@@ -1,10 +1,11 @@
 "use client";
 
-import { SEED_PEOPLE, crowdOnlineCount } from "@/data/crowd";
+import { SEED_PEOPLE, crowdOnlineCount, publicSeedName } from "@/data/crowd";
 
 export function CrowdPresence() {
   const online = crowdOnlineCount();
   const faces = SEED_PEOPLE.slice(0, 8);
+  const named = SEED_PEOPLE.filter((p) => !p.anonymous).slice(0, 3);
 
   return (
     <div className="arena-card px-5 py-4">
@@ -16,32 +17,38 @@ export function CrowdPresence() {
           </p>
         </div>
         <div className="flex -space-x-2">
-          {faces.map((p) => (
-            <span
-              key={p.id}
-              title={`${p.name} · ${p.city}`}
-              className="inline-flex h-8 w-8 items-center justify-center border border-border bg-surface-raised text-xs font-semibold text-foreground"
-              style={{
-                backgroundColor:
-                  p.leaning === "pro"
-                    ? "color-mix(in srgb, var(--pro) 12%, white)"
-                    : p.leaning === "con"
-                      ? "color-mix(in srgb, var(--con) 12%, white)"
-                      : "var(--surface-raised)",
-              }}
-            >
-              {p.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")
-                .slice(0, 2)}
-            </span>
-          ))}
+          {faces.map((p) => {
+            const label = publicSeedName(p);
+            return (
+              <span
+                key={p.id}
+                title={label}
+                className="inline-flex h-8 w-8 items-center justify-center border border-border text-xs font-semibold text-foreground"
+                style={{
+                  backgroundColor:
+                    p.leaning === "pro"
+                      ? "color-mix(in srgb, var(--pro) 12%, white)"
+                      : p.leaning === "con"
+                        ? "color-mix(in srgb, var(--con) 12%, white)"
+                        : "var(--surface-raised)",
+                }}
+              >
+                {p.anonymous
+                  ? "?"
+                  : p.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")
+                      .slice(0, 2)}
+              </span>
+            );
+          })}
         </div>
       </div>
       <p className="mt-3 text-sm text-muted">
-        {faces[0]?.name}, {faces[1]?.name}, {faces[2]?.name} and{" "}
-        {SEED_PEOPLE.length - 3} others are already in corners.
+        {named.map((p) => p.name).join(", ")}
+        {named.length ? " and " : ""}
+        mostly anonymous corners — you can hide your name too.
       </p>
     </div>
   );

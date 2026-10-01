@@ -5,6 +5,7 @@ import { AuthForm } from "@/components/auth-form";
 import { SignOutButton } from "@/components/sign-out-button";
 import { MyTakesList, type MyTake } from "@/components/my-takes-list";
 import { ReminderForm } from "@/components/reminder-form";
+import { AnonymityToggle } from "@/components/anonymity-toggle";
 
 export const metadata: Metadata = {
   title: "Account — Today's Debate",
@@ -90,10 +91,11 @@ export default async function AccountPage() {
           </div>
           <div className="border-t border-border pt-4">
             <p className="label text-muted">Saved points</p>
-            <p className="mt-1 font-display text-3xl font-semibold text-accent">
+            <p className="mt-1 font-display text-3xl font-semibold text-pro">
               {(profile?.points ?? 0).toLocaleString()}
             </p>
           </div>
+          <AnonymityToggle currentDisplayName={profile?.display_name ?? null} />
           <SignOutButton />
         </div>
       ) : (

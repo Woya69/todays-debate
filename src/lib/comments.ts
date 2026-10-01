@@ -2,6 +2,7 @@
 
 import type { DebateComment, Stance } from "@/types/debate";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { resolvePublicName } from "@/lib/identity";
 
 interface CommentRow {
   id: string;
@@ -64,10 +65,10 @@ export async function postComment(input: {
     .eq("id", user.id)
     .single();
 
-  const authorName =
-    (profile?.display_name as string | null) ||
-    user.email?.split("@")[0] ||
-    "Anonymous";
+  const authorName = resolvePublicName({
+    displayName: profile?.display_name as string | null,
+    email: user.email,
+  });
 
   const { data, error } = await supabase
     .from("debate_comments")

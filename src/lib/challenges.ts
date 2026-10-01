@@ -10,6 +10,7 @@ import type {
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import { getVoterId } from "@/lib/voter";
 import { getSeedChallenge } from "@/data/crowd";
+import { resolvePublicName } from "@/lib/identity";
 
 interface ChallengeRow {
   id: string;
@@ -170,14 +171,12 @@ async function displayName(): Promise<{
     .eq("id", user.id)
     .single();
 
-  const name = sanitizeText(
-    (profile?.display_name as string | null) ||
-      user.email?.split("@")[0] ||
-      "Debater",
-    40,
-  );
+  const name = resolvePublicName({
+    displayName: profile?.display_name as string | null,
+    email: user.email,
+  });
 
-  return { userId: user.id, name: name || "Debater" };
+  return { userId: user.id, name: name || "Anon" };
 }
 
 export async function createChallenge(input: {

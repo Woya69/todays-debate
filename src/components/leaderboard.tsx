@@ -76,11 +76,10 @@ export function Leaderboard() {
         accounts = [];
       }
 
-      // Seeded crowd so the board never looks empty on day one.
-      const { SEED_PEOPLE } = await import("@/data/crowd");
+      const { SEED_PEOPLE, publicSeedName } = await import("@/data/crowd");
       const seedRows: Row[] = SEED_PEOPLE.map((p) => ({
         id: `seed:${p.id}`,
-        name: p.name,
+        name: publicSeedName(p),
         points: p.points,
       }));
       const liveNames = new Set(accounts.map((a) => a.name.toLowerCase()));

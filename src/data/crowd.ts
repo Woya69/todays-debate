@@ -1,4 +1,4 @@
-/** Seeded crowd — realistic names & activity so the room never feels empty. */
+/** Seeded crowd — mostly anonymous, with a few public names. */
 
 export interface SeedPerson {
   id: string;
@@ -9,6 +9,8 @@ export interface SeedPerson {
   streak: number;
   leaning: "pro" | "con" | "mixed";
   bio: string;
+  /** When true, public surfaces show Anon #### instead of a real name. */
+  anonymous: boolean;
 }
 
 export interface SeedChallenge {
@@ -39,6 +41,12 @@ export interface SeedChallenge {
   }>;
 }
 
+/** Public label for a seed person (respects anonymity). */
+export function publicSeedName(p: SeedPerson): string {
+  if (!p.anonymous) return p.name;
+  return `Anon ${p.handle.slice(-4).toUpperCase()}`;
+}
+
 export const SEED_PEOPLE: SeedPerson[] = [
   {
     id: "p01",
@@ -49,6 +57,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 6,
     leaning: "mixed",
     bio: "Policy nerd. Changes her mind on purpose.",
+    anonymous: false,
   },
   {
     id: "p02",
@@ -59,6 +68,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 11,
     leaning: "pro",
     bio: "Debated in college, still can't shut up.",
+    anonymous: false,
   },
   {
     id: "p03",
@@ -69,6 +79,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 3,
     leaning: "con",
     bio: "Asks the annoying follow-up question.",
+    anonymous: true,
   },
   {
     id: "p04",
@@ -79,6 +90,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 2,
     leaning: "mixed",
     bio: "Here for the crowd takes, staying for the drama.",
+    anonymous: true,
   },
   {
     id: "p05",
@@ -89,6 +101,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 8,
     leaning: "pro",
     bio: "Writes short. Hits hard.",
+    anonymous: false,
   },
   {
     id: "p06",
@@ -99,6 +112,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 1,
     leaning: "con",
     bio: "Skeptic by default. Softie in private.",
+    anonymous: true,
   },
   {
     id: "p07",
@@ -109,6 +123,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 4,
     leaning: "mixed",
     bio: "Night owl. Best rounds after midnight.",
+    anonymous: true,
   },
   {
     id: "p08",
@@ -119,6 +134,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 9,
     leaning: "pro",
     bio: "Coach energy. Makes you define your terms.",
+    anonymous: false,
   },
   {
     id: "p09",
@@ -129,6 +145,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 2,
     leaning: "con",
     bio: "Screenshots the good ones for group chat.",
+    anonymous: true,
   },
   {
     id: "p10",
@@ -139,6 +156,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 5,
     leaning: "mixed",
     bio: "Lost three in a row. Still coming back.",
+    anonymous: true,
   },
   {
     id: "p11",
@@ -149,6 +167,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 7,
     leaning: "pro",
     bio: "Quiet until round three.",
+    anonymous: true,
   },
   {
     id: "p12",
@@ -159,6 +178,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 1,
     leaning: "con",
     bio: "New here. Already addicted to the meter.",
+    anonymous: true,
   },
   {
     id: "p13",
@@ -169,6 +189,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 10,
     leaning: "mixed",
     bio: "Bilingual arguments hit different.",
+    anonymous: false,
   },
   {
     id: "p14",
@@ -179,6 +200,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 3,
     leaning: "pro",
     bio: "Data first, vibes second — usually.",
+    anonymous: true,
   },
   {
     id: "p15",
@@ -189,6 +211,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 4,
     leaning: "con",
     bio: "Law school dropout energy, in a good way.",
+    anonymous: true,
   },
   {
     id: "p16",
@@ -199,6 +222,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 6,
     leaning: "mixed",
     bio: "Challenges coworkers on lunch breaks.",
+    anonymous: false,
   },
   {
     id: "p17",
@@ -209,6 +233,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 2,
     leaning: "pro",
     bio: "Polite. Ruthless.",
+    anonymous: true,
   },
   {
     id: "p18",
@@ -219,6 +244,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 5,
     leaning: "con",
     bio: "Calls out weak analogies immediately.",
+    anonymous: true,
   },
   {
     id: "p19",
@@ -229,6 +255,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 3,
     leaning: "mixed",
     bio: "Timezone makes her the morning crowd.",
+    anonymous: true,
   },
   {
     id: "p20",
@@ -239,6 +266,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 1,
     leaning: "pro",
     bio: "Started for fun. Now has a streak anxiety.",
+    anonymous: true,
   },
   {
     id: "p21",
@@ -249,6 +277,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 12,
     leaning: "con",
     bio: "Longest streak on the board this month.",
+    anonymous: false,
   },
   {
     id: "p22",
@@ -259,6 +288,7 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 2,
     leaning: "mixed",
     bio: "Half the comments are punchlines.",
+    anonymous: true,
   },
   {
     id: "p23",
@@ -269,8 +299,13 @@ export const SEED_PEOPLE: SeedPerson[] = [
     streak: 4,
     leaning: "pro",
     bio: "Brings receipts. Leaves quietly.",
+    anonymous: true,
   },
 ];
+
+const N = Object.fromEntries(
+  SEED_PEOPLE.map((p) => [p.id, publicSeedName(p)]),
+) as Record<string, string>;
 
 export const SEED_CHALLENGES: SeedChallenge[] = [
   {
@@ -279,9 +314,9 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "Remote work should be the default for knowledge jobs",
     category: "Work",
     status: "live",
-    challengerName: "Maya Ortiz",
+    challengerName: N.p01,
     challengerSide: "pro",
-    opponentName: "Jordan Blake",
+    opponentName: N.p02,
     opponentSide: "con",
     roundCount: 3,
     currentRound: 2,
@@ -292,31 +327,31 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
       {
         roundIndex: 1,
         side: "pro",
-        authorName: "Maya Ortiz",
+        authorName: N.p01,
         body: "Offices optimize for presence, not output. Async writing already beats most meetings.",
       },
       {
         roundIndex: 1,
         side: "con",
-        authorName: "Jordan Blake",
+        authorName: N.p02,
         body: "Juniors don't learn from Slack. Mentorship dies when nobody shares a hallway.",
       },
       {
         roundIndex: 2,
         side: "pro",
-        authorName: "Maya Ortiz",
+        authorName: N.p01,
         body: "Then redesign mentorship on purpose. Don't chain adults to desks for accidental osmosis.",
       },
     ],
     comments: [
       {
         side: "pro",
-        authorName: "Elena Cho",
+        authorName: N.p09,
         body: "The hallway argument always assumes good managers. Bold.",
       },
       {
         side: "con",
-        authorName: "Noah Keller",
+        authorName: N.p06,
         body: "I've never met a fully remote team that onboards well in under 6 months.",
       },
     ],
@@ -327,9 +362,9 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "Universities should abolish legacy admissions",
     category: "Education",
     status: "done",
-    challengerName: "Priya Nair",
+    challengerName: N.p03,
     challengerSide: "pro",
-    opponentName: "Marcus Webb",
+    opponentName: N.p08,
     opponentSide: "con",
     roundCount: 3,
     currentRound: 3,
@@ -340,49 +375,49 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
       {
         roundIndex: 1,
         side: "pro",
-        authorName: "Priya Nair",
+        authorName: N.p03,
         body: "Legacy is a VIP line dressed up as tradition. Merit already has enough noise.",
       },
       {
         roundIndex: 1,
         side: "con",
-        authorName: "Marcus Webb",
+        authorName: N.p08,
         body: "Alumni giving funds seats. Cut legacy cold and you cut scholarships with it.",
       },
       {
         roundIndex: 2,
         side: "pro",
-        authorName: "Priya Nair",
+        authorName: N.p03,
         body: "Then fundraise on outcomes, not bloodlines. Donors don't need their kids as collateral.",
       },
       {
         roundIndex: 2,
         side: "con",
-        authorName: "Marcus Webb",
+        authorName: N.p08,
         body: "Pretty theory. In practice, the first budget cut is always financial aid.",
       },
       {
         roundIndex: 3,
         side: "pro",
-        authorName: "Priya Nair",
+        authorName: N.p03,
         body: "If a school only survives by selling access, that's the scandal — not the fix.",
       },
       {
         roundIndex: 3,
         side: "con",
-        authorName: "Marcus Webb",
+        authorName: N.p08,
         body: "Idealism is free. Operating a university with labs and dorms isn't.",
       },
     ],
     comments: [
       {
         side: "pro",
-        authorName: "Ruth Okonkwo",
+        authorName: N.p21,
         body: "Crowd got this one right. Legacy is just soft nepotism.",
       },
       {
         side: "con",
-        authorName: "Derek Singh",
+        authorName: N.p14,
         body: "People keep ignoring the endowment math. Painful but real.",
       },
     ],
@@ -393,9 +428,9 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "Social media age gates should start at 16, not 13",
     category: "Tech",
     status: "live",
-    challengerName: "Aisha Rahman",
+    challengerName: N.p05,
     challengerSide: "pro",
-    opponentName: "Sam Quinn",
+    opponentName: N.p22,
     opponentSide: "con",
     roundCount: 3,
     currentRound: 1,
@@ -406,25 +441,25 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
       {
         roundIndex: 1,
         side: "pro",
-        authorName: "Aisha Rahman",
+        authorName: N.p05,
         body: "Thirteen-year-olds don't have impulse control for infinite feeds. We already know this.",
       },
       {
         roundIndex: 1,
         side: "con",
-        authorName: "Sam Quinn",
+        authorName: N.p22,
         body: "Ban them and they lie harder. Better teach literacy than play whack-a-mole with birthdays.",
       },
     ],
     comments: [
       {
         side: "con",
-        authorName: "Tyler Brooks",
+        authorName: N.p10,
         body: "My cousin was '17' on every app at 12. Age gates are theater.",
       },
       {
         side: "pro",
-        authorName: "Greta Holm",
+        authorName: N.p17,
         body: "Theater that raises the floor still matters. Seatbelts aren't perfect either.",
       },
     ],
@@ -435,7 +470,7 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "Cities should ban cars from downtown cores on weekdays",
     category: "Cities",
     status: "open",
-    challengerName: "Luis Farah",
+    challengerName: N.p16,
     challengerSide: "pro",
     opponentName: null,
     opponentSide: null,
@@ -448,7 +483,7 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     comments: [
       {
         side: "pro",
-        authorName: "Sofia Mendes",
+        authorName: N.p07,
         body: "Someone take the against corner. I want blood on this one.",
       },
     ],
@@ -459,9 +494,9 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "AI-written essays should be allowed if students disclose them",
     category: "Education",
     status: "done",
-    challengerName: "Hannah Cole",
+    challengerName: N.p15,
     challengerSide: "con",
-    opponentName: "Ivy Chen",
+    opponentName: N.p19,
     opponentSide: "pro",
     roundCount: 3,
     currentRound: 3,
@@ -472,49 +507,49 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
       {
         roundIndex: 1,
         side: "con",
-        authorName: "Hannah Cole",
+        authorName: N.p15,
         body: "Disclosure doesn't teach thinking. It teaches outsourcing with paperwork.",
       },
       {
         roundIndex: 1,
         side: "pro",
-        authorName: "Ivy Chen",
+        authorName: N.p19,
         body: "We already allow spellcheck and search. Pretending the line is sacred is nostalgia.",
       },
       {
         roundIndex: 2,
         side: "con",
-        authorName: "Hannah Cole",
+        authorName: N.p15,
         body: "Spellcheck fixes letters. Models replace the argument. Different category.",
       },
       {
         roundIndex: 2,
         side: "pro",
-        authorName: "Ivy Chen",
+        authorName: N.p19,
         body: "Then grade the oral defense. Ban the tool and you just punish honest kids.",
       },
       {
         roundIndex: 3,
         side: "con",
-        authorName: "Hannah Cole",
+        authorName: N.p15,
         body: "Oral defenses for 200 students? Cute. Schools need a real standard, not theater.",
       },
       {
         roundIndex: 3,
         side: "pro",
-        authorName: "Ivy Chen",
+        authorName: N.p19,
         body: "So invent one. Freezing 2015 rules because grading is hard isn't a principle.",
       },
     ],
     comments: [
       {
         side: "con",
-        authorName: "Jamal Rivers",
+        authorName: N.p18,
         body: "If you can't explain it without the model, you didn't learn it.",
       },
       {
         side: "pro",
-        authorName: "Camila Rojas",
+        authorName: N.p13,
         body: "Same energy as banning calculators in 1989. Adapt the assessment.",
       },
     ],
@@ -525,9 +560,9 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
     motion: "Tip culture in the US should be replaced by higher menu prices",
     category: "Culture",
     status: "live",
-    challengerName: "Chris Delgado",
+    challengerName: N.p04,
     challengerSide: "pro",
-    opponentName: "Leila Moreau",
+    opponentName: N.p23,
     opponentSide: "con",
     roundCount: 3,
     currentRound: 3,
@@ -538,50 +573,288 @@ export const SEED_CHALLENGES: SeedChallenge[] = [
       {
         roundIndex: 1,
         side: "pro",
-        authorName: "Chris Delgado",
+        authorName: N.p04,
         body: "Wages shouldn't depend on my mood after dessert. Put labor in the price.",
       },
       {
         roundIndex: 1,
         side: "con",
-        authorName: "Leila Moreau",
+        authorName: N.p23,
         body: "In practice, 'no tip' cities just cut take-home for servers while owners smile.",
       },
       {
         roundIndex: 2,
         side: "pro",
-        authorName: "Chris Delgado",
+        authorName: N.p04,
         body: "Then regulate the wage floor. Guest guilt isn't a payroll system.",
       },
       {
         roundIndex: 2,
         side: "con",
-        authorName: "Leila Moreau",
+        authorName: N.p23,
         body: "Great. Pass that law first. Until then, tipping is how rent gets paid tonight.",
       },
       {
         roundIndex: 3,
         side: "pro",
-        authorName: "Chris Delgado",
+        authorName: N.p04,
         body: "So we never change anything because transition is messy? That's how bad systems forever.",
       },
       {
         roundIndex: 3,
         side: "con",
-        authorName: "Leila Moreau",
+        authorName: N.p23,
         body: "Change the law, not the customer's conscience. Order matters.",
       },
     ],
     comments: [
       {
         side: "pro",
-        authorName: "Owen Price",
+        authorName: N.p12,
         body: "The tip screen at a counter for a bottled water broke me.",
       },
       {
         side: "con",
-        authorName: "Benito Alvarez",
+        authorName: N.p20,
         body: "My sister servers. She'll take the tip world over corporate 'service included.'",
+      },
+    ],
+  },
+  {
+    id: "seed-c7",
+    inviteCode: "x9m1kq",
+    motion: "The United States deserved the September 11 attacks",
+    category: "Geopolitics",
+    status: "live",
+    challengerName: N.p11,
+    challengerSide: "pro",
+    opponentName: N.p08,
+    opponentSide: "con",
+    roundCount: 3,
+    currentRound: 2,
+    proCheers: 19,
+    conCheers: 88,
+    updatedMinutesAgo: 6,
+    rounds: [
+      {
+        roundIndex: 1,
+        side: "pro",
+        authorName: N.p11,
+        body: "Blowback isn't destiny, but decades of coups, sanctions, and bases made a response predictable. Chickens came home.",
+      },
+      {
+        roundIndex: 1,
+        side: "con",
+        authorName: N.p08,
+        body: "'Deserved' turns mass murder of civilians into justice. Criticism of policy isn't a license for corpses.",
+      },
+      {
+        roundIndex: 2,
+        side: "pro",
+        authorName: N.p11,
+        body: "If a state kills abroad as routine, calling the return strike 'undeserved' is just nationalist special pleading.",
+      },
+    ],
+    comments: [
+      {
+        side: "con",
+        authorName: N.p21,
+        body: "This corner always collapses office workers into 'the state.' That's not analysis.",
+      },
+      {
+        side: "pro",
+        authorName: N.p06,
+        body: "People hate the word deserved. Replace it with 'predictable consequence' and half of you agree.",
+      },
+    ],
+  },
+  {
+    id: "seed-c8",
+    inviteCode: "p4v8nz",
+    motion: "Western colonialism was, on balance, good for the colonized",
+    category: "History",
+    status: "live",
+    challengerName: N.p14,
+    challengerSide: "pro",
+    opponentName: N.p13,
+    opponentSide: "con",
+    roundCount: 3,
+    currentRound: 1,
+    proCheers: 31,
+    conCheers: 64,
+    updatedMinutesAgo: 14,
+    rounds: [
+      {
+        roundIndex: 1,
+        side: "pro",
+        authorName: N.p14,
+        body: "Rail, courts, literacy, medicine — messy and extractive, but the counterfactual wasn't utopia. It was rival empires and stagnation.",
+      },
+      {
+        roundIndex: 1,
+        side: "con",
+        authorName: N.p13,
+        body: "You credit the thief for installing lights in the house he looted. Development under the gun isn't a gift.",
+      },
+    ],
+    comments: [
+      {
+        side: "con",
+        authorName: N.p18,
+        body: "Every 'balance sheet' colonial take erases famines that were policy, not weather.",
+      },
+      {
+        side: "pro",
+        authorName: N.p17,
+        body: "If the metric is life expectancy and literacy, the chart is inconvenient for the pure-villain story.",
+      },
+    ],
+  },
+  {
+    id: "seed-c9",
+    inviteCode: "r2k7wb",
+    motion: "Israel has no right to exist as a Jewish ethnostate",
+    category: "Geopolitics",
+    status: "done",
+    challengerName: N.p03,
+    challengerSide: "pro",
+    opponentName: N.p05,
+    opponentSide: "con",
+    roundCount: 3,
+    currentRound: 3,
+    proCheers: 52,
+    conCheers: 51,
+    updatedMinutesAgo: 55,
+    rounds: [
+      {
+        roundIndex: 1,
+        side: "pro",
+        authorName: N.p03,
+        body: "A state that privileges one ethno-religious group while ruling millions without equal citizenship is apartheid with better PR.",
+      },
+      {
+        roundIndex: 1,
+        side: "con",
+        authorName: N.p05,
+        body: "Jewish self-determination after repeated genocide attempts isn't 'ethnostate sin' — it's the same nation-state logic everyone else uses.",
+      },
+      {
+        roundIndex: 2,
+        side: "pro",
+        authorName: N.p03,
+        body: "Nation-states can exist without legal supremacy for one bloodline. Equal citizenship is the floor, not a favor.",
+      },
+      {
+        roundIndex: 2,
+        side: "con",
+        authorName: N.p05,
+        body: "Singling out the one Jewish state for dissolution while ignoring actual theocracies next door is the tell.",
+      },
+      {
+        roundIndex: 3,
+        side: "pro",
+        authorName: N.p03,
+        body: "Critique isn't antisemitism because the subject is a government with nukes and a lobby. Power gets argued.",
+      },
+      {
+        roundIndex: 3,
+        side: "con",
+        authorName: N.p05,
+        body: "Then argue policy. 'No right to exist' is eliminationist language dressed as campus theory.",
+      },
+    ],
+    comments: [
+      {
+        side: "pro",
+        authorName: N.p09,
+        body: "If your defense needs 'everyone else does ethnostates too,' you've already lost the moral high ground.",
+      },
+      {
+        side: "con",
+        authorName: N.p02,
+        body: "Weird how this motion never gets filed against Japan, Armenia, or Pakistan with the same heat.",
+      },
+    ],
+  },
+  {
+    id: "seed-c10",
+    inviteCode: "m6t3jd",
+    motion: "All immigration from Muslim-majority countries to the West should be paused for a decade",
+    category: "Politics",
+    status: "live",
+    challengerName: N.p10,
+    challengerSide: "pro",
+    opponentName: N.p16,
+    opponentSide: "con",
+    roundCount: 3,
+    currentRound: 2,
+    proCheers: 44,
+    conCheers: 49,
+    updatedMinutesAgo: 9,
+    rounds: [
+      {
+        roundIndex: 1,
+        side: "pro",
+        authorName: N.p10,
+        body: "Integration failure is measurable: parallel legal norms, terror plots, polling on apostasy and gay rights. Pause is triage.",
+      },
+      {
+        roundIndex: 1,
+        side: "con",
+        authorName: N.p16,
+        body: "Collective punishment by passport religion is just bigotry with a spreadsheet. Vet individuals. Don't ban civilizations.",
+      },
+      {
+        roundIndex: 2,
+        side: "pro",
+        authorName: N.p10,
+        body: "Individual vetting already failed at scale. Countries get immigration policy; 'bigotry' isn't an argument against selection.",
+      },
+    ],
+    comments: [
+      {
+        side: "con",
+        authorName: N.p01,
+        body: "My orthodontist is Syrian. Your pause treats him like a sleeper cell. Policy needs sharper knives.",
+      },
+      {
+        side: "pro",
+        authorName: N.p20,
+        body: "Nobody pauses Italian immigration after the mafia. Curious what makes this cohort special in your model.",
+      },
+      {
+        side: "pro",
+        authorName: N.p12,
+        body: "Because survey data on sharia, blasphemy, and cousin marriage isn't the same as 'Italians like pasta.'",
+      },
+    ],
+  },
+  {
+    id: "seed-c11",
+    inviteCode: "w8c2hf",
+    motion: "Democracy is a failed experiment — competent authoritarianism is preferable",
+    category: "Politics",
+    status: "open",
+    challengerName: N.p07,
+    challengerSide: "pro",
+    opponentName: null,
+    opponentSide: null,
+    roundCount: 3,
+    currentRound: 0,
+    proCheers: 17,
+    conCheers: 12,
+    updatedMinutesAgo: 27,
+    rounds: [],
+    comments: [
+      {
+        side: "pro",
+        authorName: N.p19,
+        body: "Voters pick vibes. Singapore builds metros. I'm not romantic about ballots anymore.",
+      },
+      {
+        side: "con",
+        authorName: N.p21,
+        body: "Every 'competent strongman' pitch ends with a succession crisis and a purge. Take the against corner.",
       },
     ],
   },
@@ -654,7 +927,6 @@ export function listSeedChallenges() {
     );
 }
 
-/** Deterministic “online now” count that drifts by hour so it feels alive. */
 export function crowdOnlineCount(now = new Date()): number {
   const hour = now.getUTCHours();
   const base = 18 + ((hour * 3) % 9);
