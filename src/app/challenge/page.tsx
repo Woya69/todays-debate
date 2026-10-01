@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { ChallengeCreateForm } from "@/components/challenge-create-form";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 
-type Props = { searchParams: Promise<{ motion?: string; slug?: string }> };
+type Props = {
+  searchParams: Promise<{ motion?: string; slug?: string; side?: string }>;
+};
 
 export const metadata: Metadata = {
   title: "Start a challenge",
@@ -13,6 +15,13 @@ export const metadata: Metadata = {
 
 export default async function ChallengePage({ searchParams }: Props) {
   const params = await searchParams;
+  const side =
+    params.side === "yes" || params.side === "pro" || params.side === "for"
+      ? "pro"
+      : params.side === "no" || params.side === "con" || params.side === "against"
+        ? "con"
+        : undefined;
+
   return (
     <div className="mx-auto w-full max-w-2xl">
       <p className="label text-pro">Challenge</p>
@@ -27,6 +36,7 @@ export default async function ChallengePage({ searchParams }: Props) {
         <ChallengeCreateForm
           presetMotion={params.motion}
           presetSlug={params.slug}
+          presetSide={side}
         />
       </div>
     </div>

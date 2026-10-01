@@ -11,15 +11,17 @@ export function ChallengeCreateForm({
   presetMotion,
   presetSlug,
   presetCategory,
+  presetSide,
 }: {
   presetMotion?: string;
   presetSlug?: string;
   presetCategory?: string;
+  presetSide?: Corner;
 }) {
   const router = useRouter();
   const corpus = useMemo(() => getPublishedDebates().slice(0, 40), []);
   const [motion, setMotion] = useState(presetMotion ?? "");
-  const [side, setSide] = useState<Corner>("pro");
+  const [side, setSide] = useState<Corner>(presetSide ?? "pro");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pickedSlug, setPickedSlug] = useState<string | null>(presetSlug ?? null);
@@ -96,7 +98,7 @@ export function ChallengeCreateForm({
             }`}
           >
             <p className="label text-pro">Corner</p>
-            <p className="mt-1 font-display text-2xl font-extrabold">FOR</p>
+            <p className="mt-1 font-display text-2xl font-extrabold">YES</p>
           </button>
           <button
             type="button"
@@ -106,7 +108,7 @@ export function ChallengeCreateForm({
             }`}
           >
             <p className="label text-con">Corner</p>
-            <p className="mt-1 font-display text-2xl font-extrabold">AGAINST</p>
+            <p className="mt-1 font-display text-2xl font-extrabold">NO</p>
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LANDING_HOOKS, type LandingHook } from "@/data/landing-hooks";
 
@@ -9,6 +9,7 @@ type Choice = "yes" | "no";
 const SPIN_MS = 2800;
 const HOLD_MS = 900;
 const EXIT_MS = 720;
+const FADE_MS = 280;
 
 export function LandingSpin() {
   const router = useRouter();
@@ -17,31 +18,80 @@ export function LandingSpin() {
   const [picked, setPicked] = useState<Choice | null>(null);
   const [exiting, setExiting] = useState(false);
   const locked = useRef(false);
-  const topic = LANDING_HOOKS[index % LANDING_HOOKS.length];
+  const indexRef = useRef(0);
+  const timerRef = useRef<number | null>(null);
+  const fadeRef = useRef<number | null>(null);
+
+  const topic = LANDING_HOOKS[index];
+
+  const clearTimers = useCallback(() => {
+    if (timerRef.current != null) {
+      window.clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    if (fadeRef.current != null) {
+      window.clearTimeout(fadeRef.current);
+      fadeRef.current = null;
+    }
+  }, []);
+
+  const goTo = useCallback(
+    (next: number, animate: boolean) => {
+      const bounded =
+        ((next % LANDING_HOOKS.length) + LANDING_HOOKS.length) %
+        LANDING_HOOKS.length;
+      if (bounded === indexRef.current && animate) return;
+
+      if (!animate) {
+        indexRef.current = bounded;
+        setIndex(bounded);
+        setVisible(true);
+        return;
+      }
+
+      setVisible(false);
+      fadeRef.current = window.setTimeout(() => {
+        indexRef.current = bounded;
+        setIndex(bounded);
+        setVisible(true);
+      }, FADE_MS);
+    },
+    [],
+  );
+
+  const scheduleNext = useCallback(() => {
+    clearTimers();
+    timerRef.current = window.setTimeout(() => {
+      goTo(indexRef.current + 1, true);
+      scheduleNext();
+    }, SPIN_MS + HOLD_MS);
+  }, [clearTimers, goTo]);
 
   useEffect(() => {
-    if (picked) return;
+    if (picked) {
+      clearTimers();
+      return;
+    }
+    scheduleNext();
+    return clearTimers;
+  }, [picked, scheduleNext, clearTimers]);
 
-    const cycle = () => {
-      setVisible(false);
-      window.setTimeout(() => {
-        setIndex((i) => (i + 1) % LANDING_HOOKS.length);
-        setVisible(true);
-      }, 280);
-    };
-
-    const id = window.setInterval(cycle, SPIN_MS + HOLD_MS);
-    return () => window.clearInterval(id);
-  }, [picked]);
+  function jumpTo(i: number) {
+    if (picked || locked.current) return;
+    goTo(i, true);
+    scheduleNext();
+  }
 
   function choose(choice: Choice, hook: LandingHook) {
     if (locked.current) return;
     locked.current = true;
+    clearTimers();
     setPicked(choice);
     setExiting(true);
 
     const side = choice === "yes" ? "yes" : "no";
-    const href = `/debate/${hook.debateId}?side=${side}`;
+    // Live room for THIS motion — challenge create with stance, not a random tip fight.
+    const href = `/challenge?motion=${encodeURIComponent(hook.hook)}&slug=${encodeURIComponent(hook.debateId)}&side=${side}`;
 
     window.setTimeout(() => {
       router.push(href);
@@ -70,17 +120,34 @@ export function LandingSpin() {
           {topic.hook}
         </p>
 
-        <div className="mt-4 flex items-center gap-1.5" aria-hidden>
-          {LANDING_HOOKS.map((h, i) => (
-            <span
-              key={h.id}
-              className={`h-1 rounded-full transition-all duration-300 ${
-                i === index % LANDING_HOOKS.length
-                  ? "w-7 bg-pro"
-                  : "w-3 bg-border"
-              }`}
-            />
-          ))}
+        <div
+          className="mt-5 flex items-center justify-center gap-1.5"
+          role="tablist"
+          aria-label="Topics by popularity"
+        >
+          {LANDING_HOOKS.map((h, i) => {
+            const active = i === index;
+            return (
+              <button
+                key={h.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                aria-label={`Topic ${i + 1}: ${h.hook}`}
+                disabled={!!picked}
+                onClick={() => jumpTo(i)}
+                className={`touch-target inline-flex items-center justify-center rounded-full p-2 transition ${
+                  picked ? "cursor-not-allowed opacity-50" : "cursor-pointer"
+                }`}
+              >
+                <span
+                  className={`block h-1.5 rounded-full transition-all duration-300 ${
+                    active ? "w-8 bg-pro" : "w-3 bg-border hover:bg-muted"
+                  }`}
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -105,8 +172,8 @@ export function LandingSpin() {
 
       <p className="mt-8 max-w-xs text-sm text-muted">
         {picked
-          ? "Jumping into the live room…"
-          : "Tap once. Enter the live debate."}
+          ? "Opening a live challenge on this…"
+          : "Hottest first. Tap a dot to jump. Yes/No starts a fight."}
       </p>
     </div>
   );
