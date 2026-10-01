@@ -1,0 +1,2126 @@
+[
+  {
+    "id": "remote-work-juniors",
+    "resolution": "Remote work hurts career growth for junior employees.",
+    "category": "Work & Economy",
+    "context": "Since 2020, remote and hybrid work went mainstream — and the debate over whether early-career workers gain or lose from it is still unsettled.",
+    "pro": {
+      "title": "Mentorship needs proximity",
+      "argument": "Junior workers learn fastest through osmosis — overhearing negotiations, watching seniors handle pressure, and getting spontaneous feedback. Remote work strips away those micro-moments. Studies from early-career cohorts show slower promotion rates and weaker professional networks when onboarding happens entirely through screens."
+    },
+    "con": {
+      "title": "Access beats hallway luck",
+      "argument": "Remote work democratizes opportunity. A junior in a small town can join a top firm without relocating, document their work in writing, and learn from recorded meetings they can replay. Proximity-based mentorship often favors people who already fit in socially."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Remote work hurts career growth for junior employees — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Remote work hurts career growth for junior employees. Take a side on Today's Debate."
+  },
+  {
+    "id": "ai-copyright",
+    "resolution": "AI companies should pay copyright holders for training data.",
+    "category": "Technology",
+    "context": "Lawsuits from authors, artists, and publishers against AI labs are working through the courts as models trained on vast scraped datasets reach commercial scale.",
+    "pro": {
+      "title": "Creation has value",
+      "argument": "Models trained on books, art, and journalism produce commercial value that flows to tech companies, not creators. Without compensation, we hollow out the industries that produce the culture AI imitates."
+    },
+    "con": {
+      "title": "Learning is not copying",
+      "argument": "Humans learn from copyrighted works without paying each author. AI training is closer to reading than redistribution. Retroactive licensing at scale is practically impossible and would concentrate power in firms that can afford deals."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "AI companies should pay copyright holders for training data — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: AI companies should pay copyright holders for training data. Take a side on Today's Debate."
+  },
+  {
+    "id": "universal-basic-income",
+    "resolution": "Countries should implement a universal basic income.",
+    "category": "Policy",
+    "context": "Pilot programs from Finland to Kenya to Stockton have tested unconditional cash, reviving a centuries-old idea amid fears about automation and inequality.",
+    "pro": {
+      "title": "Floor, not bureaucracy",
+      "argument": "UBI replaces patchwork welfare with a simple guarantee: everyone can eat, house themselves, and say no to exploitation. Pilots show reduced stress and more entrepreneurship."
+    },
+    "con": {
+      "title": "Price tag and incentives",
+      "argument": "Full UBI at a meaningful level requires tax increases voters reject when they see the bill. Targeted support reaches need with less waste."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Countries should implement a universal basic income — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Countries should implement a universal basic income. Take a side on Today's Debate."
+  },
+  {
+    "id": "social-media-age-verification",
+    "resolution": "Social media platforms should verify users are 16 or older.",
+    "category": "Society",
+    "context": "Several governments have passed or proposed age-verification and under-16 social media rules.",
+    "pro": {
+      "title": "Protect developing minds",
+      "argument": "Adolescent brains are uniquely vulnerable to algorithmic engagement and harassment at scale. We gate alcohol and gambling; infinite scroll deserves scrutiny."
+    },
+    "con": {
+      "title": "Privacy and exclusion",
+      "argument": "Mandatory ID verification maps who said what online. Young activists and LGBTQ youth in hostile homes rely on pseudonymity. Verification pushes teens to less moderated corners."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Social media platforms should verify users are 16 or older — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Social media platforms should verify users are 16 or older. Take a side on Today's Debate."
+  },
+  {
+    "id": "nuclear-energy",
+    "resolution": "Nuclear power should be the backbone of clean energy policy.",
+    "category": "Climate",
+    "context": "As countries chase net-zero targets, nuclear is being reconsidered even as renewables get cheaper.",
+    "pro": {
+      "title": "Dense, reliable, low-carbon",
+      "argument": "Wind and solar need storage; nuclear runs 24/7 with tiny land use and near-zero operational emissions. Climate timelines do not allow waiting for a perfect renewable-only miracle."
+    },
+    "con": {
+      "title": "Cost and clock speed",
+      "argument": "New nuclear plants routinely arrive years late and billions over budget while solar and batteries plummet in price. The fastest path is accelerate what deploys today."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Nuclear power should be the backbone of clean energy policy — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Nuclear power should be the backbone of clean energy policy. Take a side on Today's Debate."
+  },
+  {
+    "id": "four-day-workweek",
+    "resolution": "The standard workweek should be four days, not five.",
+    "category": "Work & Economy",
+    "context": "Trials in Iceland, the UK, and elsewhere reported steady output on shorter weeks.",
+    "pro": {
+      "title": "Productivity without burnout",
+      "argument": "Trials found equal or higher output with four-day schedules when meetings and busywork get cut. The five-day week is a factory convention, not a law of nature."
+    },
+    "con": {
+      "title": "Not every job flexes",
+      "argument": "Healthcare, logistics, and retail cannot shrink coverage without hiring more staff. A mandate would push some firms to offshore rather than comply."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "The standard workweek should be four days, not five — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: The standard workweek should be four days, not five. Take a side on Today's Debate."
+  },
+  {
+    "id": "open-borders",
+    "resolution": "Wealthy nations should substantially open their borders to immigration.",
+    "category": "Policy",
+    "context": "Aging populations and labor shortages collide with political backlash over migration.",
+    "pro": {
+      "title": "Freedom and growth",
+      "argument": "Where you are born should not determine life chances. Open borders would lift millions from poverty and aging rich countries need workers."
+    },
+    "con": {
+      "title": "Capacity and consent",
+      "argument": "Democratic communities have a right to set intake levels. Rapid influx strains housing and schools before infrastructure adapts."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Wealthy nations should substantially open their borders to immigration — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Wealthy nations should substantially open their borders to immigration. Take a side on Today's Debate."
+  },
+  {
+    "id": "cancel-college-debt",
+    "resolution": "Governments should cancel most outstanding student debt.",
+    "category": "Policy",
+    "context": "Ballooning tuition and trillions in loans have made debt cancellation a recurring flashpoint.",
+    "pro": {
+      "title": "Reset a broken bargain",
+      "argument": "Student debt ballooned because states cut funding while telling everyone a degree was mandatory. Mass cancellation frees a generation to buy homes and start businesses."
+    },
+    "con": {
+      "title": "Fairness forward",
+      "argument": "Canceling debt rewards those who borrowed most — often higher earners — while ignoring people who paid cash or skipped college."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should cancel most outstanding student debt — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should cancel most outstanding student debt. Take a side on Today's Debate."
+  },
+  {
+    "id": "meat-consumption",
+    "resolution": "Governments should heavily tax meat to fight climate change.",
+    "category": "Climate",
+    "context": "Livestock is a major source of emissions and land use, prompting proposals to price meat like other pollutants.",
+    "pro": {
+      "title": "Price what pollutes",
+      "argument": "Livestock drives emissions, deforestation, and antibiotic resistance. Meat is artificially cheap because costs are externalized."
+    },
+    "con": {
+      "title": "Regressive and cultural",
+      "argument": "Meat taxes hit low-income households hardest and stigmatize diets tied to culture and tradition."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should heavily tax meat to fight climate change — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should heavily tax meat to fight climate change. Take a side on Today's Debate."
+  },
+  {
+    "id": "platform-liability",
+    "resolution": "Social platforms should be legally liable for harmful user content.",
+    "category": "Technology",
+    "context": "Liability shields like Section 230 are under pressure worldwide.",
+    "pro": {
+      "title": "Accountability at scale",
+      "argument": "Immunity let platforms optimize engagement without paying for harm. Algorithmic amplifiers should not hide behind neutral pipes."
+    },
+    "con": {
+      "title": "Chill speech and crush newcomers",
+      "argument": "If platforms face lawsuits for user posts, they will over-remove. Only giants can afford armies of lawyers; startups die on first complaint."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Social platforms should be legally liable for harmful user content — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Social platforms should be legally liable for harmful user content. Take a side on Today's Debate."
+  },
+  {
+    "id": "monarchy-abolish",
+    "resolution": "Modern democracies should abolish ceremonial monarchies.",
+    "category": "Society",
+    "context": "Royal successions periodically reopen whether hereditary crowns belong in a modern democracy.",
+    "pro": {
+      "title": "Symbols matter",
+      "argument": "Hereditary privilege sits awkwardly next to equal citizenship. Democracy should be complete."
+    },
+    "con": {
+      "title": "Stability and tourism",
+      "argument": "Ceremonial monarchies often score high on stability and soft power presidents cannot match during crises."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Modern democracies should abolish ceremonial monarchies — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Modern democracies should abolish ceremonial monarchies. Take a side on Today's Debate."
+  },
+  {
+    "id": "crypto-regulation",
+    "resolution": "Cryptocurrency should face the same financial regulations as banks.",
+    "category": "Technology",
+    "context": "High-profile collapses accelerated a global push to regulate crypto.",
+    "pro": {
+      "title": "Same risk, same rules",
+      "argument": "Crypto exchanges hold customer funds and lend — exactly what banks do — but often skip audits and deposit insurance."
+    },
+    "con": {
+      "title": "Innovation needs room",
+      "argument": "Heavy bank-style rules kill programmable money and remittances. Smart regulation targets fraud without regulating every wallet."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cryptocurrency should face the same financial regulations as banks — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cryptocurrency should face the same financial regulations as banks. Take a side on Today's Debate."
+  },
+  {
+    "id": "voting-mandatory",
+    "resolution": "Voting in national elections should be mandatory.",
+    "category": "Policy",
+    "context": "Australia and Belgium fine non-voters and post high turnout.",
+    "pro": {
+      "title": "Legitimacy and voice",
+      "argument": "Low turnout lets extreme minorities pick leaders. Compulsory voting boosts engagement without crushing conscience."
+    },
+    "con": {
+      "title": "Freedom includes abstention",
+      "argument": "Forced voting is forced speech. Better fixes: election-day holiday, automatic registration, ranked choice."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Voting in national elections should be mandatory — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Voting in national elections should be mandatory. Take a side on Today's Debate."
+  },
+  {
+    "id": "space-priority",
+    "resolution": "Governments should prioritize space exploration over fixing problems on Earth.",
+    "category": "Science",
+    "context": "A new space race reignites how to weigh moonshots against needs at home.",
+    "pro": {
+      "title": "Insurance and invention",
+      "argument": "Space spending is tiny next to military budgets yet yields GPS, weather prediction, and materials science."
+    },
+    "con": {
+      "title": "Opportunity cost is real",
+      "argument": "Every billion to Mars is a billion not building transit or vaccine factories. Fix the planet you are on first."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should prioritize space exploration over fixing problems on Earth — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should prioritize space exploration over fixing problems on Earth. Take a side on Today's Debate."
+  },
+  {
+    "id": "college-free",
+    "resolution": "Public college should be tuition-free.",
+    "category": "Education",
+    "context": "Tuition-free proposals resurface every election cycle as sticker prices keep climbing.",
+    "pro": {
+      "title": "Talent without a price tag",
+      "argument": "Talent without a price tag. Tuition-free proposals resurface every election cycle as sticker prices keep climbing. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Someone pays",
+      "argument": "Someone pays. Tuition-free proposals resurface every election cycle as sticker prices keep climbing. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Public college should be tuition-free — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Public college should be tuition-free. Take a side on Today's Debate."
+  },
+  {
+    "id": "phones-schools",
+    "resolution": "Phones should be banned during the school day.",
+    "category": "Education",
+    "context": "Districts from California to Europe are locking phones away to reclaim attention.",
+    "pro": {
+      "title": "Attention is the curriculum",
+      "argument": "Attention is the curriculum. Districts from California to Europe are locking phones away to reclaim attention. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Teach the tool",
+      "argument": "Teach the tool. Districts from California to Europe are locking phones away to reclaim attention. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Phones should be banned during the school day — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Phones should be banned during the school day. Take a side on Today's Debate."
+  },
+  {
+    "id": "defund-police",
+    "resolution": "Cities should significantly reduce police budgets and reinvest in social services.",
+    "category": "Policy",
+    "context": "After 2020 protests, budget fights over policing versus mental-health response never fully settled.",
+    "pro": {
+      "title": "Right tool for the job",
+      "argument": "Right tool for the job. After 2020 protests, budget fights over policing versus mental-health response never fully settled. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Safety is foundational",
+      "argument": "Safety is foundational. After 2020 protests, budget fights over policing versus mental-health response never fully settled. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should significantly reduce police budgets and reinvest in social services — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should significantly reduce police budgets and reinvest in social services. Take a side on Today's Debate."
+  },
+  {
+    "id": "rent-control",
+    "resolution": "Cities should expand rent control to stop housing costs from rising.",
+    "category": "Policy",
+    "context": "As rents soar in major metros, tenants push hard caps while economists warn about supply.",
+    "pro": {
+      "title": "Shelter is not a luxury",
+      "argument": "Shelter is not a luxury. As rents soar in major metros, tenants push hard caps while economists warn about supply. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Supply is the cure",
+      "argument": "Supply is the cure. As rents soar in major metros, tenants push hard caps while economists warn about supply. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should expand rent control to stop housing costs from rising — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should expand rent control to stop housing costs from rising. Take a side on Today's Debate."
+  },
+  {
+    "id": "tiktok-ban",
+    "resolution": "Democratic governments should ban TikTok over national security concerns.",
+    "category": "Technology",
+    "context": "National security reviews of Chinese-owned apps keep returning to the same dilemma.",
+    "pro": {
+      "title": "Data is power",
+      "argument": "Data is power. National security reviews of Chinese-owned apps keep returning to the same dilemma. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Ban what you fear",
+      "argument": "Ban what you fear. National security reviews of Chinese-owned apps keep returning to the same dilemma. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Democratic governments should ban TikTok over national security concerns — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Democratic governments should ban TikTok over national security concerns. Take a side on Today's Debate."
+  },
+  {
+    "id": "gene-editing-babies",
+    "resolution": "Heritable human gene editing should be legal for serious diseases.",
+    "category": "Science",
+    "context": "CRISPR advances reopen whether editing embryos for disease is medicine or a slippery slope.",
+    "pro": {
+      "title": "Prevent suffering",
+      "argument": "Prevent suffering. CRISPR advances reopen whether editing embryos for disease is medicine or a slippery slope. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Line will not hold",
+      "argument": "Line will not hold. CRISPR advances reopen whether editing embryos for disease is medicine or a slippery slope. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Heritable human gene editing should be legal for serious diseases — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Heritable human gene editing should be legal for serious diseases. Take a side on Today's Debate."
+  },
+  {
+    "id": "daylight-saving",
+    "resolution": "Daylight saving time should be abolished permanently.",
+    "category": "Society",
+    "context": "Annual clock changes remain popular to hate and hard to kill legislatively.",
+    "pro": {
+      "title": "Stop the switch",
+      "argument": "Stop the switch. Annual clock changes remain popular to hate and hard to kill legislatively. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Evening light matters",
+      "argument": "Evening light matters. Annual clock changes remain popular to hate and hard to kill legislatively. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Daylight saving time should be abolished permanently — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Daylight saving time should be abolished permanently. Take a side on Today's Debate."
+  },
+  {
+    "id": "college-athletes-pay",
+    "resolution": "College athletes should be paid salaries by their schools.",
+    "category": "Sports",
+    "context": "NIL deals cracked the amateur model; salary debates ask how far professionalization should go.",
+    "pro": {
+      "title": "Labor creates the product",
+      "argument": "Labor creates the product. NIL deals cracked the amateur model; salary debates ask how far professionalization should go. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Campus is not the NFL",
+      "argument": "Campus is not the NFL. NIL deals cracked the amateur model; salary debates ask how far professionalization should go. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "College athletes should be paid salaries by their schools — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: College athletes should be paid salaries by their schools. Take a side on Today's Debate."
+  },
+  {
+    "id": "plastic-ban",
+    "resolution": "Single-use plastics should be banned nationwide.",
+    "category": "Climate",
+    "context": "Bag bans proliferate while oceans and landfills fill with packaging.",
+    "pro": {
+      "title": "Design out waste",
+      "argument": "Design out waste. Bag bans proliferate while oceans and landfills fill with packaging. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Life-cycle honesty",
+      "argument": "Life-cycle honesty. Bag bans proliferate while oceans and landfills fill with packaging. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Single-use plastics should be banned nationwide — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Single-use plastics should be banned nationwide. Take a side on Today's Debate."
+  },
+  {
+    "id": "right-to-repair",
+    "resolution": "Manufacturers should be required to support right-to-repair for electronics.",
+    "category": "Technology",
+    "context": "Farmers, phone owners, and independent shops are pushing legislatures for parts and manuals.",
+    "pro": {
+      "title": "Ownership means repair",
+      "argument": "Ownership means repair. Farmers, phone owners, and independent shops are pushing legislatures for parts and manuals. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Safety and IP",
+      "argument": "Safety and IP. Farmers, phone owners, and independent shops are pushing legislatures for parts and manuals. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Manufacturers should be required to support right-to-repair for electronics — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Manufacturers should be required to support right-to-repair for electronics. Take a side on Today's Debate."
+  },
+  {
+    "id": "wealth-tax",
+    "resolution": "Countries should impose an annual tax on extreme wealth.",
+    "category": "Policy",
+    "context": "Billionaire wealth concentration has revived wealth-tax proposals from Norway to the US.",
+    "pro": {
+      "title": "Tax the stockpile",
+      "argument": "Tax the stockpile. Billionaire wealth concentration has revived wealth-tax proposals from Norway to the US. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Flight and valuation",
+      "argument": "Flight and valuation. Billionaire wealth concentration has revived wealth-tax proposals from Norway to the US. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Countries should impose an annual tax on extreme wealth — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Countries should impose an annual tax on extreme wealth. Take a side on Today's Debate."
+  },
+  {
+    "id": "homeschool-oversight",
+    "resolution": "Homeschooling should face the same oversight as private schools.",
+    "category": "Education",
+    "context": "Homeschool growth after the pandemic revived fights over regulation versus parental rights.",
+    "pro": {
+      "title": "Children have rights too",
+      "argument": "Children have rights too. Homeschool growth after the pandemic revived fights over regulation versus parental rights. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Parents know best",
+      "argument": "Parents know best. Homeschool growth after the pandemic revived fights over regulation versus parental rights. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Homeschooling should face the same oversight as private schools — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Homeschooling should face the same oversight as private schools. Take a side on Today's Debate."
+  },
+  {
+    "id": "cashless-society",
+    "resolution": "Governments should accelerate the shift to a cashless society.",
+    "category": "Technology",
+    "context": "Digital payments dominate cities while cash remains a lifeline for the unbanked.",
+    "pro": {
+      "title": "Efficiency and transparency",
+      "argument": "Efficiency and transparency. Digital payments dominate cities while cash remains a lifeline for the unbanked. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Surveillance and exclusion",
+      "argument": "Surveillance and exclusion. Digital payments dominate cities while cash remains a lifeline for the unbanked. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should accelerate the shift to a cashless society — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should accelerate the shift to a cashless society. Take a side on Today's Debate."
+  },
+  {
+    "id": "animal-personhood",
+    "resolution": "Great apes and cetaceans should have legal personhood rights.",
+    "category": "Society",
+    "context": "Courts keep hearing cases seeking habeas corpus for chimps and elephants.",
+    "pro": {
+      "title": "Sentience deserves standing",
+      "argument": "Sentience deserves standing. Courts keep hearing cases seeking habeas corpus for chimps and elephants. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Rights need duties",
+      "argument": "Rights need duties. Courts keep hearing cases seeking habeas corpus for chimps and elephants. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Great apes and cetaceans should have legal personhood rights — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Great apes and cetaceans should have legal personhood rights. Take a side on Today's Debate."
+  },
+  {
+    "id": "term-limits",
+    "resolution": "Legislators should face strict term limits.",
+    "category": "Policy",
+    "context": "Frustration with career politicians keeps term-limit amendments alive.",
+    "pro": {
+      "title": "Fresh blood",
+      "argument": "Fresh blood. Frustration with career politicians keeps term-limit amendments alive. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Voters already decide",
+      "argument": "Voters already decide. Frustration with career politicians keeps term-limit amendments alive. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Legislators should face strict term limits — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Legislators should face strict term limits. Take a side on Today's Debate."
+  },
+  {
+    "id": "lab-grown-meat",
+    "resolution": "Governments should subsidize lab-grown meat the way they subsidize livestock.",
+    "category": "Climate",
+    "context": "Cultivated meat startups seek parity with farm subsidies that shaped cheap animal protein.",
+    "pro": {
+      "title": "Level the field",
+      "argument": "Level the field. Cultivated meat startups seek parity with farm subsidies that shaped cheap animal protein. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Unproven at scale",
+      "argument": "Unproven at scale. Cultivated meat startups seek parity with farm subsidies that shaped cheap animal protein. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should subsidize lab-grown meat the way they subsidize livestock — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should subsidize lab-grown meat the way they subsidize livestock. Take a side on Today's Debate."
+  },
+  {
+    "id": "surveillance-cameras",
+    "resolution": "Cities should blanket public spaces with AI surveillance cameras.",
+    "category": "Society",
+    "context": "Smart-city camera networks promise safety and raise Orwell alarms.",
+    "pro": {
+      "title": "Deterrence that works",
+      "argument": "Deterrence that works. Smart-city camera networks promise safety and raise Orwell alarms. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Chilling effect",
+      "argument": "Chilling effect. Smart-city camera networks promise safety and raise Orwell alarms. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should blanket public spaces with AI surveillance cameras — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should blanket public spaces with AI surveillance cameras. Take a side on Today's Debate."
+  },
+  {
+    "id": "homework-ban",
+    "resolution": "K-12 schools should ban homework.",
+    "category": "Education",
+    "context": "Some districts are cutting homework to fight burnout and inequality.",
+    "pro": {
+      "title": "School is enough",
+      "argument": "School is enough. Some districts are cutting homework to fight burnout and inequality. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Practice builds mastery",
+      "argument": "Practice builds mastery. Some districts are cutting homework to fight burnout and inequality. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "K-12 schools should ban homework — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: K-12 schools should ban homework. Take a side on Today's Debate."
+  },
+  {
+    "id": "olympics-boycott",
+    "resolution": "Democracies should boycott Olympics hosted by authoritarian regimes.",
+    "category": "Sports",
+    "context": "Sports and soft power collide whenever the Games land in contested regimes.",
+    "pro": {
+      "title": "Do not sportswash",
+      "argument": "Do not sportswash. Sports and soft power collide whenever the Games land in contested regimes. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Punish athletes",
+      "argument": "Punish athletes. Sports and soft power collide whenever the Games land in contested regimes. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Democracies should boycott Olympics hosted by authoritarian regimes — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Democracies should boycott Olympics hosted by authoritarian regimes. Take a side on Today's Debate."
+  },
+  {
+    "id": "internet-utility",
+    "resolution": "Home broadband should be regulated as a public utility.",
+    "category": "Technology",
+    "context": "Broadband is essential infrastructure, yet markets remain concentrated in many regions.",
+    "pro": {
+      "title": "Essential like water",
+      "argument": "Essential like water. Broadband is essential infrastructure, yet markets remain concentrated in many regions. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Innovation tax",
+      "argument": "Innovation tax. Broadband is essential infrastructure, yet markets remain concentrated in many regions. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Home broadband should be regulated as a public utility — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Home broadband should be regulated as a public utility. Take a side on Today's Debate."
+  },
+  {
+    "id": "prison-abolition",
+    "resolution": "Countries should abolish prisons in favor of restorative justice.",
+    "category": "Policy",
+    "context": "Abolitionist movements argue incarceration fails at rehabilitation and justice.",
+    "pro": {
+      "title": "Cages fail",
+      "argument": "Cages fail. Abolitionist movements argue incarceration fails at rehabilitation and justice. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Some people are dangerous",
+      "argument": "Some people are dangerous. Abolitionist movements argue incarceration fails at rehabilitation and justice. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Countries should abolish prisons in favor of restorative justice — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Countries should abolish prisons in favor of restorative justice. Take a side on Today's Debate."
+  },
+  {
+    "id": "geoengineering",
+    "resolution": "Governments should fund large-scale climate geoengineering research now.",
+    "category": "Climate",
+    "context": "As emissions stay high, solar geoengineering moved from taboo to research agenda.",
+    "pro": {
+      "title": "Emergency option",
+      "argument": "Emergency option. As emissions stay high, solar geoengineering moved from taboo to research agenda. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Moral hazard",
+      "argument": "Moral hazard. As emissions stay high, solar geoengineering moved from taboo to research agenda. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should fund large-scale climate geoengineering research now — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should fund large-scale climate geoengineering research now. Take a side on Today's Debate."
+  },
+  {
+    "id": "tipping-ban",
+    "resolution": "Restaurants should ban tipping and pay living wages instead.",
+    "category": "Work & Economy",
+    "context": "Tip culture fights intensify as apps and inflation scramble service pay.",
+    "pro": {
+      "title": "Dignity in the wage",
+      "argument": "Dignity in the wage. Tip culture fights intensify as apps and inflation scramble service pay. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Flexibility and upside",
+      "argument": "Flexibility and upside. Tip culture fights intensify as apps and inflation scramble service pay. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Restaurants should ban tipping and pay living wages instead — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Restaurants should ban tipping and pay living wages instead. Take a side on Today's Debate."
+  },
+  {
+    "id": "esports-olympics",
+    "resolution": "Esports should be full medal events in the Olympics.",
+    "category": "Sports",
+    "context": "The IOC flirts with gaming while purists defend physical sport.",
+    "pro": {
+      "title": "Sport of the century",
+      "argument": "Sport of the century. The IOC flirts with gaming while purists defend physical sport. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Different category",
+      "argument": "Different category. The IOC flirts with gaming while purists defend physical sport. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Esports should be full medal events in the Olympics — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Esports should be full medal events in the Olympics. Take a side on Today's Debate."
+  },
+  {
+    "id": "ai-politicians",
+    "resolution": "AI systems should be allowed to advise and draft legislation.",
+    "category": "Technology",
+    "context": "Lawmakers already use AI drafts; the question is how open and accountable that becomes.",
+    "pro": {
+      "title": "Better briefs",
+      "argument": "Better briefs. Lawmakers already use AI drafts; the question is how open and accountable that becomes. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Democratic laundering",
+      "argument": "Democratic laundering. Lawmakers already use AI drafts; the question is how open and accountable that becomes. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "AI systems should be allowed to advise and draft legislation — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: AI systems should be allowed to advise and draft legislation. Take a side on Today's Debate."
+  },
+  {
+    "id": "national-service",
+    "resolution": "Young adults should complete a year of mandatory national service.",
+    "category": "Society",
+    "context": "Service drafts resurface as social cohesion and recruitment worries grow.",
+    "pro": {
+      "title": "Shared stake",
+      "argument": "Shared stake. Service drafts resurface as social cohesion and recruitment worries grow. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Forced labor",
+      "argument": "Forced labor. Service drafts resurface as social cohesion and recruitment worries grow. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Young adults should complete a year of mandatory national service — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Young adults should complete a year of mandatory national service. Take a side on Today's Debate."
+  },
+  {
+    "id": "zoo-closure",
+    "resolution": "Traditional zoos should be phased out.",
+    "category": "Society",
+    "context": "Welfare science and streaming wildlife docs challenge the zoo model.",
+    "pro": {
+      "title": "Wild belongs wild",
+      "argument": "Wild belongs wild. Welfare science and streaming wildlife docs challenge the zoo model. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Arks and ambassadors",
+      "argument": "Arks and ambassadors. Welfare science and streaming wildlife docs challenge the zoo model. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Traditional zoos should be phased out — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Traditional zoos should be phased out. Take a side on Today's Debate."
+  },
+  {
+    "id": "sugar-tax",
+    "resolution": "Sugary drinks should face steep sin taxes.",
+    "category": "Health",
+    "context": "Soda taxes spread from Mexico to UK cities as obesity costs climb.",
+    "pro": {
+      "title": "Price the harm",
+      "argument": "Price the harm. Soda taxes spread from Mexico to UK cities as obesity costs climb. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Nanny state",
+      "argument": "Nanny state. Soda taxes spread from Mexico to UK cities as obesity costs climb. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Sugary drinks should face steep sin taxes — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Sugary drinks should face steep sin taxes. Take a side on Today's Debate."
+  },
+  {
+    "id": "driverless-priority",
+    "resolution": "Cities should redesign streets for driverless cars over private drivers.",
+    "category": "Technology",
+    "context": "AV pilots force a choice about who streets are for.",
+    "pro": {
+      "title": "Fewer cars, safer streets",
+      "argument": "Fewer cars, safer streets. AV pilots force a choice about who streets are for. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Premature bet",
+      "argument": "Premature bet. AV pilots force a choice about who streets are for. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should redesign streets for driverless cars over private drivers — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should redesign streets for driverless cars over private drivers. Take a side on Today's Debate."
+  },
+  {
+    "id": "hate-speech-ban",
+    "resolution": "Liberal democracies should criminalize hate speech more aggressively.",
+    "category": "Society",
+    "context": "Europe and the US diverge sharply on where free speech ends.",
+    "pro": {
+      "title": "Dignity and safety",
+      "argument": "Dignity and safety. Europe and the US diverge sharply on where free speech ends. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Weaponized ambiguity",
+      "argument": "Weaponized ambiguity. Europe and the US diverge sharply on where free speech ends. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Liberal democracies should criminalize hate speech more aggressively — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Liberal democracies should criminalize hate speech more aggressively. Take a side on Today's Debate."
+  },
+  {
+    "id": "medicare-all",
+    "resolution": "The government should provide universal single-payer health care.",
+    "category": "Health",
+    "context": "Single-payer remains the north star for left health politics and a red line for opponents.",
+    "pro": {
+      "title": "Coverage is a right",
+      "argument": "Coverage is a right. Single-payer remains the north star for left health politics and a red line for opponents. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "One-size rationing",
+      "argument": "One-size rationing. Single-payer remains the north star for left health politics and a red line for opponents. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "The government should provide universal single-payer health care — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: The government should provide universal single-payer health care. Take a side on Today's Debate."
+  },
+  {
+    "id": "college-rankings-ban",
+    "resolution": "Universities should stop participating in commercial college rankings.",
+    "category": "Education",
+    "context": "Schools quietly revolt against ranking incentives that warp admissions.",
+    "pro": {
+      "title": "Perverse metrics",
+      "argument": "Perverse metrics. Schools quietly revolt against ranking incentives that warp admissions. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Information vacuum",
+      "argument": "Information vacuum. Schools quietly revolt against ranking incentives that warp admissions. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Universities should stop participating in commercial college rankings — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Universities should stop participating in commercial college rankings. Take a side on Today's Debate."
+  },
+  {
+    "id": "ocean-mining",
+    "resolution": "Deep-sea mining should be banned until ecosystems are mapped.",
+    "category": "Climate",
+    "context": "Battery metals tempt seabed mining before science catches up.",
+    "pro": {
+      "title": "Precaution",
+      "argument": "Precaution. Battery metals tempt seabed mining before science catches up. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Transition metals",
+      "argument": "Transition metals. Battery metals tempt seabed mining before science catches up. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Deep-sea mining should be banned until ecosystems are mapped — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Deep-sea mining should be banned until ecosystems are mapped. Take a side on Today's Debate."
+  },
+  {
+    "id": "remote-jury",
+    "resolution": "Criminal juries should be allowed to deliberate fully online.",
+    "category": "Policy",
+    "context": "Courts that tasted Zoom wonder whether remote juries can stick.",
+    "pro": {
+      "title": "Access and efficiency",
+      "argument": "Access and efficiency. Courts that tasted Zoom wonder whether remote juries can stick. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Presence matters",
+      "argument": "Presence matters. Courts that tasted Zoom wonder whether remote juries can stick. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Criminal juries should be allowed to deliberate fully online — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Criminal juries should be allowed to deliberate fully online. Take a side on Today's Debate."
+  },
+  {
+    "id": "ads-kids",
+    "resolution": "All advertising aimed at children under 13 should be banned.",
+    "category": "Society",
+    "context": "Kidfluencers and in-game ads revive calls to protect childhood attention.",
+    "pro": {
+      "title": "Kids are not a market",
+      "argument": "Kids are not a market. Kidfluencers and in-game ads revive calls to protect childhood attention. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Parents decide",
+      "argument": "Parents decide. Kidfluencers and in-game ads revive calls to protect childhood attention. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "All advertising aimed at children under 13 should be banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: All advertising aimed at children under 13 should be banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "nuclear-weapons-ban",
+    "resolution": "Nuclear-armed states should disarm unilaterally on a fixed schedule.",
+    "category": "Policy",
+    "context": "Treaty campaigns push unilateral schedules amid renewed great-power rivalry.",
+    "pro": {
+      "title": "Existential risk",
+      "argument": "Existential risk. Treaty campaigns push unilateral schedules amid renewed great-power rivalry. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Invite coercion",
+      "argument": "Invite coercion. Treaty campaigns push unilateral schedules amid renewed great-power rivalry. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Nuclear-armed states should disarm unilaterally on a fixed schedule — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Nuclear-armed states should disarm unilaterally on a fixed schedule. Take a side on Today's Debate."
+  },
+  {
+    "id": "four-day-school",
+    "resolution": "Public schools should move to a four-day week.",
+    "category": "Education",
+    "context": "Rural and budget-strapped districts already run four-day calendars.",
+    "pro": {
+      "title": "Rest and retain",
+      "argument": "Rest and retain. Rural and budget-strapped districts already run four-day calendars. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Childcare shock",
+      "argument": "Childcare shock. Rural and budget-strapped districts already run four-day calendars. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Public schools should move to a four-day week — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Public schools should move to a four-day week. Take a side on Today's Debate."
+  },
+  {
+    "id": "influencer-disclosure",
+    "resolution": "Influencers should face fines for undisclosed sponsored content.",
+    "category": "Culture",
+    "context": "Hidden ads on social feeds blur recommendations and paid pitches.",
+    "pro": {
+      "title": "Truth in packaging",
+      "argument": "Truth in packaging. Hidden ads on social feeds blur recommendations and paid pitches. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Creators crushed",
+      "argument": "Creators crushed. Hidden ads on social feeds blur recommendations and paid pitches. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Influencers should face fines for undisclosed sponsored content — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Influencers should face fines for undisclosed sponsored content. Take a side on Today's Debate."
+  },
+  {
+    "id": "urban-highways",
+    "resolution": "Cities should tear down urban highways and replace them with boulevards.",
+    "category": "Climate",
+    "context": "Highway removal projects from Seoul to Rochester inspire new fights.",
+    "pro": {
+      "title": "Repair the scar",
+      "argument": "Repair the scar. Highway removal projects from Seoul to Rochester inspire new fights. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Freight and fairness",
+      "argument": "Freight and fairness. Highway removal projects from Seoul to Rochester inspire new fights. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should tear down urban highways and replace them with boulevards — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should tear down urban highways and replace them with boulevards. Take a side on Today's Debate."
+  },
+  {
+    "id": "alcohol-age-25",
+    "resolution": "The legal drinking age should be raised to 25.",
+    "category": "Health",
+    "context": "Brain science on young adults fuels proposals to push the drinking age higher.",
+    "pro": {
+      "title": "Brain still wiring",
+      "argument": "Brain still wiring. Brain science on young adults fuels proposals to push the drinking age higher. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Prohibition theater",
+      "argument": "Prohibition theater. Brain science on young adults fuels proposals to push the drinking age higher. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "The legal drinking age should be raised to 25 — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: The legal drinking age should be raised to 25. Take a side on Today's Debate."
+  },
+  {
+    "id": "public-housing-mandate",
+    "resolution": "Every city should require large shares of new housing to be social housing.",
+    "category": "Policy",
+    "context": "Social housing mandates clash with private development economics.",
+    "pro": {
+      "title": "Decommodify shelter",
+      "argument": "Decommodify shelter. Social housing mandates clash with private development economics. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Build nothing",
+      "argument": "Build nothing. Social housing mandates clash with private development economics. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Every city should require large shares of new housing to be social housing — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Every city should require large shares of new housing to be social housing. Take a side on Today's Debate."
+  },
+  {
+    "id": "chatgpt-exams",
+    "resolution": "Schools should redesign exams assuming AI is always available.",
+    "category": "Education",
+    "context": "ChatGPT made take-home essays and many tests obsolete overnight.",
+    "pro": {
+      "title": "Assess the real world",
+      "argument": "Assess the real world. ChatGPT made take-home essays and many tests obsolete overnight. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Foundations first",
+      "argument": "Foundations first. ChatGPT made take-home essays and many tests obsolete overnight. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Schools should redesign exams assuming AI is always available — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Schools should redesign exams assuming AI is always available. Take a side on Today's Debate."
+  },
+  {
+    "id": "billionaire-space",
+    "resolution": "Billionaires should be barred from private space tourism until climate goals are met.",
+    "category": "Climate",
+    "context": "Rocket joyrides became a symbol of inequality in a heating world.",
+    "pro": {
+      "title": "Optics and carbon",
+      "argument": "Optics and carbon. Rocket joyrides became a symbol of inequality in a heating world. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Misplaced anger",
+      "argument": "Misplaced anger. Rocket joyrides became a symbol of inequality in a heating world. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Billionaires should be barred from private space tourism until climate goals are met — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Billionaires should be barred from private space tourism until climate goals are met. Take a side on Today's Debate."
+  },
+  {
+    "id": "jury-nullification",
+    "resolution": "Juries should be explicitly instructed about nullification rights.",
+    "category": "Policy",
+    "context": "Activists want courts to tell juries they can refuse unjust laws.",
+    "pro": {
+      "title": "Conscience check",
+      "argument": "Conscience check. Activists want courts to tell juries they can refuse unjust laws. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Chaos verdicts",
+      "argument": "Chaos verdicts. Activists want courts to tell juries they can refuse unjust laws. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Juries should be explicitly instructed about nullification rights — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Juries should be explicitly instructed about nullification rights. Take a side on Today's Debate."
+  },
+  {
+    "id": "plant-based-military",
+    "resolution": "Armed forces should shift to mostly plant-based rations.",
+    "category": "Climate",
+    "context": "Military logistics footprints are huge; menus became a climate lever.",
+    "pro": {
+      "title": "Lead by example",
+      "argument": "Lead by example. Military logistics footprints are huge; menus became a climate lever. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Morale and nutrition",
+      "argument": "Morale and nutrition. Military logistics footprints are huge; menus became a climate lever. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Armed forces should shift to mostly plant-based rations — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Armed forces should shift to mostly plant-based rations. Take a side on Today's Debate."
+  },
+  {
+    "id": "social-credit-west",
+    "resolution": "Western democracies should adopt social credit-style behavior scores.",
+    "category": "Society",
+    "context": "After seeing China systems, some propose softer Western reputation scores.",
+    "pro": {
+      "title": "Incentivize virtue",
+      "argument": "Incentivize virtue. After seeing China systems, some propose softer Western reputation scores. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Soft totalitarianism",
+      "argument": "Soft totalitarianism. After seeing China systems, some propose softer Western reputation scores. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Western democracies should adopt social credit-style behavior scores — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Western democracies should adopt social credit-style behavior scores. Take a side on Today's Debate."
+  },
+  {
+    "id": "year-round-school",
+    "resolution": "Schools should run year-round calendars without long summer breaks.",
+    "category": "Education",
+    "context": "Summer learning loss research keeps year-round calendars in play.",
+    "pro": {
+      "title": "Stop the slide",
+      "argument": "Stop the slide. Summer learning loss research keeps year-round calendars in play. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Childhood summer",
+      "argument": "Childhood summer. Summer learning loss research keeps year-round calendars in play. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Schools should run year-round calendars without long summer breaks — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Schools should run year-round calendars without long summer breaks. Take a side on Today's Debate."
+  },
+  {
+    "id": "drone-delivery",
+    "resolution": "Cities should open low-altitude airspace to commercial delivery drones.",
+    "category": "Technology",
+    "context": "Amazon and others lobby for drone lanes above neighborhoods.",
+    "pro": {
+      "title": "Skip the truck",
+      "argument": "Skip the truck. Amazon and others lobby for drone lanes above neighborhoods. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Noise and privacy",
+      "argument": "Noise and privacy. Amazon and others lobby for drone lanes above neighborhoods. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should open low-altitude airspace to commercial delivery drones — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should open low-altitude airspace to commercial delivery drones. Take a side on Today's Debate."
+  },
+  {
+    "id": "attorney-general-appointed",
+    "resolution": "Attorneys general should be appointed, not elected.",
+    "category": "Policy",
+    "context": "Politicized prosecutions revive the elected-versus-appointed AG fight.",
+    "pro": {
+      "title": "Law not campaign",
+      "argument": "Law not campaign. Politicized prosecutions revive the elected-versus-appointed AG fight. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Accountable to voters",
+      "argument": "Accountable to voters. Politicized prosecutions revive the elected-versus-appointed AG fight. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Attorneys general should be appointed, not elected — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Attorneys general should be appointed, not elected. Take a side on Today's Debate."
+  },
+  {
+    "id": "museum-restitution",
+    "resolution": "Western museums should return contested colonial artifacts.",
+    "category": "Culture",
+    "context": "Benin Bronzes and similar cases reshaped museum ethics.",
+    "pro": {
+      "title": "Stolen is stolen",
+      "argument": "Stolen is stolen. Benin Bronzes and similar cases reshaped museum ethics. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Universal museums",
+      "argument": "Universal museums. Benin Bronzes and similar cases reshaped museum ethics. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Western museums should return contested colonial artifacts — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Western museums should return contested colonial artifacts. Take a side on Today's Debate."
+  },
+  {
+    "id": "fast-fashion-ban",
+    "resolution": "Ultra-fast fashion business models should be heavily regulated or banned.",
+    "category": "Climate",
+    "context": "Shein-era cycles made textile waste a policy target.",
+    "pro": {
+      "title": "Disposable clothes",
+      "argument": "Disposable clothes. Shein-era cycles made textile waste a policy target. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Style for the broke",
+      "argument": "Style for the broke. Shein-era cycles made textile waste a policy target. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Ultra-fast fashion business models should be heavily regulated or banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Ultra-fast fashion business models should be heavily regulated or banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "mental-health-days",
+    "resolution": "Employees should get unlimited mental health days by law.",
+    "category": "Work & Economy",
+    "context": "Post-pandemic workplaces debate formal mental health leave.",
+    "pro": {
+      "title": "Prevention beats burnout",
+      "argument": "Prevention beats burnout. Post-pandemic workplaces debate formal mental health leave. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Unlimited is unworkable",
+      "argument": "Unlimited is unworkable. Post-pandemic workplaces debate formal mental health leave. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Employees should get unlimited mental health days by law — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Employees should get unlimited mental health days by law. Take a side on Today's Debate."
+  },
+  {
+    "id": "concussion-ban-tackle",
+    "resolution": "Youth tackle football should be banned under age 14.",
+    "category": "Sports",
+    "context": "CTE research presses youth leagues on when tackling should start.",
+    "pro": {
+      "title": "Brains not tough enough",
+      "argument": "Brains not tough enough. CTE research presses youth leagues on when tackling should start. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Culture and choice",
+      "argument": "Culture and choice. CTE research presses youth leagues on when tackling should start. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Youth tackle football should be banned under age 14 — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Youth tackle football should be banned under age 14. Take a side on Today's Debate."
+  },
+  {
+    "id": "basic-income-kids",
+    "resolution": "Governments should pay a universal child allowance to every family.",
+    "category": "Policy",
+    "context": "Child allowances cut poverty in pilots and national programs.",
+    "pro": {
+      "title": "Invest at the start",
+      "argument": "Invest at the start. Child allowances cut poverty in pilots and national programs. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Fertility bribe fears",
+      "argument": "Fertility bribe fears. Child allowances cut poverty in pilots and national programs. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should pay a universal child allowance to every family — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should pay a universal child allowance to every family. Take a side on Today's Debate."
+  },
+  {
+    "id": "open-source-ai",
+    "resolution": "Frontier AI models should be required to release open weights.",
+    "category": "Technology",
+    "context": "Open versus closed model wars shape who controls AI capability.",
+    "pro": {
+      "title": "Public intelligence",
+      "argument": "Public intelligence. Open versus closed model wars shape who controls AI capability. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Proliferation risk",
+      "argument": "Proliferation risk. Open versus closed model wars shape who controls AI capability. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Frontier AI models should be required to release open weights — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Frontier AI models should be required to release open weights. Take a side on Today's Debate."
+  },
+  {
+    "id": "car-free-centers",
+    "resolution": "Major cities should ban private cars from downtown cores.",
+    "category": "Climate",
+    "context": "European low-emission zones inspire bolder car-free downtown proposals.",
+    "pro": {
+      "title": "Cities for people",
+      "argument": "Cities for people. European low-emission zones inspire bolder car-free downtown proposals. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Access denied",
+      "argument": "Access denied. European low-emission zones inspire bolder car-free downtown proposals. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Major cities should ban private cars from downtown cores — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Major cities should ban private cars from downtown cores. Take a side on Today's Debate."
+  },
+  {
+    "id": "polygamy-legal",
+    "resolution": "Consensual polygamy among adults should be legal.",
+    "category": "Society",
+    "context": "Plural marriage activists hitch arguments to LGBTQ equality frameworks.",
+    "pro": {
+      "title": "Consenting adults",
+      "argument": "Consenting adults. Plural marriage activists hitch arguments to LGBTQ equality frameworks. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Power imbalance",
+      "argument": "Power imbalance. Plural marriage activists hitch arguments to LGBTQ equality frameworks. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Consensual polygamy among adults should be legal — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Consensual polygamy among adults should be legal. Take a side on Today's Debate."
+  },
+  {
+    "id": "stock-buyback-ban",
+    "resolution": "Public companies should be banned from stock buybacks.",
+    "category": "Work & Economy",
+    "context": "Buybacks are blamed for underinvestment and worker squeeze.",
+    "pro": {
+      "title": "Invest in people",
+      "argument": "Invest in people. Buybacks are blamed for underinvestment and worker squeeze. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Flexible capital return",
+      "argument": "Flexible capital return. Buybacks are blamed for underinvestment and worker squeeze. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Public companies should be banned from stock buybacks — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Public companies should be banned from stock buybacks. Take a side on Today's Debate."
+  },
+  {
+    "id": "parental-leave-equal",
+    "resolution": "Parental leave should be equal and non-transferable for each parent.",
+    "category": "Society",
+    "context": "Use-it-or-lose-it leave for fathers aims to rebalance care.",
+    "pro": {
+      "title": "Norms need force",
+      "argument": "Norms need force. Use-it-or-lose-it leave for fathers aims to rebalance care. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Families differ",
+      "argument": "Families differ. Use-it-or-lose-it leave for fathers aims to rebalance care. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Parental leave should be equal and non-transferable for each parent — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Parental leave should be equal and non-transferable for each parent. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-loot-boxes",
+    "resolution": "Loot boxes in games should be regulated as gambling.",
+    "category": "Culture",
+    "context": "Random paid rewards blur gaming and gambling for kids.",
+    "pro": {
+      "title": "Predatory by design",
+      "argument": "Predatory by design. Random paid rewards blur gaming and gambling for kids. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Cosmetic panic",
+      "argument": "Cosmetic panic. Random paid rewards blur gaming and gambling for kids. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Loot boxes in games should be regulated as gambling — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Loot boxes in games should be regulated as gambling. Take a side on Today's Debate."
+  },
+  {
+    "id": "clinical-trial-diversity",
+    "resolution": "Drug trials should be legally required to match population demographics.",
+    "category": "Health",
+    "context": "Underrepresentation in trials leaves efficacy gaps for many groups.",
+    "pro": {
+      "title": "Medicine for everyone",
+      "argument": "Medicine for everyone. Underrepresentation in trials leaves efficacy gaps for many groups. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Delay cures",
+      "argument": "Delay cures. Underrepresentation in trials leaves efficacy gaps for many groups. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Drug trials should be legally required to match population demographics — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Drug trials should be legally required to match population demographics. Take a side on Today's Debate."
+  },
+  {
+    "id": "land-value-tax",
+    "resolution": "Cities should replace property tax with a land value tax.",
+    "category": "Policy",
+    "context": "Georgist tax ideas return as housing crises deepen.",
+    "pro": {
+      "title": "Tax the location",
+      "argument": "Tax the location. Georgist tax ideas return as housing crises deepen. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Assessment fights",
+      "argument": "Assessment fights. Georgist tax ideas return as housing crises deepen. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should replace property tax with a land value tax — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should replace property tax with a land value tax. Take a side on Today's Debate."
+  },
+  {
+    "id": "ai-therapist",
+    "resolution": "AI chatbots should be allowed as licensed mental health tools.",
+    "category": "Health",
+    "context": "Therapy waitlists make AI companions a tempting stopgap.",
+    "pro": {
+      "title": "Access bridge",
+      "argument": "Access bridge. Therapy waitlists make AI companions a tempting stopgap. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "False intimacy",
+      "argument": "False intimacy. Therapy waitlists make AI companions a tempting stopgap. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "AI chatbots should be allowed as licensed mental health tools — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: AI chatbots should be allowed as licensed mental health tools. Take a side on Today's Debate."
+  },
+  {
+    "id": "english-official",
+    "resolution": "English should be the sole official language of government.",
+    "category": "Society",
+    "context": "Official-language fights return with immigration politics.",
+    "pro": {
+      "title": "Common tongue",
+      "argument": "Common tongue. Official-language fights return with immigration politics. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Plural reality",
+      "argument": "Plural reality. Official-language fights return with immigration politics. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "English should be the sole official language of government — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: English should be the sole official language of government. Take a side on Today's Debate."
+  },
+  {
+    "id": "congestion-pricing",
+    "resolution": "Every major city should adopt congestion pricing.",
+    "category": "Climate",
+    "context": "London and NYC-style tolls show traffic can be priced.",
+    "pro": {
+      "title": "Time is money",
+      "argument": "Time is money. London and NYC-style tolls show traffic can be priced. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Regressive tolls",
+      "argument": "Regressive tolls. London and NYC-style tolls show traffic can be priced. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Every major city should adopt congestion pricing — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Every major city should adopt congestion pricing. Take a side on Today's Debate."
+  },
+  {
+    "id": "gene-patents",
+    "resolution": "Human genes should not be patentable.",
+    "category": "Science",
+    "context": "IP fights over diagnostics and CRISPR keep gene-patent ethics live.",
+    "pro": {
+      "title": "Nature is not invented",
+      "argument": "Nature is not invented. IP fights over diagnostics and CRISPR keep gene-patent ethics live. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Incentives matter",
+      "argument": "Incentives matter. IP fights over diagnostics and CRISPR keep gene-patent ethics live. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Human genes should not be patentable — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Human genes should not be patentable. Take a side on Today's Debate."
+  },
+  {
+    "id": "school-vouchers",
+    "resolution": "Every family should get a voucher usable at any accredited school.",
+    "category": "Education",
+    "context": "Voucher expansions clash with public-school funding politics.",
+    "pro": {
+      "title": "Fund students",
+      "argument": "Fund students. Voucher expansions clash with public-school funding politics. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Drain the commons",
+      "argument": "Drain the commons. Voucher expansions clash with public-school funding politics. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Every family should get a voucher usable at any accredited school — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Every family should get a voucher usable at any accredited school. Take a side on Today's Debate."
+  },
+  {
+    "id": "facial-recog-ban",
+    "resolution": "Police use of facial recognition should be banned.",
+    "category": "Society",
+    "context": "Misidentification scandals drive local bans on police face search.",
+    "pro": {
+      "title": "Wrongful arrests",
+      "argument": "Wrongful arrests. Misidentification scandals drive local bans on police face search. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Solve the unsolvable",
+      "argument": "Solve the unsolvable. Misidentification scandals drive local bans on police face search. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Police use of facial recognition should be banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Police use of facial recognition should be banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "farm-subsidy-end",
+    "resolution": "Agricultural subsidies for commodity crops should end.",
+    "category": "Policy",
+    "context": "Corn and soy subsidies shape diets, land use, and trade fights.",
+    "pro": {
+      "title": "Stop distorting food",
+      "argument": "Stop distorting food. Corn and soy subsidies shape diets, land use, and trade fights. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Volatility shock",
+      "argument": "Volatility shock. Corn and soy subsidies shape diets, land use, and trade fights. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Agricultural subsidies for commodity crops should end — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Agricultural subsidies for commodity crops should end. Take a side on Today's Debate."
+  },
+  {
+    "id": "robot-tax",
+    "resolution": "Companies should pay a tax for each job replaced by automation.",
+    "category": "Work & Economy",
+    "context": "Robot taxes propose funding transition as AI eats tasks.",
+    "pro": {
+      "title": "Share the surplus",
+      "argument": "Share the surplus. Robot taxes propose funding transition as AI eats tasks. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Punish productivity",
+      "argument": "Punish productivity. Robot taxes propose funding transition as AI eats tasks. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Companies should pay a tax for each job replaced by automation — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Companies should pay a tax for each job replaced by automation. Take a side on Today's Debate."
+  },
+  {
+    "id": "lifetime-congress-age",
+    "resolution": "There should be a maximum age limit for national elected office.",
+    "category": "Policy",
+    "context": "Gerontocracy critiques fuel maximum-age proposals.",
+    "pro": {
+      "title": "Cognitive duty",
+      "argument": "Cognitive duty. Gerontocracy critiques fuel maximum-age proposals. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Age is not ability",
+      "argument": "Age is not ability. Gerontocracy critiques fuel maximum-age proposals. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "There should be a maximum age limit for national elected office — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: There should be a maximum age limit for national elected office. Take a side on Today's Debate."
+  },
+  {
+    "id": "public-domain-short",
+    "resolution": "Copyright terms should be shortened to under 30 years.",
+    "category": "Culture",
+    "context": "Long copyrights keep culture locked; reformers want shorter terms.",
+    "pro": {
+      "title": "Culture wants remix",
+      "argument": "Culture wants remix. Long copyrights keep culture locked; reformers want shorter terms. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Incentive cliff",
+      "argument": "Incentive cliff. Long copyrights keep culture locked; reformers want shorter terms. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Copyright terms should be shortened to under 30 years — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Copyright terms should be shortened to under 30 years. Take a side on Today's Debate."
+  },
+  {
+    "id": "military-draft",
+    "resolution": "A gender-neutral military draft should be reinstated.",
+    "category": "Society",
+    "context": "Recruiting shortfalls revive draft talk with equity debates.",
+    "pro": {
+      "title": "Shared burden",
+      "argument": "Shared burden. Recruiting shortfalls revive draft talk with equity debates. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Coerced killing",
+      "argument": "Coerced killing. Recruiting shortfalls revive draft talk with equity debates. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "A gender-neutral military draft should be reinstated — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: A gender-neutral military draft should be reinstated. Take a side on Today's Debate."
+  },
+  {
+    "id": "soda-schools",
+    "resolution": "Schools should ban all sugary drinks including sports drinks.",
+    "category": "Health",
+    "context": "Wellness policies keep tightening what kids can buy at school.",
+    "pro": {
+      "title": "Model the day",
+      "argument": "Model the day. Wellness policies keep tightening what kids can buy at school. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Hydration and choice",
+      "argument": "Hydration and choice. Wellness policies keep tightening what kids can buy at school. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Schools should ban all sugary drinks including sports drinks — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Schools should ban all sugary drinks including sports drinks. Take a side on Today's Debate."
+  },
+  {
+    "id": "algorithmic-feed-optout",
+    "resolution": "Social platforms should default to chronological feeds.",
+    "category": "Technology",
+    "context": "Chronological defaults are proposed as an antidote to engagement ranking.",
+    "pro": {
+      "title": "User agency",
+      "argument": "User agency. Chronological defaults are proposed as an antidote to engagement ranking. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Firehose reality",
+      "argument": "Firehose reality. Chronological defaults are proposed as an antidote to engagement ranking. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Social platforms should default to chronological feeds — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Social platforms should default to chronological feeds. Take a side on Today's Debate."
+  },
+  {
+    "id": "water-futures",
+    "resolution": "Speculative trading of water rights should be banned.",
+    "category": "Climate",
+    "context": "As droughts worsen, financialization of water draws outrage.",
+    "pro": {
+      "title": "Life not a ticker",
+      "argument": "Life not a ticker. As droughts worsen, financialization of water draws outrage. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Price signals help",
+      "argument": "Price signals help. As droughts worsen, financialization of water draws outrage. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Speculative trading of water rights should be banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Speculative trading of water rights should be banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "celebrity-endorsement-ban",
+    "resolution": "Political campaigns should ban paid celebrity endorsements.",
+    "category": "Culture",
+    "context": "Star-studded campaigns raise whether fame should be purchasable political speech.",
+    "pro": {
+      "title": "Substance over fame",
+      "argument": "Substance over fame. Star-studded campaigns raise whether fame should be purchasable political speech. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Speech is speech",
+      "argument": "Speech is speech. Star-studded campaigns raise whether fame should be purchasable political speech. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Political campaigns should ban paid celebrity endorsements — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Political campaigns should ban paid celebrity endorsements. Take a side on Today's Debate."
+  },
+  {
+    "id": "mars-colony",
+    "resolution": "Humanity should prioritize a permanent Mars settlement this century.",
+    "category": "Science",
+    "context": "Mars settlement timelines slipped but the ambition remains a cultural Rorschach.",
+    "pro": {
+      "title": "Backup planet",
+      "argument": "Backup planet. Mars settlement timelines slipped but the ambition remains a cultural Rorschach. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Fantasy budget",
+      "argument": "Fantasy budget. Mars settlement timelines slipped but the ambition remains a cultural Rorschach. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Humanity should prioritize a permanent Mars settlement this century — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Humanity should prioritize a permanent Mars settlement this century. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-shadowbanning",
+    "resolution": "Platforms should be banned from shadowbanning without notice.",
+    "category": "Technology",
+    "context": "Creators demand transparency when reach silently dies.",
+    "pro": {
+      "title": "Due process lite",
+      "argument": "Due process lite. Creators demand transparency when reach silently dies. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Spam arms race",
+      "argument": "Spam arms race. Creators demand transparency when reach silently dies. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Platforms should be banned from shadowbanning without notice — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Platforms should be banned from shadowbanning without notice. Take a side on Today's Debate."
+  },
+  {
+    "id": "teacher-pay-double",
+    "resolution": "Public school teacher pay should be doubled.",
+    "category": "Education",
+    "context": "Recruitment crises make dramatic pay proposals mainstream.",
+    "pro": {
+      "title": "Pay for talent",
+      "argument": "Pay for talent. Recruitment crises make dramatic pay proposals mainstream. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Money without reform",
+      "argument": "Money without reform. Recruitment crises make dramatic pay proposals mainstream. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Public school teacher pay should be doubled — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Public school teacher pay should be doubled. Take a side on Today's Debate."
+  },
+  {
+    "id": "crypto-cbdc",
+    "resolution": "Central bank digital currencies should replace most cash.",
+    "category": "Technology",
+    "context": "CBDC pilots raise whether state money goes fully digital.",
+    "pro": {
+      "title": "Modern money",
+      "argument": "Modern money. CBDC pilots raise whether state money goes fully digital. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Programmable control",
+      "argument": "Programmable control. CBDC pilots raise whether state money goes fully digital. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Central bank digital currencies should replace most cash — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Central bank digital currencies should replace most cash. Take a side on Today's Debate."
+  },
+  {
+    "id": "stadium-subsidy-ban",
+    "resolution": "Cities should be banned from subsidizing pro sports stadiums.",
+    "category": "Sports",
+    "context": "Economists long argued stadium deals fail taxpayers.",
+    "pro": {
+      "title": "Stop the ransom",
+      "argument": "Stop the ransom. Economists long argued stadium deals fail taxpayers. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Anchor benefits",
+      "argument": "Anchor benefits. Economists long argued stadium deals fail taxpayers. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cities should be banned from subsidizing pro sports stadiums — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cities should be banned from subsidizing pro sports stadiums. Take a side on Today's Debate."
+  },
+  {
+    "id": "universal-broadband",
+    "resolution": "Every household should get free basic broadband.",
+    "category": "Technology",
+    "context": "Broadband as a free public good joins water and electricity debates.",
+    "pro": {
+      "title": "Homework gap",
+      "argument": "Homework gap. Broadband as a free public good joins water and electricity debates. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Who builds it",
+      "argument": "Who builds it. Broadband as a free public good joins water and electricity debates. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Every household should get free basic broadband — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Every household should get free basic broadband. Take a side on Today's Debate."
+  },
+  {
+    "id": "plastic-surgery-minors",
+    "resolution": "Cosmetic surgery on minors for non-medical reasons should be banned.",
+    "category": "Health",
+    "context": "Teen cosmetic procedures rose with social media filters.",
+    "pro": {
+      "title": "Protect developing bodies",
+      "argument": "Protect developing bodies. Teen cosmetic procedures rose with social media filters. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Careful exceptions",
+      "argument": "Careful exceptions. Teen cosmetic procedures rose with social media filters. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Cosmetic surgery on minors for non-medical reasons should be banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Cosmetic surgery on minors for non-medical reasons should be banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "work-from-abroad",
+    "resolution": "Companies should allow employees to work from any country.",
+    "category": "Work & Economy",
+    "context": "Digital nomad visas collided with tax and security policies.",
+    "pro": {
+      "title": "Talent without borders",
+      "argument": "Talent without borders. Digital nomad visas collided with tax and security policies. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Compliance nightmare",
+      "argument": "Compliance nightmare. Digital nomad visas collided with tax and security policies. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Companies should allow employees to work from any country — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Companies should allow employees to work from any country. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-super-pacs",
+    "resolution": "Super PACs should be abolished.",
+    "category": "Policy",
+    "context": "Campaign finance reformers still target independent expenditure giants.",
+    "pro": {
+      "title": "Democracy not auction",
+      "argument": "Democracy not auction. Campaign finance reformers still target independent expenditure giants. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Speech and association",
+      "argument": "Speech and association. Campaign finance reformers still target independent expenditure giants. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Super PACs should be abolished — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Super PACs should be abolished. Take a side on Today's Debate."
+  },
+  {
+    "id": "insect-protein",
+    "resolution": "Governments should promote insect protein in public food programs.",
+    "category": "Climate",
+    "context": "UN-backed insect protein faces Western gag reflexes.",
+    "pro": {
+      "title": "Efficient protein",
+      "argument": "Efficient protein. UN-backed insect protein faces Western gag reflexes. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Culture counts",
+      "argument": "Culture counts. UN-backed insect protein faces Western gag reflexes. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Governments should promote insect protein in public food programs — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Governments should promote insect protein in public food programs. Take a side on Today's Debate."
+  },
+  {
+    "id": "lifetime-streaming",
+    "resolution": "Streaming services should be required to keep licensed shows available for a minimum term.",
+    "category": "Culture",
+    "context": "Shows vanish from catalogs mid-binge as licenses churn.",
+    "pro": {
+      "title": "Cultural archives",
+      "argument": "Cultural archives. Shows vanish from catalogs mid-binge as licenses churn. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Contract reality",
+      "argument": "Contract reality. Shows vanish from catalogs mid-binge as licenses churn. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Streaming services should be required to keep licensed shows available for a minimum term — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Streaming services should be required to keep licensed shows available for a minimum term. Take a side on Today's Debate."
+  },
+  {
+    "id": "ai-art-label",
+    "resolution": "AI-generated media should require prominent labeling.",
+    "category": "Technology",
+    "context": "Deepfakes and AI art spark mandatory watermark proposals.",
+    "pro": {
+      "title": "Signal the synthetic",
+      "argument": "Signal the synthetic. Deepfakes and AI art spark mandatory watermark proposals. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Watermarks fail",
+      "argument": "Watermarks fail. Deepfakes and AI art spark mandatory watermark proposals. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "AI-generated media should require prominent labeling — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: AI-generated media should require prominent labeling. Take a side on Today's Debate."
+  },
+  {
+    "id": "park-camping-ban",
+    "resolution": "Major cities should ban homeless encampments in public parks.",
+    "category": "Policy",
+    "context": "Compassion versus order fights play out in park clearances.",
+    "pro": {
+      "title": "Parks are for everyone",
+      "argument": "Parks are for everyone. Compassion versus order fights play out in park clearances. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Criminalize poverty",
+      "argument": "Criminalize poverty. Compassion versus order fights play out in park clearances. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Major cities should ban homeless encampments in public parks — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Major cities should ban homeless encampments in public parks. Take a side on Today's Debate."
+  },
+  {
+    "id": "college-sports-split",
+    "resolution": "Big-time college football should spin out of universities.",
+    "category": "Sports",
+    "context": "NIL and TV money make major football look fully professional.",
+    "pro": {
+      "title": "Academics first",
+      "argument": "Academics first. NIL and TV money make major football look fully professional. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Campus glue",
+      "argument": "Campus glue. NIL and TV money make major football look fully professional. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Big-time college football should spin out of universities — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Big-time college football should spin out of universities. Take a side on Today's Debate."
+  },
+  {
+    "id": "microplastics-ban",
+    "resolution": "Products shedding high microplastics should be banned.",
+    "category": "Climate",
+    "context": "Microplastics in blood and oceans push product bans beyond bags.",
+    "pro": {
+      "title": "Stop the bleed",
+      "argument": "Stop the bleed. Microplastics in blood and oceans push product bans beyond bags. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Everything sheds",
+      "argument": "Everything sheds. Microplastics in blood and oceans push product bans beyond bags. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Products shedding high microplastics should be banned — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Products shedding high microplastics should be banned. Take a side on Today's Debate."
+  },
+  {
+    "id": "citizen-assemblies",
+    "resolution": "Citizen assemblies should decide major constitutional questions.",
+    "category": "Policy",
+    "context": "Climate and electoral assemblies inspired calls for more sortition.",
+    "pro": {
+      "title": "Deliberation beats tribalism",
+      "argument": "Deliberation beats tribalism. Climate and electoral assemblies inspired calls for more sortition. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Accountability gap",
+      "argument": "Accountability gap. Climate and electoral assemblies inspired calls for more sortition. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Citizen assemblies should decide major constitutional questions — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Citizen assemblies should decide major constitutional questions. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-targeted-political-ads",
+    "resolution": "Platforms should ban microtargeted political advertising.",
+    "category": "Technology",
+    "context": "Microtargeting is blamed for polarizing persuasion in the dark.",
+    "pro": {
+      "title": "Sunlight politics",
+      "argument": "Sunlight politics. Microtargeting is blamed for polarizing persuasion in the dark. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Speech channels",
+      "argument": "Speech channels. Microtargeting is blamed for polarizing persuasion in the dark. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Platforms should ban microtargeted political advertising — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Platforms should ban microtargeted political advertising. Take a side on Today's Debate."
+  },
+  {
+    "id": "medical-aid-dying",
+    "resolution": "Medical aid in dying should be legal for terminal adults nationwide.",
+    "category": "Health",
+    "context": "MAID laws expand while disability advocates warn of coercion.",
+    "pro": {
+      "title": "Last autonomy",
+      "argument": "Last autonomy. MAID laws expand while disability advocates warn of coercion. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Coercion risk",
+      "argument": "Coercion risk. MAID laws expand while disability advocates warn of coercion. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Medical aid in dying should be legal for terminal adults nationwide — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Medical aid in dying should be legal for terminal adults nationwide. Take a side on Today's Debate."
+  },
+  {
+    "id": "prime-amazon-split",
+    "resolution": "Regulators should break up Amazon retail and AWS.",
+    "category": "Technology",
+    "context": "Antitrust cases ask whether cloud and retail under one roof is too much power.",
+    "pro": {
+      "title": "Structural separation",
+      "argument": "Structural separation. Antitrust cases ask whether cloud and retail under one roof is too much power. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Integrated efficiency",
+      "argument": "Integrated efficiency. Antitrust cases ask whether cloud and retail under one roof is too much power. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Regulators should break up Amazon retail and AWS — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Regulators should break up Amazon retail and AWS. Take a side on Today's Debate."
+  },
+  {
+    "id": "school-start-later",
+    "resolution": "High schools should start no earlier than 8:30 a.m.",
+    "category": "Health",
+    "context": "Sleep science pushed later bell times into mainstream policy.",
+    "pro": {
+      "title": "Biology is policy",
+      "argument": "Biology is policy. Sleep science pushed later bell times into mainstream policy. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Family logistics",
+      "argument": "Family logistics. Sleep science pushed later bell times into mainstream policy. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "High schools should start no earlier than 8:30 a.m — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: High schools should start no earlier than 8:30 a.m. Take a side on Today's Debate."
+  },
+  {
+    "id": "universal-childcare",
+    "resolution": "Government should guarantee universal childcare from age one.",
+    "category": "Policy",
+    "context": "Childcare costs rival rent and stall careers, especially for mothers.",
+    "pro": {
+      "title": "Infrastructure for work",
+      "argument": "Infrastructure for work. Childcare costs rival rent and stall careers, especially for mothers. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Quality cliff",
+      "argument": "Quality cliff. Childcare costs rival rent and stall careers, especially for mothers. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Government should guarantee universal childcare from age one — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Government should guarantee universal childcare from age one. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-gas-cars",
+    "resolution": "Sale of new gasoline cars should be banned by 2035.",
+    "category": "Climate",
+    "context": "EV mandates set hard dates that thrill climate hawks and scare drivers.",
+    "pro": {
+      "title": "Hard stop needed",
+      "argument": "Hard stop needed. EV mandates set hard dates that thrill climate hawks and scare drivers. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Grid and choice",
+      "argument": "Grid and choice. EV mandates set hard dates that thrill climate hawks and scare drivers. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Sale of new gasoline cars should be banned by 2035 — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Sale of new gasoline cars should be banned by 2035. Take a side on Today's Debate."
+  },
+  {
+    "id": "journalist-shield",
+    "resolution": "National shield laws should protect journalist confidential sources.",
+    "category": "Society",
+    "context": "Raids on newsrooms revive demands for stronger source protection.",
+    "pro": {
+      "title": "Democracy needs sources",
+      "argument": "Democracy needs sources. Raids on newsrooms revive demands for stronger source protection. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Who is a journalist",
+      "argument": "Who is a journalist. Raids on newsrooms revive demands for stronger source protection. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "National shield laws should protect journalist confidential sources — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: National shield laws should protect journalist confidential sources. Take a side on Today's Debate."
+  },
+  {
+    "id": "orbit-debris-tax",
+    "resolution": "Companies should pay a tax on every satellite launch for debris risk.",
+    "category": "Science",
+    "context": "Mega-constellations raise Kessler syndrome fears.",
+    "pro": {
+      "title": "Price the junk",
+      "argument": "Price the junk. Mega-constellations raise Kessler syndrome fears. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Chills exploration",
+      "argument": "Chills exploration. Mega-constellations raise Kessler syndrome fears. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Companies should pay a tax on every satellite launch for debris risk — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Companies should pay a tax on every satellite launch for debris risk. Take a side on Today's Debate."
+  },
+  {
+    "id": "paid-jury-duty",
+    "resolution": "Jury duty should pay at least the local median wage.",
+    "category": "Policy",
+    "context": "Unpaid or token jury pay excludes working people from the box.",
+    "pro": {
+      "title": "Democratic participation",
+      "argument": "Democratic participation. Unpaid or token jury pay excludes working people from the box. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Budget blowout",
+      "argument": "Budget blowout. Unpaid or token jury pay excludes working people from the box. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Jury duty should pay at least the local median wage — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Jury duty should pay at least the local median wage. Take a side on Today's Debate."
+  },
+  {
+    "id": "ban-noncompetes",
+    "resolution": "Non-compete agreements should be banned for all workers.",
+    "category": "Work & Economy",
+    "context": "Regulators moved against noncompetes that trap workers in jobs.",
+    "pro": {
+      "title": "Labor mobility",
+      "argument": "Labor mobility. Regulators moved against noncompetes that trap workers in jobs. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Protect secrets",
+      "argument": "Protect secrets. Regulators moved against noncompetes that trap workers in jobs. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Non-compete agreements should be banned for all workers — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Non-compete agreements should be banned for all workers. Take a side on Today's Debate."
+  },
+  {
+    "id": "street-cameras-audio",
+    "resolution": "Public CCTV should be allowed to record audio as well as video.",
+    "category": "Society",
+    "context": "Cities debate whether cameras need ears to be useful.",
+    "pro": {
+      "title": "Complete evidence",
+      "argument": "Complete evidence. Cities debate whether cameras need ears to be useful. Supporters argue the status quo externalizes harm and delays a clearer rule. Waiting for perfect consensus usually means incumbents keep winning by default."
+    },
+    "con": {
+      "title": "Private conversations",
+      "argument": "Private conversations. Cities debate whether cameras need ears to be useful. Critics warn the proposed fix creates new failure modes — cost, coercion, or unintended side effects — that may outweigh the problem it targets."
+    },
+    "status": "published",
+    "publishedAt": "2025-01-01",
+    "seoTitle": "Public CCTV should be allowed to record audio as well as video — arguments for and against",
+    "seoDescription": "Read the strongest case for and against: Public CCTV should be allowed to record audio as well as video. Take a side on Today's Debate."
+  }
+]
