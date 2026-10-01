@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Libre_Bodoni, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { Analytics } from "@/components/analytics";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
@@ -10,26 +10,27 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  themeColor: "#0c0f14",
+  themeColor: "#eceef1",
 };
 
-const display = Syne({
+const display = Libre_Bodoni({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
-const body = DM_Sans({
+const body = Source_Sans_3({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const monoData = JetBrains_Mono({
+const monoData = IBM_Plex_Mono({
   variable: "--font-mono-data",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {

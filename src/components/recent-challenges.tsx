@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Challenge } from "@/types/debate";
 import { listRecentChallenges } from "@/lib/challenges";
+import { listSeedChallenges } from "@/data/crowd";
 
 function statusLabel(status: Challenge["status"]): string {
   if (status === "open") return "Open";
@@ -12,9 +13,9 @@ function statusLabel(status: Challenge["status"]): string {
 }
 
 function statusTone(status: Challenge["status"]): string {
-  if (status === "open") return "text-pro bg-pro/15";
-  if (status === "live") return "text-con bg-con/15";
-  return "text-muted bg-border/40";
+  if (status === "open") return "text-pro";
+  if (status === "live") return "text-con";
+  return "text-muted";
 }
 
 export function RecentChallenges({ limit = 6 }: { limit?: number }) {
@@ -23,8 +24,19 @@ export function RecentChallenges({ limit = 6 }: { limit?: number }) {
   useEffect(() => {
     let active = true;
     listRecentChallenges(limit)
-      .then((data) => active && setItems(data))
-      .catch(() => active && setItems([]));
+      .then((live) => {
+        if (!active) return;
+        const seeds = listSeedChallenges();
+        const liveIds = new Set(live.map((c) => c.inviteCode));
+        const merged = [
+          ...live,
+          ...seeds.filter((s) => !liveIds.has(s.inviteCode)),
+        ].slice(0, limit);
+        setItems(merged);
+      })
+      .catch(() => {
+        if (active) setItems(listSeedChallenges().slice(0, limit));
+      });
     return () => {
       active = false;
     };
@@ -37,7 +49,7 @@ export function RecentChallenges({ limit = 6 }: { limit?: number }) {
   if (items.length === 0) {
     return (
       <div className="arena-card px-6 py-8 text-center">
-        <p className="font-display text-xl font-bold text-foreground">
+        <p className="font-display text-xl font-semibold text-foreground">
           No challenges yet
         </p>
         <p className="mt-2 text-sm text-muted">
@@ -56,20 +68,20 @@ export function RecentChallenges({ limit = 6 }: { limit?: number }) {
         <Link
           key={c.id}
           href={`/challenge/${c.inviteCode}`}
-          className="arena-card block px-5 py-4 transition hover:border-pro/40"
+          className="arena-card block px-5 py-4 transition hover:border-foreground"
         >
-          <div className="flex flex-wrap items-center gap-2">
-            <span className={`label rounded-full px-2.5 py-1 ${statusTone(c.status)}`}>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className={`label ${statusTone(c.status)}`}>
               {statusLabel(c.status)}
             </span>
             <span className="label text-muted">{c.category}</span>
           </div>
-          <p className="mt-2 font-display text-lg font-bold leading-snug text-foreground">
+          <p className="mt-2 font-display text-lg font-semibold leading-snug text-foreground">
             {c.motion}
           </p>
           <p className="mt-2 text-sm text-muted">
             {c.challengerName}
-            {c.opponentName ? ` vs ${c.opponentName}` : " waiting for opponent"}
+            {c.opponentName ? ` vs ${c.opponentName}` : " — waiting for opponent"}
           </p>
         </Link>
       ))}

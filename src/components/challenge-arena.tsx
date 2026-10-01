@@ -67,6 +67,8 @@ export function ChallengeArena({
     setLoading(false);
   }, [initialCode]);
 
+  const isDemo = challenge?.id.startsWith("seed-") ?? false;
+
   useEffect(() => {
     void refresh();
     const id = window.setInterval(() => void refresh(), 8000);
@@ -222,9 +224,15 @@ export function ChallengeArena({
           </span>
           <span className="label text-muted">{challenge.category}</span>
         </div>
-        <h1 className="mt-4 font-display text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
+        <h1 className="mt-4 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
           {challenge.motion}
         </h1>
+        {isDemo && (
+          <p className="mt-3 rounded-sm border border-border bg-background px-3 py-2 text-sm text-muted">
+            Sample debate so the room never looks empty. Cheer and comment —
+            start your own challenge to go live.
+          </p>
+        )}
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           <div className="rounded-2xl border border-pro/40 bg-pro/5 px-4 py-3">
             <p className="label text-pro">

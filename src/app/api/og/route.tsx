@@ -3,13 +3,12 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 const COLORS = {
-  bg: "#0c0f14",
-  surface: "#141a22",
-  ink: "#eef2f7",
-  muted: "#8b98a8",
-  pro: "#2dd4bf",
-  con: "#ff5a3c",
-  border: "#2a3544",
+  bg: "#eceef1",
+  ink: "#14161a",
+  muted: "#5f6773",
+  pro: "#0f5c4c",
+  con: "#9b341f",
+  border: "#c9ced6",
 };
 
 function stanceWord(value: string | null): string {
@@ -38,7 +37,7 @@ export async function GET(request: Request) {
           flexDirection: "column",
           backgroundColor: COLORS.bg,
           padding: "56px",
-          fontFamily: "system-ui, sans-serif",
+          fontFamily: "Georgia, serif",
         }}
       >
         <div
@@ -48,27 +47,19 @@ export async function GET(request: Request) {
             alignItems: "center",
           }}
         >
-          <div
-            style={{
-              fontSize: 28,
-              fontWeight: 800,
-              letterSpacing: "-1px",
-              color: COLORS.ink,
-            }}
-          >
+          <div style={{ fontSize: 28, fontWeight: 700, color: COLORS.ink }}>
             TODAY&apos;S DEBATE
           </div>
-          <div style={{ fontSize: 20, letterSpacing: "3px", color: COLORS.muted }}>
+          <div style={{ fontSize: 20, letterSpacing: "2px", color: COLORS.muted }}>
             {`MAIN EVENT No. ${number}`}
           </div>
         </div>
 
         <div
           style={{
-            marginTop: 20,
-            height: 4,
+            marginTop: 18,
+            height: 3,
             display: "flex",
-            borderRadius: 999,
             overflow: "hidden",
           }}
         >
@@ -87,8 +78,8 @@ export async function GET(request: Request) {
         >
           <div
             style={{
-              fontSize: 22,
-              letterSpacing: "6px",
+              fontSize: 20,
+              letterSpacing: "4px",
               color: COLORS.muted,
               marginBottom: 12,
             }}
@@ -99,26 +90,44 @@ export async function GET(request: Request) {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 28,
-              fontSize: 84,
-              fontWeight: 800,
+              gap: 24,
+              fontSize: 78,
+              fontWeight: 700,
               color: COLORS.ink,
             }}
           >
-            <span style={{ color: from === "FOR" ? COLORS.pro : from === "AGAINST" ? COLORS.con : COLORS.ink }}>
+            <span
+              style={{
+                color:
+                  from === "FOR"
+                    ? COLORS.pro
+                    : from === "AGAINST"
+                      ? COLORS.con
+                      : COLORS.ink,
+              }}
+            >
               {from}
             </span>
             <span style={{ color: COLORS.muted }}>{crossed ? "→" : "·"}</span>
-            <span style={{ color: to === "FOR" ? COLORS.pro : to === "AGAINST" ? COLORS.con : COLORS.ink }}>
+            <span
+              style={{
+                color:
+                  to === "FOR"
+                    ? COLORS.pro
+                    : to === "AGAINST"
+                      ? COLORS.con
+                      : COLORS.ink,
+              }}
+            >
               {to}
             </span>
           </div>
           <div
             style={{
-              fontSize: 22,
-              letterSpacing: "4px",
+              fontSize: 20,
+              letterSpacing: "3px",
               color: COLORS.muted,
-              marginTop: 16,
+              marginTop: 14,
             }}
           >
             {crossed ? "CROSSED THE FLOOR" : "HELD THE CORNER"}
@@ -131,30 +140,30 @@ export async function GET(request: Request) {
             justifyContent: "space-between",
             alignItems: "flex-end",
             borderTop: `1px solid ${COLORS.border}`,
-            paddingTop: 24,
+            paddingTop: 22,
           }}
         >
-          <div style={{ display: "flex", gap: 48 }}>
+          <div style={{ display: "flex", gap: 40 }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <span style={{ fontSize: 52, fontWeight: 800, color: COLORS.pro }}>
+              <span style={{ fontSize: 48, fontWeight: 700, color: COLORS.pro }}>
                 +{points}
               </span>
-              <span style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.muted }}>
+              <span style={{ fontSize: 16, letterSpacing: "2px", color: COLORS.muted }}>
                 POINTS
               </span>
             </div>
             {streak && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <span style={{ fontSize: 52, fontWeight: 800, color: COLORS.ink }}>
+                <span style={{ fontSize: 48, fontWeight: 700, color: COLORS.ink }}>
                   {streak}
                 </span>
-                <span style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.muted }}>
+                <span style={{ fontSize: 16, letterSpacing: "2px", color: COLORS.muted }}>
                   DAY STREAK
                 </span>
               </div>
             )}
           </div>
-          <div style={{ fontSize: 22, color: COLORS.muted }}>todaysdebate.app</div>
+          <div style={{ fontSize: 20, color: COLORS.muted }}>todaysdebate.app</div>
         </div>
       </div>
     ),

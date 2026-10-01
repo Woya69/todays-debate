@@ -76,6 +76,19 @@ export function Leaderboard() {
         accounts = [];
       }
 
+      // Seeded crowd so the board never looks empty on day one.
+      const { SEED_PEOPLE } = await import("@/data/crowd");
+      const seedRows: Row[] = SEED_PEOPLE.map((p) => ({
+        id: `seed:${p.id}`,
+        name: p.name,
+        points: p.points,
+      }));
+      const liveNames = new Set(accounts.map((a) => a.name.toLowerCase()));
+      for (const s of seedRows) {
+        if (!liveNames.has(s.name.toLowerCase())) accounts.push(s);
+      }
+      community = Math.max(community, accounts.length);
+
       let merged: Row[];
       let rank: number;
 
@@ -176,20 +189,18 @@ export function Leaderboard() {
 
       {fieldEmpty && (
         <p className="text-center text-sm text-muted">
-          The table&apos;s still filling up — play a debate and you could be the
-          first name on the board.
+          Play today&apos;s main event to climb the standings.
         </p>
       )}
 
       {signedIn ? (
         <p className="text-center font-mono text-xs text-muted">
-          Real players only · your points sync as you debate
+          Your points sync as you debate
         </p>
       ) : (
         <p className="text-center font-mono text-xs text-muted">
-          Real players only ·{" "}
-          <Link href="/account" className="text-accent hover:underline">
-            sign in
+          <Link href="/account" className="text-pro hover:underline">
+            Sign in
           </Link>{" "}
           to claim your spot on the table
         </p>

@@ -1,19 +1,24 @@
 import { ImageResponse } from "next/og";
+import { getSeedChallenge } from "@/data/crowd";
 
 export const runtime = "edge";
 
 const COLORS = {
-  bg: "#0c0f14",
-  ink: "#eef2f7",
-  muted: "#8b98a8",
-  pro: "#2dd4bf",
-  con: "#ff5a3c",
+  bg: "#eceef1",
+  ink: "#14161a",
+  muted: "#5f6773",
+  pro: "#0f5c4c",
+  con: "#9b341f",
 };
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get("code") ?? "";
-  const motion = searchParams.get("motion") ?? "Live challenge on Today's Debate";
+  const seed = code ? getSeedChallenge(code) : null;
+  const motion =
+    searchParams.get("motion") ||
+    seed?.challenge.motion ||
+    "Live challenge on Today's Debate";
 
   return new ImageResponse(
     (
@@ -25,24 +30,23 @@ export async function GET(request: Request) {
           flexDirection: "column",
           backgroundColor: COLORS.bg,
           padding: "56px",
-          fontFamily: "system-ui, sans-serif",
+          fontFamily: "Georgia, serif",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{ fontSize: 26, fontWeight: 800, color: COLORS.ink }}>
+          <div style={{ fontSize: 26, fontWeight: 700, color: COLORS.ink }}>
             TODAY&apos;S DEBATE
           </div>
-          <div style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.con }}>
-            CHALLENGE {code ? `· ${code.slice(0, 6).toUpperCase()}` : ""}
+          <div style={{ fontSize: 18, letterSpacing: "2px", color: COLORS.con }}>
+            CHALLENGE
           </div>
         </div>
 
         <div
           style={{
-            marginTop: 20,
-            height: 4,
+            marginTop: 18,
+            height: 3,
             display: "flex",
-            borderRadius: 999,
             overflow: "hidden",
           }}
         >
@@ -60,21 +64,20 @@ export async function GET(request: Request) {
         >
           <div
             style={{
-              fontSize: 20,
-              letterSpacing: "4px",
+              fontSize: 18,
+              letterSpacing: "3px",
               color: COLORS.pro,
-              marginBottom: 18,
+              marginBottom: 16,
             }}
           >
             WATCH THE CROWD
           </div>
           <div
             style={{
-              fontSize: motion.length > 90 ? 38 : 48,
-              fontWeight: 800,
-              lineHeight: 1.12,
+              fontSize: motion.length > 90 ? 36 : 46,
+              fontWeight: 700,
+              lineHeight: 1.15,
               color: COLORS.ink,
-              letterSpacing: "-1px",
             }}
           >
             {motion}
@@ -82,10 +85,10 @@ export async function GET(request: Request) {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{ fontSize: 22, color: COLORS.muted }}>
+          <div style={{ fontSize: 20, color: COLORS.muted }}>
             Two corners. Crowd decides.
           </div>
-          <div style={{ fontSize: 22, color: COLORS.muted }}>todaysdebate.app</div>
+          <div style={{ fontSize: 20, color: COLORS.muted }}>todaysdebate.app</div>
         </div>
       </div>
     ),

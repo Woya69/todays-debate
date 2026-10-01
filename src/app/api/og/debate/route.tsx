@@ -4,11 +4,11 @@ import { DEBATES } from "@/data/debates";
 export const runtime = "edge";
 
 const COLORS = {
-  bg: "#0c0f14",
-  ink: "#eef2f7",
-  muted: "#8b98a8",
-  pro: "#2dd4bf",
-  con: "#ff5a3c",
+  bg: "#eceef1",
+  ink: "#14161a",
+  muted: "#5f6773",
+  pro: "#0f5c4c",
+  con: "#9b341f",
 };
 
 export async function GET(request: Request) {
@@ -28,7 +28,7 @@ export async function GET(request: Request) {
           flexDirection: "column",
           backgroundColor: COLORS.bg,
           padding: "56px",
-          fontFamily: "system-ui, sans-serif",
+          fontFamily: "Georgia, serif",
         }}
       >
         <div
@@ -38,13 +38,13 @@ export async function GET(request: Request) {
             alignItems: "center",
           }}
         >
-          <div style={{ fontSize: 26, fontWeight: 800, color: COLORS.ink }}>
+          <div style={{ fontSize: 26, fontWeight: 700, color: COLORS.ink }}>
             TODAY&apos;S DEBATE
           </div>
           <div
             style={{
               fontSize: 18,
-              letterSpacing: "3px",
+              letterSpacing: "2px",
               color: COLORS.muted,
               textTransform: "uppercase",
             }}
@@ -55,10 +55,9 @@ export async function GET(request: Request) {
 
         <div
           style={{
-            marginTop: 20,
-            height: 4,
+            marginTop: 18,
+            height: 3,
             display: "flex",
-            borderRadius: 999,
             overflow: "hidden",
           }}
         >
@@ -72,27 +71,26 @@ export async function GET(request: Request) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingTop: 36,
-            paddingBottom: 36,
+            paddingTop: 32,
+            paddingBottom: 32,
           }}
         >
           <div
             style={{
-              fontSize: 20,
-              letterSpacing: "4px",
+              fontSize: 18,
+              letterSpacing: "3px",
               color: COLORS.pro,
-              marginBottom: 18,
+              marginBottom: 16,
             }}
           >
             MAIN EVENT
           </div>
           <div
             style={{
-              fontSize: resolution.length > 90 ? 40 : 50,
-              fontWeight: 800,
-              lineHeight: 1.12,
+              fontSize: resolution.length > 90 ? 38 : 48,
+              fontWeight: 700,
+              lineHeight: 1.15,
               color: COLORS.ink,
-              letterSpacing: "-1px",
             }}
           >
             {resolution}
@@ -106,10 +104,10 @@ export async function GET(request: Request) {
             alignItems: "flex-end",
           }}
         >
-          <div style={{ fontSize: 22, color: COLORS.muted }}>
+          <div style={{ fontSize: 20, color: COLORS.muted }}>
             Challenge someone. Let the crowd decide.
           </div>
-          <div style={{ fontSize: 22, color: COLORS.muted }}>todaysdebate.app</div>
+          <div style={{ fontSize: 20, color: COLORS.muted }}>todaysdebate.app</div>
         </div>
       </div>
     ),

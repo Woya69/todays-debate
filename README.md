@@ -35,9 +35,13 @@ NEXT_PUBLIC_ADS_ENABLED=false
 
 ## Database
 
-Apply SQL in `supabase/` (order: profiles → votes/comments → **challenges.sql**).
+Apply SQL in order:
 
-Challenges power `/challenge` and `/watch`. Without that migration, create/list will fail gracefully.
+1. `supabase/profiles.sql` (+ votes/comments as needed)
+2. `supabase/challenges.sql`
+3. `supabase/challenges_security.sql` — tighter RLS, accept RPC, spam caps
+
+Challenges power `/challenge` and `/watch`. Seeded crowd data in `src/data/crowd.ts` keeps the feed + leaderboard alive before real users show up.
 
 ## Core loops
 
