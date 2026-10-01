@@ -14,7 +14,7 @@ export default function TopicsIndexPage() {
   return (
     <div className="mx-auto max-w-2xl">
       <p className="label text-accent">The Index</p>
-      <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+      <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-foreground">
         Topics
       </h1>
       <p className="mt-3 text-lg text-muted">

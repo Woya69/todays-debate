@@ -60,12 +60,14 @@ export function ReminderForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
-          className="flex-1 border border-border bg-transparent px-3 py-2 text-foreground outline-none focus:border-accent"
+          autoComplete="email"
+          inputMode="email"
+          className="min-h-12 flex-1 border border-border bg-transparent px-3 py-3 text-base text-foreground outline-none focus:border-accent"
         />
         <button
           type="submit"
           disabled={busy}
-          className="bg-foreground px-6 py-2 font-display text-base font-semibold text-background transition hover:bg-accent disabled:opacity-40"
+          className="min-h-12 bg-foreground px-6 py-3 font-display text-base font-semibold text-background transition hover:bg-accent disabled:opacity-40"
         >
           {busy ? "Saving…" : "Remind me"}
         </button>

@@ -45,7 +45,7 @@ export default async function TopicCategoryPage({ params }: Props) {
         <span className="mx-2">/</span>
         <span className="text-accent">{category}</span>
       </p>
-      <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+      <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-foreground">
         {category}
       </h1>
       <p className="mt-3 text-muted">

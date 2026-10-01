@@ -11,7 +11,7 @@ export default function ClassroomsPage() {
   return (
     <div className="mx-auto max-w-2xl">
       <p className="label text-accent">For educators</p>
-      <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+      <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-foreground">
         Classrooms
       </h1>
       <p className="mt-4 text-lg text-muted">

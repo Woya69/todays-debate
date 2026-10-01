@@ -129,7 +129,7 @@ export function HotTakes({
         <span className="label text-accent">{points} pts earned</span>
       </div>
 
-      <div className="relative h-[300px] select-none">
+      <div className="relative h-[min(52vh,380px)] min-h-[280px] select-none sm:h-[300px] sm:min-h-0">
         {next && (
           <Card take={next} style={{ transform: "scale(0.95) translateY(10px)" }} faded />
         )}
@@ -153,20 +153,20 @@ export function HotTakes({
         <button
           type="button"
           onClick={() => commit("disagree")}
-          className="border border-con px-5 py-4 font-display text-lg font-semibold text-con transition hover:bg-con hover:text-background"
+          className="min-h-12 border border-con px-4 py-4 font-display text-base font-semibold text-con transition hover:bg-con hover:text-background sm:px-5 sm:text-lg"
         >
           Disagree
         </button>
         <button
           type="button"
           onClick={() => commit("agree")}
-          className="border border-pro px-5 py-4 font-display text-lg font-semibold text-pro transition hover:bg-pro hover:text-background"
+          className="min-h-12 border border-pro px-4 py-4 font-display text-base font-semibold text-pro transition hover:bg-pro hover:text-background sm:px-5 sm:text-lg"
         >
           Agree
         </button>
       </div>
       <p className="mt-4 text-center font-mono text-xs text-muted">
-        Swipe the card, tap a button, or use ← / → keys
+        Swipe the card or tap a button
       </p>
       {onReport && current && (
         <div className="mt-2 text-center">
@@ -218,13 +218,13 @@ function Card({
     <div
       {...handlers}
       style={style}
-      className={`paper-card absolute inset-0 flex flex-col justify-between px-7 py-7 ${
+      className={`paper-card absolute inset-0 flex flex-col justify-between px-5 py-5 sm:px-7 sm:py-7 ${
         interactive ? "cursor-grab active:cursor-grabbing touch-none" : ""
       } ${faded ? "opacity-50" : ""}`}
     >
-      <div className="flex items-center justify-between">
-        <span className="label text-muted">{take.topic}</span>
-        <div className="flex gap-3">
+      <div className="flex items-center justify-between gap-2">
+        <span className="label truncate text-muted">{take.topic}</span>
+        <div className="flex shrink-0 gap-2 sm:gap-3">
           <span
             className="label transition-opacity"
             style={{ opacity: hint < -30 ? 1 : 0.2, color: "var(--con)" }}
@@ -239,7 +239,7 @@ function Card({
           </span>
         </div>
       </div>
-      <p className="font-display text-2xl font-semibold leading-snug text-foreground">
+      <p className="font-display text-xl font-semibold leading-snug text-foreground sm:text-2xl">
         {take.text}
       </p>
       <span className="label text-muted">Today&apos;s Takes</span>

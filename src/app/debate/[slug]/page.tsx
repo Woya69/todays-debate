@@ -126,24 +126,26 @@ export default async function DebateSlugPage({ params }: Props) {
           <span className="mx-2 text-muted">·</span>
           No. {daily.debateNumber}
         </p>
-        <h1 className="mt-3 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+        <h1 className="mt-3 font-display text-[1.65rem] font-semibold leading-tight text-foreground sm:text-4xl">
           {daily.resolution}
         </h1>
         {daily.context && (
-          <p className="mt-4 text-lg leading-8 text-muted">{daily.context}</p>
+          <p className="mt-4 text-base leading-7 text-muted sm:text-lg sm:leading-8">
+            {daily.context}
+          </p>
         )}
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <section className="border border-border px-5 py-5">
+          <section className="border border-border px-4 py-4 sm:px-5 sm:py-5">
             <p className="label text-accent">The case for</p>
-            <h2 className="mt-2 font-display text-xl font-semibold text-foreground">
+            <h2 className="mt-2 font-display text-lg font-semibold text-foreground sm:text-xl">
               {daily.pro.title}
             </h2>
             <p className="mt-3 text-sm leading-7 text-muted">{daily.pro.argument}</p>
           </section>
-          <section className="border border-border px-5 py-5">
+          <section className="border border-border px-4 py-4 sm:px-5 sm:py-5">
             <p className="label text-accent">The case against</p>
-            <h2 className="mt-2 font-display text-xl font-semibold text-foreground">
+            <h2 className="mt-2 font-display text-lg font-semibold text-foreground sm:text-xl">
               {daily.con.title}
             </h2>
             <p className="mt-3 text-sm leading-7 text-muted">{daily.con.argument}</p>
@@ -153,7 +155,7 @@ export default async function DebateSlugPage({ params }: Props) {
         <AdSlot placement="debate-below-args" className="mt-6" />
       </article>
 
-      <DebateFlow debate={daily} />
+      <DebateFlow debate={daily} hideTitle />
     </>
   );
 }

@@ -14,21 +14,21 @@ export function SideCard({ side, title, argument }: SideCardProps) {
           isPro ? "bg-pro" : "bg-con"
         }`}
       />
-      <div className="px-6 py-6 sm:px-8">
-        <div className="mb-3 flex items-baseline justify-between border-b border-border pb-3">
+      <div className="px-4 py-5 sm:px-8 sm:py-6">
+        <div className="mb-3 flex items-baseline justify-between gap-2 border-b border-border pb-3">
           <span
             className={`label ${isPro ? "text-pro" : "text-con"}`}
           >
             {isPro ? "The case for" : "The case against"}
           </span>
-          <span className="label text-muted">
+          <span className="label hidden text-muted sm:inline">
             {isPro ? "Affirmative" : "Opposition"}
           </span>
         </div>
-        <h3 className="font-display text-2xl font-semibold leading-snug text-foreground">
+        <h3 className="font-display text-xl font-semibold leading-snug text-foreground sm:text-2xl">
           {title}
         </h3>
-        <p className="dropcap mt-4 text-[1.05rem] leading-8 text-foreground/90">
+        <p className="dropcap mt-4 text-base leading-7 text-foreground/90 sm:text-[1.05rem] sm:leading-8">
           {argument}
         </p>
       </div>

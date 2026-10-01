@@ -68,9 +68,9 @@ export function StatusBar() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="px-4 py-3">
-      <p className="label text-muted">{label}</p>
-      <p className="mt-1 font-display text-xl font-semibold text-foreground">
+    <div className="min-w-0 px-2 py-3 sm:px-4">
+      <p className="label truncate text-muted">{label}</p>
+      <p className="mt-1 truncate font-display text-base font-semibold text-foreground sm:text-xl">
         {value}
       </p>
     </div>

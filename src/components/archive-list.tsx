@@ -50,21 +50,21 @@ export function ArchiveList({ entries }: { entries: ArchiveEntry[] }) {
   return (
     <div className="space-y-5">
       <div className="paper-card grid grid-cols-3 divide-x divide-border">
-        <div className="px-5 py-4">
-          <p className="label text-muted">Motions to date</p>
-          <p className="mt-1 font-display text-2xl font-semibold text-foreground">
+        <div className="min-w-0 px-2 py-3 sm:px-5 sm:py-4">
+          <p className="label text-muted">Motions</p>
+          <p className="mt-1 font-display text-xl font-semibold text-foreground sm:text-2xl">
             {entries.length}
           </p>
         </div>
-        <div className="px-5 py-4">
-          <p className="label text-muted">Verdicts cast</p>
-          <p className="mt-1 font-display text-2xl font-semibold text-foreground">
+        <div className="min-w-0 px-2 py-3 sm:px-5 sm:py-4">
+          <p className="label text-muted">Verdicts</p>
+          <p className="mt-1 font-display text-xl font-semibold text-foreground sm:text-2xl">
             {totalDebaters.toLocaleString()}
           </p>
         </div>
-        <div className="px-5 py-4">
-          <p className="label text-muted">You&apos;ve played</p>
-          <p className="mt-1 font-display text-2xl font-semibold text-accent">
+        <div className="min-w-0 px-2 py-3 sm:px-5 sm:py-4">
+          <p className="label text-muted">Played</p>
+          <p className="mt-1 font-display text-xl font-semibold text-accent sm:text-2xl">
             {playedCount}
           </p>
         </div>
@@ -79,7 +79,7 @@ export function ArchiveList({ entries }: { entries: ArchiveEntry[] }) {
               setCategory(c);
               setLimit(PAGE);
             }}
-            className={`label border px-3 py-1.5 transition ${
+            className={`label touch-target inline-flex items-center border px-3 py-2 transition ${
               category === c
                 ? "border-foreground bg-foreground text-background"
                 : "border-border text-muted hover:border-foreground hover:text-foreground"
@@ -116,23 +116,23 @@ export function ArchiveList({ entries }: { entries: ArchiveEntry[] }) {
             <Link
               key={entry.dateKey}
               href={`/debate/${entry.debateId}`}
-              className="flex items-center gap-4 border-b border-border px-5 py-4 transition last:border-0 hover:bg-accent/5"
+              className="flex items-start gap-3 border-b border-border px-4 py-4 transition last:border-0 hover:bg-accent/5 sm:items-center sm:gap-4 sm:px-5"
             >
-              <span className="w-12 shrink-0 font-mono text-xs text-muted">
+              <span className="w-10 shrink-0 pt-1 font-mono text-xs text-muted sm:w-12 sm:pt-0">
                 No.{entry.debateNumber}
               </span>
               <div className="min-w-0 flex-1">
-                <p className="truncate font-display text-lg text-foreground">
+                <p className="font-display text-base leading-snug text-foreground sm:truncate sm:text-lg">
                   {entry.resolution}
                 </p>
-                <p className="label text-muted">
+                <p className="label mt-1 text-muted">
                   {entry.category}
                   {entry.isToday ? " · Today" : ` · ${formatDisplayDate(entry.dateKey)}`}
                   {count > 0 && ` · ${count.toLocaleString()} debated`}
                 </p>
               </div>
               <span
-                className={`label shrink-0 ${done ? "text-accent" : "text-muted"}`}
+                className={`label shrink-0 pt-1 sm:pt-0 ${done ? "text-accent" : "text-muted"}`}
               >
                 {done ? "Played" : "Open"}
               </span>

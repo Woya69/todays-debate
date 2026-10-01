@@ -30,32 +30,22 @@ export function SponsorForm() {
     );
   }
 
+  const field =
+    "mt-1 min-h-12 w-full border border-border bg-transparent px-3 py-3 text-base text-foreground";
+
   return (
     <form onSubmit={onSubmit} className="paper-card space-y-4 px-5 py-6">
       <label className="block">
         <span className="label text-muted">Brand</span>
-        <input
-          name="brand"
-          required
-          className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground"
-        />
+        <input name="brand" required className={field} />
       </label>
       <label className="block">
         <span className="label text-muted">Work email</span>
-        <input
-          name="email"
-          type="email"
-          required
-          className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground"
-        />
+        <input name="email" type="email" required className={field} />
       </label>
       <label className="block">
         <span className="label text-muted">Approx. budget</span>
-        <select
-          name="budget"
-          className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground"
-          defaultValue="explore"
-        >
+        <select name="budget" className={field} defaultValue="explore">
           <option value="explore">Still exploring</option>
           <option value="2-5k">$2–5k / day</option>
           <option value="5-15k">$5–15k / day</option>
@@ -64,15 +54,11 @@ export function SponsorForm() {
       </label>
       <label className="block">
         <span className="label text-muted">What should the day be about?</span>
-        <textarea
-          name="notes"
-          rows={4}
-          className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground"
-        />
+        <textarea name="notes" rows={4} className={`${field} min-h-24`} />
       </label>
       <button
         type="submit"
-        className="w-full bg-foreground px-5 py-3 font-display text-lg font-semibold text-background"
+        className="min-h-12 w-full bg-foreground px-5 py-3 font-display text-lg font-semibold text-background"
       >
         Send inquiry
       </button>

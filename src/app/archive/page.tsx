@@ -14,7 +14,7 @@ export default function ArchivePage() {
     <div className="mx-auto w-full max-w-2xl">
       <header className="mb-8 text-center">
         <p className="label text-accent">The Back Issues</p>
-        <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+        <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-foreground">
           The Archive
         </h1>
         <p className="mt-2 text-muted">

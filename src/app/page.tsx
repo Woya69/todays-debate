@@ -33,10 +33,10 @@ export default function HomePage() {
 
       <Link
         href={debatePath(debate)}
-        className="paper-card group block px-7 py-8 transition hover:border-foreground"
+        className="paper-card group block px-5 py-6 transition hover:border-foreground sm:px-7 sm:py-8"
       >
         <p className="label text-accent">The Motion of the Day</p>
-        <h1 className="mt-3 font-display text-3xl font-semibold leading-[1.15] text-foreground sm:text-4xl">
+        <h1 className="mt-3 font-display text-[1.65rem] font-semibold leading-[1.15] text-foreground sm:text-4xl">
           {debate.resolution}
         </h1>
         <p className="mt-4 inline-flex items-center gap-2 font-display text-lg font-semibold text-foreground">

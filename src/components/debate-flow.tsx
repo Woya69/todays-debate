@@ -39,7 +39,14 @@ import { DebateComments } from "@/components/debate-comments";
 
 const steps: DebateStep[] = ["stance", "read", "predict", "vote", "share"];
 
-export function DebateFlow({ debate }: { debate: DailyDebate }) {
+export function DebateFlow({
+  debate,
+  hideTitle = false,
+}: {
+  debate: DailyDebate;
+  /** When the page already rendered the motion title above (SEO slug page). */
+  hideTitle?: boolean;
+}) {
   const [step, setStep] = useState<DebateStep>("stance");
   const [stance, setStance] = useState<Stance | null>(null);
   const [prediction, setPrediction] = useState<Verdict | null>(null);
@@ -128,19 +135,21 @@ export function DebateFlow({ debate }: { debate: DailyDebate }) {
 
   return (
     <div className="mx-auto w-full max-w-3xl">
-      <header className="mb-6 text-center">
-        <p className="label text-accent">Motion No. {debate.debateNumber}</p>
-        <h1 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-semibold leading-[1.15] text-foreground sm:text-[2.6rem]">
-          {debate.resolution}
-        </h1>
-        <p className="mt-3 label text-muted">{debate.category}</p>
-      </header>
+      {!hideTitle && (
+        <header className="mb-6 text-center">
+          <p className="label text-accent">Motion No. {debate.debateNumber}</p>
+          <h1 className="mx-auto mt-3 max-w-2xl font-display text-[1.65rem] font-semibold leading-[1.15] text-foreground sm:text-[2.6rem]">
+            {debate.resolution}
+          </h1>
+          <p className="mt-3 label text-muted">{debate.category}</p>
+        </header>
+      )}
 
-      <div className="mb-8 flex items-center justify-center gap-2">
+      <div className="mb-6 flex items-center justify-center gap-1.5 sm:mb-8 sm:gap-2">
         {steps.map((s, i) => (
           <span
             key={s}
-            className={`h-[3px] w-10 ${i <= stepIndex ? "bg-accent" : "bg-border"}`}
+            className={`h-[3px] w-8 sm:w-10 ${i <= stepIndex ? "bg-accent" : "bg-border"}`}
           />
         ))}
       </div>
@@ -312,7 +321,7 @@ export function DebateFlow({ debate }: { debate: DailyDebate }) {
             </PrimaryButton>
             <Link
               href="/takes"
-              className="flex-1 border border-foreground px-6 py-4 text-center font-display text-lg font-semibold text-foreground transition hover:bg-foreground hover:text-background"
+              className="flex min-h-12 flex-1 items-center justify-center border border-foreground px-6 py-4 text-center font-display text-lg font-semibold text-foreground transition hover:bg-foreground hover:text-background"
             >
               Run the Hot Takes
             </Link>
@@ -357,7 +366,7 @@ function PrimaryButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="flex-1 bg-foreground px-6 py-4 font-display text-lg font-semibold text-background transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40"
+      className="flex min-h-12 flex-1 items-center justify-center bg-foreground px-6 py-4 font-display text-lg font-semibold text-background transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40"
     >
       {children}
     </button>
@@ -387,7 +396,7 @@ function PredictButton({
     <button
       type="button"
       onClick={onClick}
-      className={`border px-5 py-6 text-left font-display text-xl font-semibold text-foreground transition ${tone}`}
+      className={`min-h-14 border px-4 py-5 text-left font-display text-lg font-semibold text-foreground transition sm:px-5 sm:py-6 sm:text-xl ${tone}`}
     >
       {label}
     </button>

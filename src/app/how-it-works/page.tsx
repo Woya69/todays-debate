@@ -41,7 +41,7 @@ export default function HowItWorksPage() {
   return (
     <div className="mx-auto max-w-2xl">
       <p className="label text-accent">The House Rules</p>
-      <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+      <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-foreground">
         How it works
       </h1>
       <p className="mt-4 text-lg leading-8 text-muted">

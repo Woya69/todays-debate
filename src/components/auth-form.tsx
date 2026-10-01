@@ -102,7 +102,7 @@ export function AuthForm() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground outline-none focus:border-accent"
+            className="mt-1 min-h-12 w-full border border-border bg-transparent px-3 py-3 text-base text-foreground outline-none focus:border-accent"
             placeholder="you@example.com"
           />
         </label>
@@ -114,14 +114,14 @@ export function AuthForm() {
             minLength={6}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-1 w-full border border-border bg-transparent px-3 py-2 text-foreground outline-none focus:border-accent"
+            className="mt-1 min-h-12 w-full border border-border bg-transparent px-3 py-3 text-base text-foreground outline-none focus:border-accent"
             placeholder="At least 6 characters"
           />
         </label>
         <button
           type="submit"
           disabled={busy}
-          className="w-full bg-foreground px-6 py-3 font-display text-lg font-semibold text-background transition hover:bg-accent disabled:opacity-40"
+          className="min-h-12 w-full bg-foreground px-6 py-3 font-display text-lg font-semibold text-background transition hover:bg-accent disabled:opacity-40"
         >
           {busy
             ? "Working…"
@@ -140,7 +140,7 @@ export function AuthForm() {
       <button
         type="button"
         onClick={handleGoogle}
-        className="w-full border border-foreground px-6 py-3 font-display text-lg font-semibold text-foreground transition hover:bg-foreground hover:text-background"
+        className="w-full min-h-12 border border-foreground px-6 py-3 font-display text-lg font-semibold text-foreground transition hover:bg-foreground hover:text-background"
       >
         Continue with Google
       </button>
@@ -172,7 +172,7 @@ function Tab({
     <button
       type="button"
       onClick={onClick}
-      className={`flex-1 border px-4 py-2 font-display text-base font-semibold transition ${
+      className={`flex min-h-12 flex-1 items-center justify-center border px-4 py-2 font-display text-base font-semibold transition ${
         active
           ? "border-foreground bg-foreground text-background"
           : "border-border text-muted hover:border-foreground"
