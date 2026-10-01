@@ -46,7 +46,7 @@ export function LandingSpin() {
     setExiting(true);
 
     const side = choice === "yes" ? "yes" : "no";
-    const href = `/challenge?motion=${encodeURIComponent(hook.hook)}&slug=${encodeURIComponent(hook.debateId)}&side=${side}`;
+    const href = `/live/${hook.debateId}?side=${side}`;
 
     window.setTimeout(() => {
       router.push(href);
@@ -123,7 +123,7 @@ export function LandingSpin() {
 
       <p className="mt-8 max-w-xs text-sm text-muted">
         {picked
-          ? "Opening a live challenge on this…"
+          ? "Jumping into the live room…"
           : "Hottest first. Tap a dot to jump. Yes/No starts a fight."}
       </p>
     </div>
