@@ -190,3 +190,85 @@ a,
 .animate-meter {
   animation: none;
 }
+
+@keyframes landing-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.landing-spin__pulse {
+  animation: landing-pulse 1.4s ease-in-out infinite;
+}
+
+.landing-spin {
+  transition:
+    background-color 0.55s ease,
+    color 0.55s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.7s ease;
+}
+
+.landing-spin--exit {
+  transform: scale(1.04);
+  opacity: 0;
+}
+
+.landing-spin--yes {
+  background: color-mix(in srgb, var(--pro) 14%, transparent);
+}
+
+.landing-spin--no {
+  background: color-mix(in srgb, var(--con) 14%, transparent);
+}
+
+.landing-choice {
+  display: inline-flex;
+  min-height: 4.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  border: 1px solid var(--border);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.landing-choice:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.landing-choice:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.landing-choice--yes {
+  background: var(--pro);
+  border-color: var(--pro);
+  color: #f7f8fa;
+}
+
+.landing-choice--yes:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.landing-choice--no {
+  background: var(--con);
+  border-color: var(--con);
+  color: #f7f8fa;
+}
+
+.landing-choice--no:hover:not(:disabled) {
+  filter: brightness(1.08);
+}

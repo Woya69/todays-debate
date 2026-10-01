@@ -42,12 +42,16 @@ const steps: DebateStep[] = ["stance", "read", "predict", "vote", "share"];
 export function DebateFlow({
   debate,
   hideTitle = false,
+  initialStance,
 }: {
   debate: DailyDebate;
   hideTitle?: boolean;
+  initialStance?: Stance;
 }) {
-  const [step, setStep] = useState<DebateStep>("stance");
-  const [stance, setStance] = useState<Stance | null>(null);
+  const [step, setStep] = useState<DebateStep>(
+    initialStance ? "read" : "stance",
+  );
+  const [stance, setStance] = useState<Stance | null>(initialStance ?? null);
   const [prediction, setPrediction] = useState<Verdict | null>(null);
   const [hasRead, setHasRead] = useState(false);
   const [result, setResult] = useState<UserDebateResult | null>(null);
@@ -69,9 +73,12 @@ export function DebateFlow({
       fetchDebateStats(debate.dateKey, debate.id)
         .then((live) => setStats(live ?? getMockStats(debate.dateKey)))
         .catch(() => setStats(getMockStats(debate.dateKey)));
+    } else if (initialStance) {
+      setStance(initialStance);
+      setStep("read");
     }
     setStreak(getStreak());
-  }, [debate.dateKey, debate.id]);
+  }, [debate.dateKey, debate.id, initialStance]);
 
   async function castVote(convincedBy: Stance) {
     if (!stance) return;

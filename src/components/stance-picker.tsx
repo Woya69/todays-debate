@@ -9,9 +9,9 @@ interface Option {
 }
 
 const options: Option[] = [
-  { value: "pro", label: "FOR", hint: "Take this corner" },
+  { value: "pro", label: "YES", hint: "Take this corner" },
   { value: "undecided", label: "WATCH", hint: "Spectate for now" },
-  { value: "con", label: "AGAINST", hint: "Take this corner" },
+  { value: "con", label: "NO", hint: "Take this corner" },
 ];
 
 function accent(value: Stance, selected: boolean): string {

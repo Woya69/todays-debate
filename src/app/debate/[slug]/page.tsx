@@ -4,8 +4,9 @@ import Link from "next/link";
 import { DebateFlow } from "@/components/debate-flow";
 import { JsonLd } from "@/components/json-ld";
 import { AdSlot } from "@/components/ad-slot";
+import { CrowdPresence } from "@/components/crowd-presence";
+import { RecentChallenges } from "@/components/recent-challenges";
 import {
-  categoryPath,
   getDailyDebate,
   getDailyDebateForSlug,
   getDebateBySlug,
@@ -16,9 +17,18 @@ import {
   seoTitleFor,
 } from "@/lib/debate-service";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
-import { formatDisplayDate } from "@/lib/dates";
+import type { Stance } from "@/types/debate";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ side?: string }>;
+};
+
+function sideToStance(side: string | undefined): Stance | null {
+  if (side === "yes" || side === "pro" || side === "for") return "pro";
+  if (side === "no" || side === "con" || side === "against") return "con";
+  return null;
+}
 
 export async function generateStaticParams() {
   return getScheduledDebates().map((d) => ({ slug: d.id }));
@@ -65,8 +75,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function DebateSlugPage({ params }: Props) {
+export default async function DebateSlugPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const { side } = await searchParams;
 
   if (isDateParam(slug)) {
     if (!isValidDebateDate(slug)) notFound();
@@ -76,6 +87,8 @@ export default async function DebateSlugPage({ params }: Props) {
 
   const daily = getDailyDebateForSlug(slug);
   if (!daily) notFound();
+
+  const initialStance = sideToStance(side);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -89,88 +102,65 @@ export default async function DebateSlugPage({ params }: Props) {
     articleSection: daily.category,
   };
 
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What is the case for: ${daily.resolution}`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${daily.pro.title}. ${daily.pro.argument}`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `What is the case against: ${daily.resolution}`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${daily.con.title}. ${daily.con.argument}`,
-        },
-      },
-    ],
-  };
-
   const challengeHref = `/challenge?motion=${encodeURIComponent(daily.resolution)}&slug=${encodeURIComponent(daily.id)}`;
 
   return (
     <>
       <JsonLd data={jsonLd} />
-      <JsonLd data={faqLd} />
 
-      <article className="mx-auto mb-10 max-w-3xl">
+      <article className="mx-auto mb-8 max-w-3xl animate-rise">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="label rounded-full bg-pro/15 px-2.5 py-1 text-pro">
-            Main Event
+          <span className="label rounded-full bg-con/15 px-2.5 py-1 text-con">
+            Live now
           </span>
-          <span className="label text-muted">{formatDisplayDate(daily.dateKey)}</span>
-          <span className="label text-muted">· No. {daily.debateNumber}</span>
+          {initialStance && (
+            <span
+              className={`label rounded-full px-2.5 py-1 ${
+                initialStance === "pro"
+                  ? "bg-pro/15 text-pro"
+                  : "bg-con/15 text-con"
+              }`}
+            >
+              You said {initialStance === "pro" ? "YES" : "NO"}
+            </span>
+          )}
         </div>
-        <p className="mt-3 label text-muted">
-          <Link href={categoryPath(daily.category)} className="hover:text-pro">
-            {daily.category}
-          </Link>
-        </p>
-        <h1 className="mt-3 font-display text-[1.65rem] font-extrabold leading-tight text-foreground sm:text-4xl">
+
+        <h1 className="mt-4 font-display text-[1.85rem] font-extrabold leading-tight text-foreground sm:text-4xl">
           {daily.resolution}
         </h1>
-        {daily.context && (
-          <p className="mt-4 text-base leading-7 text-muted sm:text-lg sm:leading-8">
-            {daily.context}
-          </p>
-        )}
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <section className="arena-card corner-pro px-4 py-4 sm:px-5 sm:py-5">
-            <p className="label text-pro">FOR</p>
-            <h2 className="mt-2 font-display text-lg font-extrabold text-foreground sm:text-xl">
-              {daily.pro.title}
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-muted">{daily.pro.argument}</p>
-          </section>
-          <section className="arena-card corner-con px-4 py-4 sm:px-5 sm:py-5">
-            <p className="label text-con">AGAINST</p>
-            <h2 className="mt-2 font-display text-lg font-extrabold text-foreground sm:text-xl">
-              {daily.con.title}
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-muted">{daily.con.argument}</p>
-          </section>
+        <div className="mt-6">
+          <CrowdPresence />
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <Link href={challengeHref} className="btn-primary flex-1 text-center">
-            Challenge a friend on this
+            Challenge someone live
           </Link>
           <Link href="/watch" className="btn-ghost flex-1 text-center">
-            Watch live challenges
+            Watch other rooms
           </Link>
         </div>
+
+        <section className="mt-8">
+          <p className="label text-con">In this motion</p>
+          <h2 className="mt-1 font-display text-2xl font-semibold text-foreground">
+            Debates happening now
+          </h2>
+          <div className="mt-4">
+            <RecentChallenges limit={4} />
+          </div>
+        </section>
 
         <AdSlot placement="debate-below-args" className="mt-6" />
       </article>
 
-      <DebateFlow debate={daily} hideTitle />
+      <DebateFlow
+        debate={daily}
+        hideTitle
+        initialStance={initialStance ?? undefined}
+      />
     </>
   );
 }

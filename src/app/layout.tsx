@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Libre_Bodoni, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { HomeAwareShell } from "@/components/home-aware-shell";
 import { Analytics } from "@/components/analytics";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -74,11 +75,9 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${monoData.variable} h-full`}
     >
       <body className="flex min-h-full flex-col overflow-x-hidden">
-        <SiteHeader />
-        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-6 sm:py-10">
+        <HomeAwareShell header={<SiteHeader />} footer={<SiteFooter />}>
           {children}
-        </main>
-        <SiteFooter />
+        </HomeAwareShell>
         <Analytics />
       </body>
     </html>
