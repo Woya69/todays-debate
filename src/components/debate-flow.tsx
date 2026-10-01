@@ -23,7 +23,7 @@ import {
   buildShareImageUrl,
   buildShareText,
   changedMind,
-  shareOrCopy,
+  copyLink,
 } from "@/lib/share";
 import {
   getDebateResult,
@@ -130,9 +130,10 @@ export function DebateFlow({
   async function copyShare() {
     if (!result) return;
     const text = buildShareText(result, debate.resolution, debate.id);
-    await shareOrCopy(text);
+    const ok = await copyLink(text);
+    if (!ok) return;
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 2200);
   }
 
   const challengeHref = `/challenge?motion=${encodeURIComponent(debate.resolution)}&slug=${encodeURIComponent(debate.id)}`;
@@ -339,8 +340,21 @@ export function DebateFlow({
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={copyShare} className="btn-primary flex-1">
-              {copied ? "Ready to paste" : "Share scorecard"}
+            <button type="button" onClick={copyShare} className="btn-primary relative flex-1 overflow-hidden">
+              <span
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+                  copied ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+                }`}
+              >
+                Copied
+              </span>
+              <span
+                className={`flex items-center justify-center transition-all duration-300 ${
+                  copied ? "-translate-y-2 opacity-0" : "translate-y-0 opacity-100"
+                }`}
+              >
+                Share
+              </span>
             </button>
             <Link href={challengeHref} className="btn-ghost flex-1">
               Challenge a friend

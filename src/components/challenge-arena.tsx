@@ -20,7 +20,7 @@ import {
   postRound,
 } from "@/lib/challenges";
 import { absoluteUrl } from "@/lib/site";
-import { shareOrCopy } from "@/lib/share";
+import { copyLink } from "@/lib/share";
 import { CrowdMeter, CornerCheerButtons } from "@/components/crowd-meter";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 
@@ -158,13 +158,10 @@ export function ChallengeArena({
   async function onShare() {
     if (!challenge) return;
     const url = absoluteUrl(`/challenge/${challenge.inviteCode}`);
-    const text =
-      challenge.status === "open"
-        ? `I challenged you on Today's Debate:\n${challenge.motion}\n\nAccept here: ${url}`
-        : `Watch this debate — crowd is live:\n${challenge.motion}\n\n${url}`;
-    await shareOrCopy(text);
+    const ok = await copyLink(url);
+    if (!ok) return;
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    window.setTimeout(() => setCopied(false), 2200);
   }
 
   if (loading) {
@@ -255,12 +252,30 @@ export function ChallengeArena({
           </div>
         </div>
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-          <button type="button" onClick={onShare} className="btn-primary flex-1">
-            {copied
-              ? "Ready to paste"
-              : challenge.status === "open"
-                ? "Share challenge link"
-                : "Share with spectators"}
+          <button
+            type="button"
+            onClick={onShare}
+            className="btn-primary relative flex-1 overflow-hidden"
+            aria-live="polite"
+          >
+            <span
+              className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+                copied
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-2 opacity-0"
+              }`}
+            >
+              Copied
+            </span>
+            <span
+              className={`flex items-center justify-center transition-all duration-300 ${
+                copied
+                  ? "-translate-y-2 opacity-0"
+                  : "translate-y-0 opacity-100"
+              }`}
+            >
+              Share
+            </span>
           </button>
           {challenge.status === "open" && mySide === null && (
             <button
