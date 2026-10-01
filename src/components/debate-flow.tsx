@@ -44,7 +44,6 @@ export function DebateFlow({
   hideTitle = false,
 }: {
   debate: DailyDebate;
-  /** When the page already rendered the motion title above (SEO slug page). */
   hideTitle?: boolean;
 }) {
   const [step, setStep] = useState<DebateStep>("stance");
@@ -55,7 +54,6 @@ export function DebateFlow({
   const [personality, setPersonality] = useState<Personality | null>(null);
   const [streak, setStreak] = useState(0);
   const [copied, setCopied] = useState(false);
-
   const [stats, setStats] = useState<DebateStats | null>(null);
   const stepIndex = steps.indexOf(step);
 
@@ -78,8 +76,6 @@ export function DebateFlow({
   async function castVote(convincedBy: Stance) {
     if (!stance) return;
 
-    // Record the anonymous vote first, then read back live crowd stats
-    // (which now include this vote) to grade the room-reading prediction.
     await castDebateVote({
       dateKey: debate.dateKey,
       debateId: debate.id,
@@ -127,18 +123,19 @@ export function DebateFlow({
   async function copyShare() {
     if (!result) return;
     const text = buildShareText(result, debate.resolution, debate.id);
-    const mode = await shareOrCopy(text);
+    await shareOrCopy(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-    return mode;
   }
+
+  const challengeHref = `/challenge?motion=${encodeURIComponent(debate.resolution)}&slug=${encodeURIComponent(debate.id)}`;
 
   return (
     <div className="mx-auto w-full max-w-3xl">
       {!hideTitle && (
         <header className="mb-6 text-center">
-          <p className="label text-accent">Motion No. {debate.debateNumber}</p>
-          <h1 className="mx-auto mt-3 max-w-2xl font-display text-[1.65rem] font-semibold leading-[1.15] text-foreground sm:text-[2.6rem]">
+          <p className="label text-pro">Main Event · No. {debate.debateNumber}</p>
+          <h1 className="mx-auto mt-3 max-w-2xl font-display text-[1.65rem] font-extrabold leading-[1.1] text-foreground sm:text-[2.6rem]">
             {debate.resolution}
           </h1>
           <p className="mt-3 label text-muted">{debate.category}</p>
@@ -149,7 +146,9 @@ export function DebateFlow({
         {steps.map((s, i) => (
           <span
             key={s}
-            className={`h-[3px] w-8 sm:w-10 ${i <= stepIndex ? "bg-accent" : "bg-border"}`}
+            className={`h-1.5 w-8 rounded-full sm:w-10 ${
+              i <= stepIndex ? "bg-pro" : "bg-border"
+            }`}
           />
         ))}
       </div>
@@ -157,8 +156,8 @@ export function DebateFlow({
       {step === "stance" && (
         <section className="animate-rise space-y-6">
           <Heading
-            title="Where do you stand?"
-            sub="A gut call before the arguments. You can change your mind later."
+            title="Pick a corner"
+            sub="Gut call before the clash. You can flip later if the other side earns it."
           />
           <StancePicker
             selected={stance}
@@ -167,52 +166,66 @@ export function DebateFlow({
               setStep("read");
             }}
           />
+          <Link href={challengeHref} className="btn-ghost mx-auto flex max-w-md">
+            Or challenge a friend on this motion
+          </Link>
         </section>
       )}
 
       {step === "read" && stance && (
         <section className="animate-rise space-y-5">
           {debate.context && (
-            <div className="paper-card border-l-4 border-l-accent px-5 py-4">
-              <p className="label text-accent">The brief</p>
+            <div className="arena-card border-l-4 border-l-pro px-5 py-4">
+              <p className="label text-pro">The brief</p>
               <p className="mt-2 text-sm leading-6 text-muted">{debate.context}</p>
             </div>
           )}
-          <SideCard side="pro" title={debate.pro.title} argument={debate.pro.argument} />
-          <SideCard side="con" title={debate.con.title} argument={debate.con.argument} />
-          <label className="paper-card flex cursor-pointer items-start gap-3 px-5 py-4">
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            <SideCard side="pro" title={debate.pro.title} argument={debate.pro.argument} />
+            <SideCard side="con" title={debate.con.title} argument={debate.con.argument} />
+          </div>
+
+          <DebateComments debateId={debate.id} defaultSide={stance} />
+
+          <label className="arena-card flex cursor-pointer items-start gap-3 px-5 py-4">
             <input
               type="checkbox"
               checked={hasRead}
               onChange={(e) => setHasRead(e.target.checked)}
-              className="mt-1 h-4 w-4 accent-[var(--accent)]"
+              className="mt-1 h-4 w-4 accent-[var(--pro)]"
             />
             <span className="text-sm leading-6 text-muted">
-              I&apos;ve weighed both cases and I&apos;m ready to call the room.
+              I&apos;ve weighed both corners and I&apos;m ready to call the crowd.
             </span>
           </label>
-          <PrimaryButton disabled={!hasRead} onClick={() => setStep("predict")}>
+          <button
+            type="button"
+            disabled={!hasRead}
+            onClick={() => setStep("predict")}
+            className="btn-primary w-full"
+          >
             Continue
-          </PrimaryButton>
+          </button>
         </section>
       )}
 
       {step === "predict" && (
         <section className="animate-rise space-y-6">
           <Heading
-            title="Call the room"
-            sub="Which way will the crowd rule today? Nail it for bonus points."
+            title="Call the crowd"
+            sub="Which corner wins the room? Nail it for bonus points."
           />
           <div className="grid gap-3 sm:grid-cols-2">
             <PredictButton
               side="pro"
-              label="The room rules For"
+              label="Crowd rules FOR"
               active={prediction === "pro"}
               onClick={() => setPrediction("pro")}
             />
             <PredictButton
               side="con"
-              label="The room rules Against"
+              label="Crowd rules AGAINST"
               active={prediction === "con"}
               onClick={() => setPrediction("con")}
             />
@@ -221,9 +234,14 @@ export function DebateFlow({
             Correct call +{POINTS.predictionCorrect} · taking part +
             {POINTS.predictionWrong}
           </p>
-          <PrimaryButton disabled={!prediction} onClick={() => setStep("vote")}>
+          <button
+            type="button"
+            disabled={!prediction}
+            onClick={() => setStep("vote")}
+            className="btn-primary w-full"
+          >
             Lock it in
-          </PrimaryButton>
+          </button>
         </section>
       )}
 
@@ -231,7 +249,7 @@ export function DebateFlow({
         <section className="animate-rise space-y-6">
           <Heading
             title="Your verdict"
-            sub="Forget where you started — which side actually made the better case?"
+            sub="Forget where you started — which corner actually made the better case?"
           />
           <StancePicker selected={null} onSelect={castVote} />
         </section>
@@ -239,27 +257,25 @@ export function DebateFlow({
 
       {step === "share" && result && (
         <section className="animate-rise space-y-5">
-          <div className="paper-card px-6 py-7 text-center">
-            <p className="label text-muted">The verdict is in</p>
-            <p className="mt-4 font-display text-3xl font-semibold tracking-tight text-foreground">
+          <div className="arena-panel px-6 py-8 text-center">
+            <p className="label text-muted">Verdict locked</p>
+            <p className="mt-4 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
               {buildScoreline(result)}
             </p>
             <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted">
-              {changedMind(result) ? "You crossed the floor" : "You held your ground"}
+              {changedMind(result) ? "You crossed the floor" : "You held your corner"}
             </p>
 
-            <hr className="rule my-5" />
-
-            <div className="flex items-center justify-center gap-6">
+            <div className="mt-6 flex items-center justify-center gap-8">
               <div>
-                <p className="font-display text-2xl font-semibold text-accent">
+                <p className="font-display text-3xl font-extrabold text-pro">
                   +{result.pointsEarned}
                 </p>
                 <p className="label text-muted">points</p>
               </div>
               {streak > 0 && (
                 <div>
-                  <p className="font-display text-2xl font-semibold text-foreground">
+                  <p className="font-display text-3xl font-extrabold text-foreground">
                     {streak}
                   </p>
                   <p className="label text-muted">day streak</p>
@@ -269,9 +285,9 @@ export function DebateFlow({
 
             {result.predictionCorrect !== null && (
               <p className="mt-5 border-t border-border pt-4 text-sm text-muted">
-                You called the room{" "}
+                You called the crowd{" "}
                 <strong className="text-foreground">
-                  {result.prediction === "pro" ? "For" : "Against"}
+                  {result.prediction === "pro" ? "FOR" : "AGAINST"}
                 </strong>{" "}
                 — {result.predictionCorrect ? "spot on." : "not this time."}
               </p>
@@ -287,16 +303,16 @@ export function DebateFlow({
           )}
 
           {personality && personality.sampleSize >= 3 && (
-            <div className="paper-card px-6 py-5">
+            <div className="arena-card px-6 py-5">
               <p className="label text-muted">Your debating character</p>
-              <p className="mt-2 font-display text-2xl font-semibold text-foreground">
+              <p className="mt-2 font-display text-2xl font-extrabold text-foreground">
                 {personality.archetype}
               </p>
               <p className="mt-1 text-sm text-muted">{personality.tagline}</p>
             </div>
           )}
 
-          <div className="paper-card overflow-hidden">
+          <div className="arena-card overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={buildShareImageUrl(result, streak)}
@@ -309,21 +325,18 @@ export function DebateFlow({
               href={buildShareImageUrl(result, streak)}
               target="_blank"
               rel="noopener noreferrer"
-              className="block border-t border-border px-5 py-3 text-center label text-accent transition hover:bg-accent/5"
+              className="block border-t border-border px-5 py-3 text-center label text-pro transition hover:bg-pro/5"
             >
               Open share image →
             </a>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <PrimaryButton onClick={copyShare}>
-              {copied ? "Ready to paste" : "Share / copy scorecard"}
-            </PrimaryButton>
-            <Link
-              href="/takes"
-              className="flex min-h-12 flex-1 items-center justify-center border border-foreground px-6 py-4 text-center font-display text-lg font-semibold text-foreground transition hover:bg-foreground hover:text-background"
-            >
-              Run the Hot Takes
+            <button type="button" onClick={copyShare} className="btn-primary flex-1">
+              {copied ? "Ready to paste" : "Share scorecard"}
+            </button>
+            <Link href={challengeHref} className="btn-ghost flex-1">
+              Challenge a friend
             </Link>
           </div>
 
@@ -333,7 +346,7 @@ export function DebateFlow({
           />
 
           <p className="text-center font-mono text-xs text-muted">
-            New motion every day. Come back tomorrow to keep the streak.
+            New main event every day. Challenges run whenever you drop a link.
           </p>
         </section>
       )}
@@ -344,32 +357,11 @@ export function DebateFlow({
 function Heading({ title, sub }: { title: string; sub: string }) {
   return (
     <div className="text-center">
-      <h2 className="font-display text-2xl font-semibold text-foreground">
+      <h2 className="font-display text-2xl font-extrabold text-foreground sm:text-3xl">
         {title}
       </h2>
       <p className="mx-auto mt-2 max-w-md text-muted">{sub}</p>
     </div>
-  );
-}
-
-function PrimaryButton({
-  children,
-  onClick,
-  disabled,
-}: {
-  children: React.ReactNode;
-  onClick: () => void;
-  disabled?: boolean;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className="flex min-h-12 flex-1 items-center justify-center bg-foreground px-6 py-4 font-display text-lg font-semibold text-background transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40"
-    >
-      {children}
-    </button>
   );
 }
 
@@ -387,16 +379,16 @@ function PredictButton({
   const tone =
     side === "pro"
       ? active
-        ? "border-pro bg-pro/10"
+        ? "corner-pro bg-pro/10"
         : "border-border hover:border-pro"
       : active
-        ? "border-con bg-con/10"
+        ? "corner-con bg-con/10"
         : "border-border hover:border-con";
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`min-h-14 border px-4 py-5 text-left font-display text-lg font-semibold text-foreground transition sm:px-5 sm:py-6 sm:text-xl ${tone}`}
+      className={`min-h-14 rounded-2xl border px-4 py-5 text-left font-display text-lg font-extrabold text-foreground transition sm:px-5 sm:py-6 sm:text-xl ${tone}`}
     >
       {label}
     </button>

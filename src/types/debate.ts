@@ -162,3 +162,52 @@ export interface DebateSuggestion {
   proHint: string;
   conHint: string;
 }
+
+export type ChallengeStatus = "open" | "live" | "done";
+export type Corner = "pro" | "con";
+
+export interface Challenge {
+  id: string;
+  inviteCode: string;
+  motion: string;
+  debateSlug: string | null;
+  category: string;
+  status: ChallengeStatus;
+  roundCount: number;
+  challengerId: string;
+  challengerName: string;
+  challengerSide: Corner;
+  opponentId: string | null;
+  opponentName: string | null;
+  opponentSide: Corner | null;
+  currentRound: number;
+  nextSide: Corner | null;
+  createdAt: string;
+  updatedAt: string;
+  finishedAt: string | null;
+}
+
+export interface ChallengeRound {
+  id: string;
+  challengeId: string;
+  roundIndex: number;
+  side: Corner;
+  body: string;
+  authorName: string;
+  createdAt: string;
+}
+
+export interface ChallengeCrowd {
+  proPercent: number;
+  conPercent: number;
+  totalCheers: number;
+}
+
+export interface ChallengeComment {
+  id: string;
+  challengeId: string;
+  body: string;
+  side: Corner;
+  authorName: string;
+  createdAt: string;
+}

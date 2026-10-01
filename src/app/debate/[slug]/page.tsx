@@ -112,21 +112,27 @@ export default async function DebateSlugPage({ params }: Props) {
     ],
   };
 
+  const challengeHref = `/challenge?motion=${encodeURIComponent(daily.resolution)}&slug=${encodeURIComponent(daily.id)}`;
+
   return (
     <>
       <JsonLd data={jsonLd} />
       <JsonLd data={faqLd} />
 
       <article className="mx-auto mb-10 max-w-3xl">
-        <p className="label text-muted">{formatDisplayDate(daily.dateKey)}</p>
-        <p className="mt-2 label text-accent">
-          <Link href={categoryPath(daily.category)} className="hover:text-foreground">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="label rounded-full bg-pro/15 px-2.5 py-1 text-pro">
+            Main Event
+          </span>
+          <span className="label text-muted">{formatDisplayDate(daily.dateKey)}</span>
+          <span className="label text-muted">· No. {daily.debateNumber}</span>
+        </div>
+        <p className="mt-3 label text-muted">
+          <Link href={categoryPath(daily.category)} className="hover:text-pro">
             {daily.category}
           </Link>
-          <span className="mx-2 text-muted">·</span>
-          No. {daily.debateNumber}
         </p>
-        <h1 className="mt-3 font-display text-[1.65rem] font-semibold leading-tight text-foreground sm:text-4xl">
+        <h1 className="mt-3 font-display text-[1.65rem] font-extrabold leading-tight text-foreground sm:text-4xl">
           {daily.resolution}
         </h1>
         {daily.context && (
@@ -136,20 +142,29 @@ export default async function DebateSlugPage({ params }: Props) {
         )}
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <section className="border border-border px-4 py-4 sm:px-5 sm:py-5">
-            <p className="label text-accent">The case for</p>
-            <h2 className="mt-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+          <section className="arena-card corner-pro px-4 py-4 sm:px-5 sm:py-5">
+            <p className="label text-pro">FOR</p>
+            <h2 className="mt-2 font-display text-lg font-extrabold text-foreground sm:text-xl">
               {daily.pro.title}
             </h2>
             <p className="mt-3 text-sm leading-7 text-muted">{daily.pro.argument}</p>
           </section>
-          <section className="border border-border px-4 py-4 sm:px-5 sm:py-5">
-            <p className="label text-accent">The case against</p>
-            <h2 className="mt-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+          <section className="arena-card corner-con px-4 py-4 sm:px-5 sm:py-5">
+            <p className="label text-con">AGAINST</p>
+            <h2 className="mt-2 font-display text-lg font-extrabold text-foreground sm:text-xl">
               {daily.con.title}
             </h2>
             <p className="mt-3 text-sm leading-7 text-muted">{daily.con.argument}</p>
           </section>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <Link href={challengeHref} className="btn-primary flex-1 text-center">
+            Challenge a friend on this
+          </Link>
+          <Link href="/watch" className="btn-ghost flex-1 text-center">
+            Watch live challenges
+          </Link>
         </div>
 
         <AdSlot placement="debate-below-args" className="mt-6" />

@@ -5,9 +5,9 @@ import { toDateKey } from "@/lib/dates";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Today's motion",
+  title: "Today's main event",
   description:
-    "Take a side on today's debate — read both cases, then cast your verdict.",
+    "Pick a corner on today's debate. Read both sides. Call the crowd. Challenge a friend.",
   alternates: { canonical: absoluteUrl("/debate") },
 };
 

@@ -3,14 +3,14 @@ import Link from "next/link";
 import { getDailyDebate, debatePath } from "@/lib/debate-service";
 import { formatDisplayDate, toDateKey } from "@/lib/dates";
 import { StatusBar } from "@/components/status-bar";
-import { PersonalityCard } from "@/components/personality-card";
 import { ReminderForm } from "@/components/reminder-form";
+import { RecentChallenges } from "@/components/recent-challenges";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} — one motion, both sides, daily`,
+  title: `${SITE_NAME} — challenge someone. let the crowd decide.`,
   description:
-    "Take a side on today's motion, read the strongest case for and against, predict the room, then cast your verdict.",
+    "Challenge a friend to a structured debate. The crowd watches, cheers a corner, and decides. Daily main event always live.",
   alternates: { canonical: absoluteUrl("/") },
 };
 
@@ -19,89 +19,108 @@ export default function HomePage() {
   const debate = getDailyDebate(dateKey);
 
   return (
-    <div className="mx-auto w-full max-w-3xl space-y-8">
-      <section className="text-center">
-        <div className="flex items-center justify-center gap-3 label text-muted">
-          <span>{formatDisplayDate(dateKey)}</span>
-          <span className="text-accent">·</span>
-          <span>No. {debate.debateNumber}</span>
+    <div className="mx-auto w-full max-w-4xl">
+      <section className="relative overflow-hidden rounded-[1.75rem] border border-border bg-surface px-6 py-10 sm:px-10 sm:py-14">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-20 top-0 h-56 w-56 rounded-full bg-pro/20 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-con/20 blur-3xl"
+        />
+
+        <p className="label text-pro">Today&apos;s Debate</p>
+        <h1 className="mt-4 max-w-2xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+          Challenge someone.
+          <br />
+          <span className="bg-gradient-to-r from-pro via-foreground to-con bg-clip-text text-transparent">
+            Let the crowd decide.
+          </span>
+        </h1>
+        <p className="mt-5 max-w-lg text-base text-muted sm:text-lg">
+          Short rounds. Two corners. Spectators cheer and comment. Share the
+          link — growth happens when the crowd shows up.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Link href="/challenge" className="btn-primary">
+            Start a challenge
+          </Link>
+          <Link href={debatePath(debate)} className="btn-ghost">
+            Watch today&apos;s main event
+          </Link>
         </div>
-        <hr className="rule-double mx-auto mt-3 max-w-xs" />
       </section>
 
-      <StatusBar />
+      <div className="mt-6">
+        <StatusBar />
+      </div>
 
       <Link
         href={debatePath(debate)}
-        className="paper-card group block px-5 py-6 transition hover:border-foreground sm:px-7 sm:py-8"
+        className="arena-panel group mt-6 block px-6 py-7 transition hover:border-pro/50 sm:px-8"
       >
-        <p className="label text-accent">The Motion of the Day</p>
-        <h1 className="mt-3 font-display text-[1.65rem] font-semibold leading-[1.15] text-foreground sm:text-4xl">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="label rounded-full bg-pro/15 px-2.5 py-1 text-pro">
+            Main Event
+          </span>
+          <span className="label text-muted">{formatDisplayDate(dateKey)}</span>
+          <span className="label text-muted">· No. {debate.debateNumber}</span>
+        </div>
+        <h2 className="mt-4 font-display text-2xl font-extrabold leading-tight text-foreground sm:text-3xl">
           {debate.resolution}
-        </h1>
-        <p className="mt-4 inline-flex items-center gap-2 font-display text-lg font-semibold text-foreground">
-          Take your side
+        </h2>
+        <p className="mt-4 inline-flex items-center gap-2 font-display text-lg font-bold text-pro">
+          Pick a corner
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </p>
       </Link>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <section className="mt-8">
+        <div className="mb-4 flex items-end justify-between gap-3">
+          <div>
+            <p className="label text-con">Live challenges</p>
+            <h2 className="mt-1 font-display text-2xl font-extrabold text-foreground">
+              Watch the crowd
+            </h2>
+          </div>
+          <Link href="/watch" className="label text-muted hover:text-foreground">
+            See all →
+          </Link>
+        </div>
+        <RecentChallenges />
+      </section>
+
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <Link
           href="/takes"
-          className="paper-card group block px-6 py-6 transition hover:border-foreground"
+          className="arena-card group block px-6 py-6 transition hover:border-pro/40"
         >
-          <p className="label text-accent">Rapid Fire</p>
-          <h2 className="mt-2 font-display text-2xl font-semibold text-foreground">
+          <p className="label text-pro">Rapid fire</p>
+          <h3 className="mt-2 font-display text-xl font-bold text-foreground">
             Hot Takes
-          </h2>
+          </h3>
           <p className="mt-1 text-sm text-muted">
-            Swipe a dozen spicy statements. Five points each.
+            Snap-agree a dozen spicy lines. Fuel for challenges.
           </p>
         </Link>
         <Link
-          href="/topics"
-          className="paper-card group block px-6 py-6 transition hover:border-foreground"
+          href="/how-it-works"
+          className="arena-card group block px-6 py-6 transition hover:border-con/40"
         >
-          <p className="label text-accent">The Index</p>
-          <h2 className="mt-2 font-display text-2xl font-semibold text-foreground">
-            Topics
-          </h2>
+          <p className="label text-con">The rules</p>
+          <h3 className="mt-2 font-display text-xl font-bold text-foreground">
+            How it works
+          </h3>
           <p className="mt-1 text-sm text-muted">
-            Browse every motion by subject — built for search.
+            Argue the motion. Not the person. Crowd decides.
           </p>
         </Link>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Link
-          href="/stats"
-          className="paper-card group block px-6 py-6 transition hover:border-foreground"
-        >
-          <p className="label text-accent">The Ledger</p>
-          <h2 className="mt-2 font-display text-2xl font-semibold text-foreground">
-            Your Record
-          </h2>
-          <p className="mt-1 text-sm text-muted">
-            Accuracy, leanings, and the badges you&apos;ve earned.
-          </p>
-        </Link>
-        <Link
-          href="/archive"
-          className="paper-card group block px-6 py-6 transition hover:border-foreground"
-        >
-          <p className="label text-accent">The Back Issues</p>
-          <h2 className="mt-2 font-display text-2xl font-semibold text-foreground">
-            Archive
-          </h2>
-          <p className="mt-1 text-sm text-muted">
-            Replay any motion you missed. Catch up your record.
-          </p>
-        </Link>
+      <div className="mt-8">
+        <ReminderForm />
       </div>
-
-      <PersonalityCard />
-
-      <ReminderForm />
     </div>
   );
 }

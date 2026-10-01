@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/lib/site";
 function stanceWord(stance: Stance): string {
   if (stance === "pro") return "FOR";
   if (stance === "con") return "AGAINST";
-  return "UNDECIDED";
+  return "WATCH";
 }
 
 function verdictWord(verdict: Verdict): string {
@@ -19,23 +19,23 @@ export function changedMind(result: UserDebateResult): boolean {
   );
 }
 
-/** Typographic scorecard — no emoji, reads like a clipping. */
+/** Shareable scorecard for social / clipboard. */
 export function buildShareText(
   result: UserDebateResult,
   resolution: string,
   debateSlug?: string,
 ): string {
   const lines = [
-    `TODAY'S DEBATE — No. ${result.debateNumber}`,
-    "————————————————",
+    `TODAY'S DEBATE — Main Event No. ${result.debateNumber}`,
+    "——————————————",
     resolution,
-    "————————————————",
+    "——————————————",
     `Opened:   ${stanceWord(result.stance)}`,
     `Verdict:  ${stanceWord(result.convincedBy)}`,
   ];
 
   if (result.prediction) {
-    const hit = result.predictionCorrect ? "read the room" : "misread the room";
+    const hit = result.predictionCorrect ? "read the crowd" : "misread the crowd";
     lines.push(`Called ${verdictWord(result.prediction)} — ${hit}`);
   }
 
@@ -46,17 +46,19 @@ export function buildShareText(
   const url = debateSlug
     ? absoluteUrl(`/debate/${debateSlug}`)
     : absoluteUrl("/");
-  lines.push("————————————————", url, "Challenge a friend — both sides, no pile-on.");
+  lines.push(
+    "——————————————",
+    url,
+    "Challenge someone. Let the crowd decide.",
+  );
   return lines.join("\n");
 }
 
-/** Compact one-line scorecard for cards. */
 export function buildScoreline(result: UserDebateResult): string {
   const arrow = changedMind(result) ? "→" : "·";
   return `${stanceWord(result.stance)} ${arrow} ${stanceWord(result.convincedBy)}`;
 }
 
-/** URL to the generated newspaper-style share image for a result. */
 export function buildShareImageUrl(
   result: UserDebateResult,
   streak: number,
@@ -73,6 +75,29 @@ export function buildShareImageUrl(
 
 export function buildDebateOgUrl(slug: string): string {
   return `/api/og/debate?slug=${encodeURIComponent(slug)}`;
+}
+
+export function buildChallengeShareText(input: {
+  motion: string;
+  inviteCode: string;
+  status: "open" | "live" | "done";
+  proPercent?: number;
+  conPercent?: number;
+}): string {
+  const url = absoluteUrl(`/challenge/${input.inviteCode}`);
+  if (input.status === "open") {
+    return `I challenged you on Today's Debate:\n${input.motion}\n\nAccept here: ${url}`;
+  }
+  if (input.status === "done" && input.proPercent != null && input.conPercent != null) {
+    const winner =
+      input.proPercent === input.conPercent
+        ? "TIE"
+        : input.proPercent > input.conPercent
+          ? "FOR"
+          : "AGAINST";
+    return `Crowd ruled ${winner} (${input.proPercent}%–${input.conPercent}%)\n${input.motion}\n\n${url}`;
+  }
+  return `Watch this debate — crowd is live:\n${input.motion}\n\n${url}`;
 }
 
 /** Prefer native share sheet; fall back to clipboard. */

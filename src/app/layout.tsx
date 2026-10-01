@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Newsreader, Spline_Sans_Mono } from "next/font/google";
+import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { Analytics } from "@/components/analytics";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
@@ -10,22 +10,23 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  themeColor: "#e9e2d2",
+  themeColor: "#0c0f14",
 };
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const display = Syne({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["600", "700", "800"],
+});
+
+const body = DM_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const monoData = Spline_Sans_Mono({
+const monoData = JetBrains_Mono({
   variable: "--font-mono-data",
   subsets: ["latin"],
   display: "swap",
@@ -34,11 +35,11 @@ const monoData = Spline_Sans_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — one motion, both sides, daily`,
+    default: `${SITE_NAME} — challenge someone. let the crowd decide.`,
     template: `%s · ${SITE_NAME}`,
   },
   description:
-    "A daily op-ed duel. Take a side, read the strongest case for and against, predict the room, then cast your verdict.",
+    "Challenge a friend to a structured debate. Throw short rounds. The crowd picks a corner, cheers, and comments. Daily main event always live.",
   applicationName: SITE_NAME,
   openGraph: {
     title: SITE_NAME,
@@ -69,11 +70,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${newsreader.variable} ${monoData.variable} h-full`}
+      className={`${display.variable} ${body.variable} ${monoData.variable} h-full`}
     >
       <body className="flex min-h-full flex-col overflow-x-hidden">
         <SiteHeader />
-        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-6 sm:py-12">
+        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-6 sm:py-10">
           {children}
         </main>
         <SiteFooter />

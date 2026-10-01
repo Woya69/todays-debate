@@ -1,8 +1,8 @@
 # Today's Debate
 
-One debate per day. Pick a stance, read both sides, vote on what convinced you, share your grid.
+Challenge someone. Let the crowd decide.
 
-**Live product goals:** SEO topic pages (`/debate/[slug]`), daily habit loop, ads + Plus + sponsored days + classrooms.
+**Live product:** 1v1 challenges with spectator cheers + comments, plus a daily Main Event for SEO and habit.
 
 ## Run locally
 
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 - Next.js (App Router)
 - TypeScript + Tailwind CSS
-- Supabase (auth, votes, comments, reminders)
+- Supabase (auth, votes, comments, challenges, reminders)
 - Local storage for personal progress
 
 ## Environment
@@ -33,17 +33,17 @@ NEXT_PUBLIC_POLAR_CHECKOUT_URL=
 NEXT_PUBLIC_ADS_ENABLED=false
 ```
 
-## SEO notes
+## Database
 
-- Canonical motions live at `/debate/[slug]` (not date URLs).
-- `/debate/YYYY-MM-DD` permanently redirects to that day's slug.
-- `sitemap.xml` + `robots.txt` are generated.
-- Topic hubs: `/topics` and `/topics/[category]`.
-- Publish cadence ops: `/publish`.
+Apply SQL in `supabase/` (order: profiles → votes/comments → **challenges.sql**).
 
-## Content
+Challenges power `/challenge` and `/watch`. Without that migration, create/list will fail gracefully.
 
-Debate corpus: `src/data/debates.json` (regenerate drafts via `node scripts/generate-debates.mjs`).
+## Core loops
+
+- `/challenge` — create invite link, opponent accepts, alternate rounds, crowd cheers
+- `/debate/[slug]` — daily Main Event (SEO)
+- Share cards + OG images for social spread
 
 ## Monetization surfaces
 
@@ -51,10 +51,3 @@ Debate corpus: `src/data/debates.json` (regenerate drafts via `node scripts/gene
 - `/sponsor` — sponsored day intake
 - `/classrooms` — B2B education pilot
 - `AdSlot` — enable with `NEXT_PUBLIC_ADS_ENABLED=true`
-
-## Ops checklist (toward growth)
-
-1. Google Search Console on `NEXT_PUBLIC_SITE_URL`
-2. Plausible (or similar) via `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`
-3. Ship ≥1 unique motion/day; measure resolution-query rankings
-4. Wire Polar product → `NEXT_PUBLIC_POLAR_CHECKOUT_URL`

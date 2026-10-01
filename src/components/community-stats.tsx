@@ -10,32 +10,51 @@ export function CommunityStats({ stats, mode, highlight }: CommunityStatsProps) 
   const bars =
     mode === "stance"
       ? [
-          { key: "pro", label: "For", value: stats.proStancePercent, color: "bg-pro" },
-          { key: "con", label: "Against", value: stats.conStancePercent, color: "bg-con" },
-          { key: "und", label: "Undecided", value: stats.undecidedStancePercent, color: "bg-muted" },
+          { key: "pro", label: "FOR", value: stats.proStancePercent, color: "bg-pro" },
+          { key: "con", label: "AGAINST", value: stats.conStancePercent, color: "bg-con" },
+          { key: "und", label: "WATCH", value: stats.undecidedStancePercent, color: "bg-muted" },
         ]
       : [
-          { key: "pro", label: "For", value: stats.proConvincedPercent, color: "bg-pro" },
-          { key: "con", label: "Against", value: stats.conConvincedPercent, color: "bg-con" },
+          { key: "pro", label: "FOR", value: stats.proConvincedPercent, color: "bg-pro" },
+          { key: "con", label: "AGAINST", value: stats.conConvincedPercent, color: "bg-con" },
         ];
 
+  const pro = mode === "convinced" ? stats.proConvincedPercent : stats.proStancePercent;
+  const con = mode === "convinced" ? stats.conConvincedPercent : stats.conStancePercent;
+
   return (
-    <div className="paper-card px-6 py-5">
-      <div className="mb-4 flex items-baseline justify-between border-b border-border pb-2">
-        <h3 className="label text-foreground">
-          {mode === "stance" ? "How the room opened" : "How the room ruled"}
+    <div className="arena-card px-5 py-5 sm:px-6">
+      <div className="mb-4 flex items-baseline justify-between">
+        <h3 className="font-display text-xl font-extrabold text-foreground">
+          {mode === "stance" ? "How corners opened" : "Crowd meter"}
         </h3>
         <span className="label text-muted">
-          {stats.totalVotes.toLocaleString()} readers
+          {stats.totalVotes.toLocaleString()} in
         </span>
       </div>
+
+      {mode === "convinced" && (
+        <div className="mb-4">
+          <div className="mb-2 flex justify-between">
+            <span className="label text-pro">{pro}%</span>
+            <span className="label text-con">{con}%</span>
+          </div>
+          <div className="crowd-meter-bar animate-meter">
+            <div className="flex h-full w-full">
+              <div className="crowd-meter-fill bg-pro" style={{ width: `${pro}%` }} />
+              <div className="crowd-meter-fill bg-con" style={{ width: `${con}%` }} />
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="space-y-3">
         {bars.map((bar) => (
           <div key={bar.key}>
             <div className="mb-1 flex justify-between text-sm">
               <span
                 className={
-                  highlight === bar.key ? "font-semibold text-foreground" : ""
+                  highlight === bar.key ? "font-semibold text-foreground" : "text-muted"
                 }
               >
                 {bar.label}
@@ -43,20 +62,15 @@ export function CommunityStats({ stats, mode, highlight }: CommunityStatsProps) 
               </span>
               <span className="font-mono text-muted">{bar.value}%</span>
             </div>
-            <div className="h-2 w-full bg-border/60">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-border/60">
               <div
-                className={`h-full ${bar.color} transition-all duration-700`}
+                className={`h-full rounded-full ${bar.color} transition-all duration-700`}
                 style={{ width: `${bar.value}%` }}
               />
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-4 border-t border-border pt-3 font-mono text-xs text-muted">
-        {stats.totalVotes > 0
-          ? "Live community totals"
-          : "Be the first to weigh in"}
-      </p>
     </div>
   );
 }

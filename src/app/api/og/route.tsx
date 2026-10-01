@@ -3,18 +3,19 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 const COLORS = {
-  bg: "#e9e2d2",
-  surface: "#f4eee0",
-  ink: "#1a1611",
-  accent: "#8a2832",
-  muted: "#6c6453",
-  border: "#c9bda3",
+  bg: "#0c0f14",
+  surface: "#141a22",
+  ink: "#eef2f7",
+  muted: "#8b98a8",
+  pro: "#2dd4bf",
+  con: "#ff5a3c",
+  border: "#2a3544",
 };
 
 function stanceWord(value: string | null): string {
   if (value === "pro") return "FOR";
   if (value === "con") return "AGAINST";
-  if (value === "undecided") return "UNDECIDED";
+  if (value === "undecided") return "WATCH";
   return "—";
 }
 
@@ -36,8 +37,8 @@ export async function GET(request: Request) {
           display: "flex",
           flexDirection: "column",
           backgroundColor: COLORS.bg,
-          padding: "64px",
-          fontFamily: "Georgia, serif",
+          padding: "56px",
+          fontFamily: "system-ui, sans-serif",
         }}
       >
         <div
@@ -45,33 +46,34 @@ export async function GET(request: Request) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            paddingBottom: "16px",
           }}
         >
           <div
             style={{
-              fontSize: 30,
-              fontWeight: 700,
-              letterSpacing: "-0.5px",
+              fontSize: 28,
+              fontWeight: 800,
+              letterSpacing: "-1px",
               color: COLORS.ink,
             }}
           >
             TODAY&apos;S DEBATE
           </div>
-          <div
-            style={{
-              fontSize: 22,
-              letterSpacing: "4px",
-              color: COLORS.muted,
-            }}
-          >
-            {`MOTION No. ${number}`}
+          <div style={{ fontSize: 20, letterSpacing: "3px", color: COLORS.muted }}>
+            {`MAIN EVENT No. ${number}`}
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ height: "3px", backgroundColor: COLORS.ink }} />
-          <div style={{ height: "3px" }} />
-          <div style={{ height: "1px", backgroundColor: COLORS.ink }} />
+
+        <div
+          style={{
+            marginTop: 20,
+            height: 4,
+            display: "flex",
+            borderRadius: 999,
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ flex: 1, backgroundColor: COLORS.pro }} />
+          <div style={{ flex: 1, backgroundColor: COLORS.con }} />
         </div>
 
         <div
@@ -85,37 +87,41 @@ export async function GET(request: Request) {
         >
           <div
             style={{
-              fontSize: 26,
-              letterSpacing: "8px",
-              color: COLORS.accent,
-              marginBottom: "8px",
+              fontSize: 22,
+              letterSpacing: "6px",
+              color: COLORS.muted,
+              marginBottom: 12,
             }}
           >
-            THE VERDICT
+            VERDICT
           </div>
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "28px",
-              fontSize: 88,
-              fontWeight: 700,
+              gap: 28,
+              fontSize: 84,
+              fontWeight: 800,
               color: COLORS.ink,
             }}
           >
-            <span>{from}</span>
-            <span style={{ color: COLORS.accent }}>{crossed ? "→" : "·"}</span>
-            <span>{to}</span>
+            <span style={{ color: from === "FOR" ? COLORS.pro : from === "AGAINST" ? COLORS.con : COLORS.ink }}>
+              {from}
+            </span>
+            <span style={{ color: COLORS.muted }}>{crossed ? "→" : "·"}</span>
+            <span style={{ color: to === "FOR" ? COLORS.pro : to === "AGAINST" ? COLORS.con : COLORS.ink }}>
+              {to}
+            </span>
           </div>
           <div
             style={{
-              fontSize: 26,
+              fontSize: 22,
               letterSpacing: "4px",
               color: COLORS.muted,
-              marginTop: "16px",
+              marginTop: 16,
             }}
           >
-            {crossed ? "CROSSED THE FLOOR" : "HELD THE LINE"}
+            {crossed ? "CROSSED THE FLOOR" : "HELD THE CORNER"}
           </div>
         </div>
 
@@ -125,30 +131,30 @@ export async function GET(request: Request) {
             justifyContent: "space-between",
             alignItems: "flex-end",
             borderTop: `1px solid ${COLORS.border}`,
-            paddingTop: "24px",
+            paddingTop: 24,
           }}
         >
-          <div style={{ display: "flex", gap: "48px" }}>
+          <div style={{ display: "flex", gap: 48 }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <span style={{ fontSize: 56, fontWeight: 700, color: COLORS.accent }}>
+              <span style={{ fontSize: 52, fontWeight: 800, color: COLORS.pro }}>
                 +{points}
               </span>
-              <span style={{ fontSize: 22, letterSpacing: "4px", color: COLORS.muted }}>
+              <span style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.muted }}>
                 POINTS
               </span>
             </div>
             {streak && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <span style={{ fontSize: 56, fontWeight: 700, color: COLORS.ink }}>
+                <span style={{ fontSize: 52, fontWeight: 800, color: COLORS.ink }}>
                   {streak}
                 </span>
-                <span style={{ fontSize: 22, letterSpacing: "4px", color: COLORS.muted }}>
+                <span style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.muted }}>
                   DAY STREAK
                 </span>
               </div>
             )}
           </div>
-          <div style={{ fontSize: 24, color: COLORS.muted }}>todaysdebate.app</div>
+          <div style={{ fontSize: 22, color: COLORS.muted }}>todaysdebate.app</div>
         </div>
       </div>
     ),

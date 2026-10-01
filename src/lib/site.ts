@@ -5,7 +5,7 @@ export const SITE_URL =
 
 export const SITE_NAME = "Today's Debate";
 
-export const SITE_TAGLINE = "One motion. Both sides. Daily.";
+export const SITE_TAGLINE = "Challenge someone. Let the crowd decide.";
 
 export function absoluteUrl(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;

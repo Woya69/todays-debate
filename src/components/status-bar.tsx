@@ -35,11 +35,11 @@ export function StatusBar() {
   }, []);
 
   if (!snap) {
-    return <div className="h-[86px] paper-card animate-pulse" />;
+    return <div className="h-[86px] arena-card animate-pulse" />;
   }
 
   return (
-    <div className="paper-card">
+    <div className="arena-card">
       <div className="grid grid-cols-3 divide-x divide-border">
         <Stat label="Rank" value={snap.rankTitle} />
         <Stat label="Points" value={snap.points.toLocaleString()} />
@@ -54,9 +54,9 @@ export function StatusBar() {
             <span className="label text-muted">Next: {snap.next}</span>
             <span className="label text-muted">{snap.percent}%</span>
           </div>
-          <div className="h-[3px] w-full bg-border">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-border">
             <div
-              className="h-full bg-accent transition-all duration-500"
+              className="h-full rounded-full bg-pro transition-all duration-500"
               style={{ width: `${snap.percent}%` }}
             />
           </div>

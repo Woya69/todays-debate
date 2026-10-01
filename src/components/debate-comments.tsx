@@ -8,9 +8,9 @@ import { fetchComments, postComment } from "@/lib/comments";
 const MAX = 280;
 
 function sideLabel(side: Stance): string {
-  if (side === "pro") return "For";
-  if (side === "con") return "Against";
-  return "Undecided";
+  if (side === "pro") return "FOR";
+  if (side === "con") return "AGAINST";
+  return "WATCH";
 }
 
 export function DebateComments({
@@ -52,13 +52,18 @@ export function DebateComments({
   const remaining = MAX - body.length;
 
   return (
-    <section className="paper-card px-6 py-5">
-      <div className="flex items-baseline justify-between border-b border-border pb-2">
-        <h3 className="label text-foreground">Reader rebuttals</h3>
+    <section className="arena-card px-5 py-5 sm:px-6">
+      <div className="flex items-baseline justify-between">
+        <h3 className="font-display text-xl font-extrabold text-foreground">
+          Crowd
+        </h3>
         <span className="label text-muted">
           {comments ? comments.length : "…"}
         </span>
       </div>
+      <p className="mt-1 text-sm text-muted">
+        One sharp line from your corner. Argue the motion — not the person.
+      </p>
 
       <form onSubmit={handleSubmit} className="mt-4 space-y-2">
         <textarea
@@ -66,8 +71,8 @@ export function DebateComments({
           maxLength={MAX}
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          placeholder="One sharp line. Make the case the article missed."
-          className="w-full resize-none border border-border bg-transparent px-3 py-2 text-foreground outline-none focus:border-accent"
+          placeholder="Make the case the stage missed."
+          className="w-full resize-none rounded-2xl border border-border bg-background/60 px-3 py-2 text-foreground outline-none focus:border-pro"
         />
         <div className="flex items-center justify-between">
           <span className="font-mono text-xs text-muted">
@@ -76,13 +81,13 @@ export function DebateComments({
           <button
             type="submit"
             disabled={busy || body.trim().length < 3}
-            className="bg-foreground px-5 py-2 font-display text-base font-semibold text-background transition hover:bg-accent disabled:opacity-40"
+            className="btn-primary !min-h-10 !px-5 !py-2 !text-base"
           >
             {busy ? "Posting…" : "Post"}
           </button>
         </div>
         {error && (
-          <p className="border border-con bg-con/10 px-3 py-2 text-sm text-con">
+          <p className="rounded-xl border border-con/40 bg-con/10 px-3 py-2 text-sm text-con">
             {error}{" "}
             {error.toLowerCase().includes("sign in") && (
               <Link href="/account" className="underline">
@@ -96,7 +101,7 @@ export function DebateComments({
       <div className="mt-5 space-y-3">
         {comments && comments.length === 0 && (
           <p className="text-sm text-muted">
-            No rebuttals yet. Be the first to weigh in.
+            No crowd lines yet. Be first.
           </p>
         )}
         {comments?.map((c) => (

@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
     "/debate",
+    "/challenge",
+    "/watch",
     "/archive",
     "/how-it-works",
     "/takes",
@@ -22,8 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
-    changeFrequency: path === "" || path === "/debate" ? "daily" : "weekly",
-    priority: path === "" ? 1 : 0.7,
+    changeFrequency:
+      path === "" || path === "/debate" || path === "/watch" || path === "/challenge"
+        ? "daily"
+        : "weekly",
+    priority: path === "" ? 1 : path === "/challenge" || path === "/debate" ? 0.9 : 0.7,
   }));
 
   const debates = getScheduledDebates().map((d) => ({

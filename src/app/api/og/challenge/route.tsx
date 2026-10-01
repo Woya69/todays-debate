@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { DEBATES } from "@/data/debates";
 
 export const runtime = "edge";
 
@@ -13,10 +12,8 @@ const COLORS = {
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const slug = searchParams.get("slug") ?? "";
-  const debate = DEBATES.find((d) => d.id === slug);
-  const resolution = debate?.resolution ?? "Today's Debate";
-  const category = debate?.category ?? "Main Event";
+  const code = searchParams.get("code") ?? "";
+  const motion = searchParams.get("motion") ?? "Live challenge on Today's Debate";
 
   return new ImageResponse(
     (
@@ -31,25 +28,12 @@ export async function GET(request: Request) {
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ fontSize: 26, fontWeight: 800, color: COLORS.ink }}>
             TODAY&apos;S DEBATE
           </div>
-          <div
-            style={{
-              fontSize: 18,
-              letterSpacing: "3px",
-              color: COLORS.muted,
-              textTransform: "uppercase",
-            }}
-          >
-            {category}
+          <div style={{ fontSize: 18, letterSpacing: "3px", color: COLORS.con }}>
+            CHALLENGE {code ? `· ${code.slice(0, 6).toUpperCase()}` : ""}
           </div>
         </div>
 
@@ -72,8 +56,6 @@ export async function GET(request: Request) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingTop: 36,
-            paddingBottom: 36,
           }}
         >
           <div
@@ -84,30 +66,24 @@ export async function GET(request: Request) {
               marginBottom: 18,
             }}
           >
-            MAIN EVENT
+            WATCH THE CROWD
           </div>
           <div
             style={{
-              fontSize: resolution.length > 90 ? 40 : 50,
+              fontSize: motion.length > 90 ? 38 : 48,
               fontWeight: 800,
               lineHeight: 1.12,
               color: COLORS.ink,
               letterSpacing: "-1px",
             }}
           >
-            {resolution}
+            {motion}
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ fontSize: 22, color: COLORS.muted }}>
-            Challenge someone. Let the crowd decide.
+            Two corners. Crowd decides.
           </div>
           <div style={{ fontSize: 22, color: COLORS.muted }}>todaysdebate.app</div>
         </div>
